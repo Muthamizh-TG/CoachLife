@@ -1,0 +1,85 @@
+{
+  "sessionNo": 48,
+  "studentName": "Tamizh",
+  "coachName": "Coach T",
+  "date": "2025-02-05",
+  "hours": "2 Hours",
+  "activities": [
+    {
+      "name": "Python - File Editing Practice",
+      "type": "python",
+      "description": "Master the fundamentals of file handling in Python by learning to read, write, and modify files efficiently. This comprehensive activity includes four progressive programs that build skills from text replacement to data validation. players will gain practical experience with file I/O operations, string manipulation, conditional logic, and list processing—essential skills for real-world programming.",
+      "instructionsToCoach": "Observe how the student approaches each program step-by-step. Evaluate their understanding of file operations, loop logic, and conditional statements. Encourage them to think about edge cases and error handling. Check if they can explain what each line does and why the code works.",
+      "pythonCode": {
+        "Program1": {
+            "story": "A storyteller has written a tale about a brave knight, but wants to use a more powerful word to better describe the hero's character. She needs to replace every instance of 'brave' with 'courageous' throughout the entire story file to enhance the narrative impact. Write a program that reads the story, finds and replaces the word, then saves the improved version.",
+            "code" : "with open('story.txt', 'r') as file:\n    content = file.read()\n\ncontent = content.replace('brave', 'courageous')\n\nwith open('story.txt', 'w') as file:\n    file.write(content)"
+        },
+        "Program2": {
+            "story": "A grocery store manager needs to update the shopping inventory because they received extra bananas during the weekly delivery. The current shopping list has each item with its quantity in CSV format (item,quantity), but bananas need 2 extra units added to the stock. Create a program that reads the shopping list, finds the banana entry, increases its quantity by 2, and updates the file with the new values.",
+            "code": "with open('shopping.txt', 'r') as file:\n    lines = file.readlines()\n\nupdated_lines = []\nfor line in lines:\n    item, qty = line.strip().split(',')\n    if item == 'banana':\n        qty = str(int(qty) + 2)\n    updated_lines.append(f'{item},{qty}\\n')\n\nwith open('shopping.txt', 'w') as file:\n    file.writelines(updated_lines)"
+        },
+        "Program3": {
+            "story": "A math teacher has discovered several calculation errors in the results file that were recorded during yesterday's exam. The wrong answers are 5+3=9, 10-2=7, and 4*2=10, but they should be corrected to the right values. Write a program that reads through all the math results, finds these three incorrect answers, replaces them with the correct calculations, and saves the corrected file.",
+            "code": "with open('math_results.txt', 'r') as file:\n    lines = file.readlines()\n\ncorrected_lines = []\nfor line in lines:\n    if '5 + 3' in line:\n        corrected_lines.append('5 + 3 = 8\\n')\n    elif '10 - 2' in line:\n        corrected_lines.append('10 - 2 = 8\\n')\n    elif '4 * 2' in line:\n        corrected_lines.append('4 * 2 = 8\\n')\n    else:\n        corrected_lines.append(line)\n\nwith open('math_results.txt', 'w') as file:\n    file.writelines(corrected_lines)"
+        },
+        "Program4": {
+            "story": "A project manager is compiling the weekly progress report and needs to append new task information to the existing report file without overwriting what's already there. The report currently shows completed and pending tasks, and now three new tasks have been assigned that need to be added to the end of the document. Write a program that opens the report in append mode and adds the new task entry.",
+            "code": "with open('report.txt', 'a') as file:\n    file.write('\\n- New tasks added: 3')"
+        }
+      },
+      "feedback": "She demonstrated excellent understanding of file operations and string manipulation. Her code was clean and efficient. Encourage her to add error handling (try-except blocks) in future projects to handle cases where files might not exist.",
+      "completedOnTime": "yes",
+      "repeat": "no",
+      "repeatReason": "",
+      "rating": 4
+    },
+    {
+      "name": "Web Technology - Basic HTML Structure",
+      "description": "Design and create a professional HTML page from scratch that incorporates semantic structure with title, descriptive paragraphs, and embedded images. This activity introduces players to the fundamentals of web development including proper document structure, HTML tags, attributes, and best practices for organizing content. players will learn how to make web pages accessible and visually organized through proper HTML markup.",
+      "instructionsToCoach": "Observe the student's creativity and attention to semantic HTML structure. Check if they understand the purpose of each HTML tag. Encourage them to use meaningful tag names and proper indentation. Ask them to explain their design choices and how the page could be enhanced further.",
+      "feedback": "Excellent creativity! The student designed a visually appealing layout with good understanding of HTML structure. She used semantic tags appropriately and added personal touches with custom content. Next time, encourage her to explore CSS for styling and responsive design principles.",
+      "completedOnTime": "yes",
+      "repeat": "no",
+      "repeatReason": "",
+      "rating": 5
+    },
+    {
+      "name": "Blooket -  Quiz Session",
+      "description": "Participate in an engaging Blooket quiz game session focused on food-related questions and facts. The student competed in the Crypto Hack game mode, which challenges players to answer questions quickly while managing virtual currency and strategic gameplay elements. This activity combines learning assessment with game-based motivation, helping players retain information through interactive, competitive gameplay. Final score achieved: 14B (currency points).",
+      "instructionsToCoach": "Monitor the student's engagement level, accuracy of answers, and response time. Record the final score and observe their behavior during gameplay—do they strategize or guess randomly? Note their reactions to wins and losses. Use this data to understand their learning pace and motivation preferences.",
+      "feedback": "Outstanding performance and energy throughout the session! The student was fully engaged, answered questions quickly and accurately, and showed genuine enthusiasm for the competitive element. She demonstrated quick thinking and strategic decision-making during gameplay. Consider using more game-based learning activities as she clearly thrives with this approach.",
+      "completedOnTime": "yes",
+      "repeat": "no",
+      "repeatReason": "",
+      "rating": 5
+    },
+    {
+      "name": "Typing Club Practice",
+      "description": "Complete a 10-minute focused warm-up typing session on Typing Club platform. This introductory typing practice develops fundamental keyboarding skills including proper finger placement, hand positioning, and typing accuracy. The warm-up exercises help improve muscle memory and build a foundation for faster, more accurate typing. This is essential for players who will be using computers extensively in school and future careers.",
+      "instructionsToCoach": "Observe the student's hand placement, posture, and typing technique. Monitor their accuracy versus speed balance—encourage accuracy over speed at this stage. Watch for signs of fatigue or frustration. If they lose focus, consider switching to a more interactive or game-based typing activity to maintain engagement.",
+      "feedback": "The student showed difficulty maintaining focus during the traditional typing exercises and expressed boredom with the routine practice format. While her typing mechanics were acceptable, her motivation level was low. She may respond better to interactive, game-based typing platforms like TypeRacer or Nitro Type which gamify the learning experience and provide more immediate feedback.",
+      "completedOnTime": "no",
+      "repeat": "yes",
+      "repeatReason": "Student felt unmotivated by traditional typing drills. Switch to Code.org or game-based typing platforms (TypeRacer, Nitro Type) next time to increase engagement and make typing practice more enjoyable.",
+      "rating": 2
+    },
+    {
+      "name": "Lego Prime",
+      "description": "Design, build, and program an advanced robotic arm using the LEGO Prime education kit. This activity combines engineering principles with programming logic as players construct a functional robotic arm capable of picking up and placing objects in specified locations. players will learn about mechanical advantage, motor control, sensor feedback, and programming sequences. The project integrates hands-on building with computational thinking to solve real-world manipulation challenges.",
+      "instructionsToCoach": "Guide the student through both the mechanical building phase and the programming phase. Observe how they troubleshoot when something doesn't work as expected. Encourage them to test small sections of code before building the complete program. Ask them to explain their design choices and predict what will happen before testing. Praise problem-solving efforts.",
+      "feedback": "Fantastic work! The student demonstrated excellent understanding of both mechanical design and programming logic. She was patient during the building phase, carefully following instructions and checking her work. Her programming sequence was well-structured and she successfully debugged issues independently. She shows strong spatial reasoning and logical thinking. Consider challenging her with more complex tasks like adding sensors or multiple arms.",
+      "completedOnTime": "yes",
+      "repeat": "no",
+      "repeatReason": "",
+      "rating": 4
+    }
+  ],
+  "newTechnology": {
+    "description": "Introduction to Biometrics - Modern authentication methods including fingerprint scanners, face ID recognition, voice lock systems, and their security implications in everyday devices.",
+    "referenceLink": "https://www.kaspersky.com/resource-center/definitions/biometrics"
+  },
+  "sessionCompleted": "yes",
+  "overallFeedback": "Replace typing session with something engaging. Add bonus challenge in Python next time.",
+  "sessionRating": 4
+}

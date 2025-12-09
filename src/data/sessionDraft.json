@@ -1,0 +1,62 @@
+[
+  {
+    "sessionId": 49,
+    "student": "John",
+    "studentId": "p1",
+    "coach": "Coach Priya",
+    "coachId": "c1",
+    "status": "draft",
+    "activities": [
+      {
+        "name": "Python Files",
+        "programs": ["P1", "P3"],
+        "defaultPoints": 10,
+        "completed": false
+      },
+      {
+        "name": "Functions & Modules",
+        "programs": ["P4", "P5"],
+        "defaultPoints": 15,
+        "completed": false
+      }
+    ],
+    "totalPoints": 25,
+    "createdDate": "2024-11-21"
+  },
+  {
+    "sessionId": 50,
+    "student": "Alex",
+    "studentId": "p2",
+    "coach": "Coach Priya",
+    "coachId": "c1",
+    "status": "draft",
+    "activities": [
+      {
+        "name": "Python Basics",
+        "programs": ["P1", "P2"],
+        "defaultPoints": 10,
+        "completed": false
+      }
+    ],
+    "totalPoints": 10,
+    "createdDate": "2024-11-21"
+  },
+  {
+    "sessionId": 51,
+    "student": "Jordan",
+    "studentId": "p3",
+    "coach": "Coach Tamizh",
+    "coachId": "c2",
+    "status": "draft",
+    "activities": [
+      {
+        "name": "Web Basics",
+        "programs": ["W1", "W2"],
+        "defaultPoints": 15,
+        "completed": false
+      }
+    ],
+    "totalPoints": 15,
+    "createdDate": "2024-11-21"
+  }
+]

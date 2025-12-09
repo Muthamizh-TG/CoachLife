@@ -1,0 +1,29 @@
+[
+  {
+    "coachId": "c1",
+    "name": "Coach Priya",
+    "email": "priya@technology-garage.com",
+    "specialization": "Python & Web Dev",
+    "assignedPlayers": ["p1", "p2", "p5"],
+    "totalSessions": 45,
+    "joinDate": "2023-06-10"
+  },
+  {
+    "coachId": "c2",
+    "name": "Coach Tamizh",
+    "email": "tamizh@technology-garage.com",
+    "specialization": "Data Science & ML",
+    "assignedPlayers": ["p3", "p4"],
+    "totalSessions": 38,
+    "joinDate": "2023-07-15"
+  },
+  {
+    "coachId": "c3",
+    "name": "Coach Keerthana",
+    "email": "keerthana@technology-garage.com",
+    "specialization": "Frontend Development",
+    "assignedPlayers": ["p1"],
+    "totalSessions": 52,
+    "joinDate": "2023-05-20"
+  }
+]

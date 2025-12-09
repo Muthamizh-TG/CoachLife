@@ -1,0 +1,38 @@
+[
+  {
+    "redeemId": "rd1",
+    "playerId": "p1",
+    "rewardId": "r1",
+    "rewardName": "Badge of Excellence",
+    "pointsUsed": 100,
+    "date": "2024-10-15",
+    "status": "completed"
+  },
+  {
+    "redeemId": "rd2",
+    "playerId": "p1",
+    "rewardId": "r3",
+    "rewardName": "Consistency Streak",
+    "pointsUsed": 150,
+    "date": "2024-11-01",
+    "status": "completed"
+  },
+  {
+    "redeemId": "rd3",
+    "playerId": "p3",
+    "rewardId": "r2",
+    "rewardName": "Pro Developer",
+    "pointsUsed": 250,
+    "date": "2024-11-10",
+    "status": "completed"
+  },
+  {
+    "redeemId": "rd4",
+    "playerId": "p2",
+    "rewardId": "r4",
+    "rewardName": "Quick Learner",
+    "pointsUsed": 80,
+    "date": "2024-11-05",
+    "status": "pending"
+  }
+]

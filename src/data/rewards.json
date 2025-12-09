@@ -1,0 +1,42 @@
+[
+  {
+    "rewardId": "r1",
+    "name": "Badge of Excellence",
+    "description": "Awarded for completing 10 sessions",
+    "pointsRequired": 100,
+    "type": "badge",
+    "icon": "⭐"
+  },
+  {
+    "rewardId": "r2",
+    "name": "Pro Developer",
+    "description": "Reached level 5 proficiency",
+    "pointsRequired": 250,
+    "type": "badge",
+    "icon": "🚀"
+  },
+  {
+    "rewardId": "r3",
+    "name": "Consistency Streak",
+    "description": "10 sessions without missing",
+    "pointsRequired": 150,
+    "type": "achievement",
+    "icon": "🔥"
+  },
+  {
+    "rewardId": "r4",
+    "name": "Quick Learner",
+    "description": "Completed 5 activities in one day",
+    "pointsRequired": 80,
+    "type": "achievement",
+    "icon": "⚡"
+  },
+  {
+    "rewardId": "r5",
+    "name": "Mentor Award",
+    "description": "Helped 3 other players",
+    "pointsRequired": 200,
+    "type": "badge",
+    "icon": "👨‍🏫"
+  }
+]

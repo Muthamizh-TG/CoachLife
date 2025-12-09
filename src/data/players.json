@@ -1,0 +1,57 @@
+[
+  {
+    "playerId": "p1",
+    "name": "John",
+    "email": "john@example.com",
+    "level": 3,
+    "stage": 1,
+    "primaryCoach": "c1",
+    "totalPoints": 380,
+    "progress": 64,
+    "joinDate": "2024-01-15"
+  },
+  {
+    "playerId": "p2",
+    "name": "Alex",
+    "email": "alex@example.com",
+    "level": 2,
+    "stage": 1,
+    "primaryCoach": "c1",
+    "totalPoints": 250,
+    "progress": 45,
+    "joinDate": "2024-02-20"
+  },
+  {
+    "playerId": "p3",
+    "name": "Jordan",
+    "email": "jordan@example.com",
+    "level": 4,
+    "stage": 2,
+    "primaryCoach": "c2",
+    "totalPoints": 520,
+    "progress": 78,
+    "joinDate": "2024-01-10"
+  },
+  {
+    "playerId": "p4",
+    "name": "Casey",
+    "email": "casey@example.com",
+    "level": 1,
+    "stage": 1,
+    "primaryCoach": "c2",
+    "totalPoints": 150,
+    "progress": 25,
+    "joinDate": "2024-03-05"
+  },
+  {
+    "playerId": "p5",
+    "name": "Morgan",
+    "email": "morgan@example.com",
+    "level": 3,
+    "stage": 2,
+    "primaryCoach": "c1",
+    "totalPoints": 420,
+    "progress": 72,
+    "joinDate": "2024-01-25"
+  }
+]
