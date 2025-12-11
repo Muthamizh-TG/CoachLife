@@ -78,7 +78,9 @@ export const StudentDetail = () => {
           display: 'flex',
           alignItems: 'center',
           gap: '24px'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-duration="800">
           <div style={{
             width: '100px',
             height: '100px',
@@ -112,7 +114,10 @@ export const StudentDetail = () => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
           gap: '16px',
           marginBottom: '32px'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="800">
           {/* Level Card */}
           <div style={{
             background: 'white',
@@ -126,7 +131,9 @@ export const StudentDetail = () => {
             e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.12)';
             e.currentTarget.style.transform = 'translateY(-4px)';
           }}
-          onMouseLeave={(e) => {
+          on
+          data-aos="zoom-in"
+          data-aos-duration="800"MouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
             e.currentTarget.style.transform = 'translateY(0)';
           }}>
@@ -157,7 +164,10 @@ export const StudentDetail = () => {
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
             e.currentTarget.style.transform = 'translateY(0)';
-          }}>
+          }}
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          data-aos-duration="800">
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
               <div style={{ backgroundColor: '#FFFBEB', borderRadius: '8px', padding: '8px' }}>
                 <Zap size={24} color="#526681" />
@@ -182,7 +192,10 @@ export const StudentDetail = () => {
             e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.12)';
             e.currentTarget.style.transform = 'translateY(-4px)';
           }}
-          onMouseLeave={(e) => {
+          on
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-duration="800"MouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
             e.currentTarget.style.transform = 'translateY(0)';
           }}>

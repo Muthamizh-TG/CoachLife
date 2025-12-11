@@ -306,7 +306,7 @@ export function Home() {
       `}</style>
 
       {/* Header */}
-      <header className="home-header">
+      <header className="home-header" data-aos="fade-up" data-aos-duration="800">
         <div className="home-header-content">
           <div className="home-logo">
             <Zap size={40} className="logo-icon" />
@@ -325,13 +325,13 @@ export function Home() {
       </header>
 
       {/* Features Section */}
-      <section className="home-features">
+      <section className="home-features" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
         <h2>Platform Features</h2>
         <div className="features-grid">
           {features.map((feature, idx) => {
             const Icon = feature.icon;
             return (
-              <div key={idx} className="feature-card">
+              <div key={idx} className="feature-card" data-aos="zoom-in" data-aos-duration="800">
                 <div className="feature-icon">
                   <Icon size={32} />
                 </div>

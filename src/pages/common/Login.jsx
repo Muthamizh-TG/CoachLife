@@ -309,7 +309,7 @@ export const Login = () => {
       </button>
 
       <div className="login-left">
-        <div className="login-left-content">
+        <div className="login-left-content" data-aos="fade-up" data-aos-duration="800">
           <div className="login-logo-large">
             <LogIn size={48} />
           </div>
@@ -349,7 +349,7 @@ export const Login = () => {
       </div>
 
       <div className="login-right">
-        <div className="login-form-container">
+        <div className="login-form-container" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
           <div className="login-form-header">
             <h2>Sign In</h2>
             <p>Enter your credentials to access your dashboard</p>

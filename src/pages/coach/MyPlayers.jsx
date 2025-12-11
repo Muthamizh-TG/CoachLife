@@ -65,7 +65,9 @@ export const MyPlayers = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'flex-start'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-duration="800">
           <div>
             <h1 style={{
               fontSize: '32px',
@@ -160,7 +162,10 @@ export const MyPlayers = () => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
           gap: '16px',
           marginBottom: '32px'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="800">
           {/* Total players */}
           <div style={{
             background: '#FFFFFF',
@@ -179,7 +184,9 @@ export const MyPlayers = () => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
             e.currentTarget.style.borderColor = '#E2E8F0';
             e.currentTarget.style.transform = 'translateY(0)';
-          }}>
+          }}
+          data-aos="zoom-in"
+          data-aos-duration="800">
             <div style={{
               width: '44px',
               height: '44px',
@@ -214,7 +221,10 @@ export const MyPlayers = () => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
             e.currentTarget.style.borderColor = '#E2E8F0';
             e.currentTarget.style.transform = 'translateY(0)';
-          }}>
+          }}
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          data-aos-duration="800">
             <div style={{
               width: '44px',
               height: '44px',
@@ -249,7 +259,10 @@ export const MyPlayers = () => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
             e.currentTarget.style.borderColor = '#E2E8F0';
             e.currentTarget.style.transform = 'translateY(0)';
-          }}>
+          }}
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-duration="800">
             <div style={{
               width: '44px',
               height: '44px',
@@ -284,7 +297,10 @@ export const MyPlayers = () => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
             e.currentTarget.style.borderColor = '#E2E8F0';
             e.currentTarget.style.transform = 'translateY(0)';
-          }}>
+          }}
+          data-aos="zoom-in"
+          data-aos-delay="300"
+          data-aos-duration="800">
             <div style={{
               width: '44px',
               height: '44px',

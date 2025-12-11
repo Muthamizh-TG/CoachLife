@@ -45,13 +45,15 @@ export const CoachProfile = () => {
         <div style={{
           background: 'linear-gradient(135deg, #252c35, #526681)',
           borderRadius: '16px',
-          padding: '40px 32px',
+          padding: '32px',
           marginBottom: '32px',
           color: 'white',
           position: 'relative',
           overflow: 'hidden',
-          boxShadow: '0 8px 24px rgba(37, 44, 53, 0.2)'
-        }}>
+          boxShadow: '0 4px 12px rgba(37, 44, 53, 0.2)'
+        }}
+        data-aos="fade-up"
+        data-aos-duration="800">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '32px' }}>
             {/* Avatar & Info */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '32px', flex: 1 }}>
@@ -180,7 +182,10 @@ export const CoachProfile = () => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
           gap: '16px',
           marginBottom: '32px'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="800">
           {/* Total players */}
           <div style={{
             background: '#FFFFFF',
@@ -197,7 +202,9 @@ export const CoachProfile = () => {
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
             e.currentTarget.style.borderColor = '#E2E8F0';
-          }}>
+          }}
+          data-aos="zoom-in"
+          data-aos-duration="800">
             <div style={{
               width: '44px',
               height: '44px',
@@ -230,7 +237,10 @@ export const CoachProfile = () => {
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
             e.currentTarget.style.borderColor = '#E2E8F0';
-          }}>
+          }}
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          data-aos-duration="800">
             <div style={{
               width: '44px',
               height: '44px',
@@ -263,7 +273,10 @@ export const CoachProfile = () => {
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
             e.currentTarget.style.borderColor = '#E2E8F0';
-          }}>
+          }}
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-duration="800">
             <div style={{
               width: '44px',
               height: '44px',
@@ -296,7 +309,10 @@ export const CoachProfile = () => {
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
             e.currentTarget.style.borderColor = '#E2E8F0';
-          }}>
+          }}
+          data-aos="zoom-in"
+          data-aos-delay="300"
+          data-aos-duration="800">
             <div style={{
               width: '44px',
               height: '44px',
@@ -324,10 +340,19 @@ export const CoachProfile = () => {
           {/* Contact Info Card */}
           <div style={{
             background: '#FFFFFF',
-            borderRadius: '14px',
-            border: '1.5px solid #E2E8F0',
+            borderRadius: '12px',
+            border: '2px solid #E2E8F0',
             overflow: 'hidden',
-            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)'
+            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
+            e.currentTarget.style.borderColor = '#526681';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
+            e.currentTarget.style.borderColor = '#E2E8F0';
           }}>
             <div style={{
               padding: '24px',

@@ -145,16 +145,32 @@ export const Coaches = () => {
 
   return (
     <Layout>
-      <div className="admin-page-container">
-        {/* Page Header */}
-        <div style={{ marginBottom: '32px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '24px' }}>
-            <div>
-              <h1 style={{ fontSize: '32px', fontWeight: 'bold', color: '#111827', marginBottom: '8px' }}>Coaches Management</h1>
-              <p style={{ fontSize: '14px', color: '#666', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Users size={16} /> Manage {stats.total} coach{stats.total !== 1 ? 'es' : ''}, monitor performance, and track players
-              </p>
-            </div>
+      <div style={{ maxWidth: '100%', padding: '0' }}>
+        {/* Enhanced Header */}
+        <div style={{
+          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
+          backdropFilter: 'blur(20px)',
+          color: 'white',
+          padding: '40px 32px',
+          marginBottom: '32px',
+          borderRadius: '12px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          border: '1px solid rgba(255, 255, 255, 0.15)',
+          boxShadow: '0 8px 32px rgba(37, 44, 53, 0.15)'
+        }}
+        data-aos="fade-up"
+        data-aos-duration="800">
+          <div>
+            <h1 style={{ fontSize: '32px', fontWeight: 'bold', margin: '0 0 8px 0' }}>Coaches Management</h1>
+            <p style={{ fontSize: '14px', opacity: 0.95, margin: 0 }}>Manage {stats.total} coach{stats.total !== 1 ? 'es' : ''}, monitor performance, and track players</p>
+          </div>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '16px'
+          }}>
             <button
               onClick={() => {
                 setFormData({ name: '', email: '', specialization: '' });
@@ -164,45 +180,64 @@ export const Coaches = () => {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',
-                padding: '12px 24px',
+                padding: '10px 20px',
                 borderRadius: '8px',
                 fontWeight: '600',
-                background: 'linear-gradient(135deg, #252c35, #526681)',
+                background: 'rgba(255, 255, 255, 0.15)',
                 color: 'white',
-                border: 'none',
+                border: '2px solid rgba(255, 255, 255, 1)',
                 cursor: 'pointer',
                 transition: 'all 0.3s',
-                boxShadow: '0 4px 12px rgba(37, 44, 53, 0.3)'
+                backdropFilter: 'blur(10px)',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 6px 20px rgba(37, 44, 53, 0.4)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.25)';
+                e.currentTarget.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.2)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(37, 44, 53, 0.3)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
               }}
             >
-              <Plus size={18} /> Add New Coach
+              <Plus size={18} /> Add Coach
             </button>
+            
           </div>
+        </div>
 
+        <div style={{ padding: '0 32px' }}>
           {/* Stats Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '32px' }}
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="800">
             <div style={{
               backgroundColor: 'white',
               borderRadius: '12px',
-              padding: '20px',
+              padding: '24px',
               boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-              border: '1px solid #e5e7eb',
+              border: '2px solid #E2E8F0',
               display: 'flex',
               alignItems: 'center',
               gap: '16px',
-              transition: 'all 0.3s'
-            }}>
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
+              e.currentTarget.style.borderColor = '#526681';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+              e.currentTarget.style.borderColor = '#E2E8F0';
+            }}
+            data-aos="zoom-in"
+            data-aos-duration="800">
               <div style={{
-                width: '50px',
-                height: '50px',
+                width: '48px',
+                height: '48px',
                 borderRadius: '10px',
                 background: '#E8F2F8',
                 display: 'flex',
@@ -212,25 +247,36 @@ export const Coaches = () => {
                 <Users size={24} color="#252c35" />
               </div>
               <div>
-                <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase' }}>Total Coaches</p>
-                <p style={{ fontSize: '24px', fontWeight: '700', color: '#111827' }}>{stats.total}</p>
+                <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Total Coaches</p>
+                <p style={{ fontSize: '24px', fontWeight: '700', color: '#111827', margin: '4px 0 0 0' }}>{stats.total}</p>
               </div>
             </div>
 
             <div style={{
               backgroundColor: 'white',
               borderRadius: '12px',
-              padding: '20px',
+              padding: '24px',
               boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-              border: '1px solid #e5e7eb',
+              border: '2px solid #E2E8F0',
               display: 'flex',
               alignItems: 'center',
               gap: '16px',
-              transition: 'all 0.3s'
-            }}>
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
+              e.currentTarget.style.borderColor = '#526681';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+              e.currentTarget.style.borderColor = '#E2E8F0';
+            }}
+            data-aos="zoom-in"
+            data-aos-delay="100"
+            data-aos-duration="800">
               <div style={{
-                width: '50px',
-                height: '50px',
+                width: '48px',
+                height: '48px',
                 borderRadius: '10px',
                 background: '#F0FDF4',
                 display: 'flex',
@@ -240,25 +286,36 @@ export const Coaches = () => {
                 <TrendingUp size={24} color="#10B981" />
               </div>
               <div>
-                <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase' }}>Active Coaches</p>
-                <p style={{ fontSize: '24px', fontWeight: '700', color: '#111827' }}>{stats.active}</p>
+                <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Active Coaches</p>
+                <p style={{ fontSize: '24px', fontWeight: '700', color: '#111827', margin: '4px 0 0 0' }}>{stats.active}</p>
               </div>
             </div>
 
             <div style={{
               backgroundColor: 'white',
               borderRadius: '12px',
-              padding: '20px',
+              padding: '24px',
               boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-              border: '1px solid #e5e7eb',
+              border: '2px solid #E2E8F0',
               display: 'flex',
               alignItems: 'center',
               gap: '16px',
-              transition: 'all 0.3s'
-            }}>
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
+              e.currentTarget.style.borderColor = '#526681';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+              e.currentTarget.style.borderColor = '#E2E8F0';
+            }}
+            data-aos="zoom-in"
+            data-aos-delay="200"
+            data-aos-duration="800">
               <div style={{
-                width: '50px',
-                height: '50px',
+                width: '48px',
+                height: '48px',
                 borderRadius: '10px',
                 background: '#FEF2F2',
                 display: 'flex',
@@ -268,25 +325,36 @@ export const Coaches = () => {
                 <AlertCircle size={24} color="#EF4444" />
               </div>
               <div>
-                <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase' }}>Inactive Coaches</p>
-                <p style={{ fontSize: '24px', fontWeight: '700', color: '#111827' }}>{stats.inactive}</p>
+                <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Inactive Coaches</p>
+                <p style={{ fontSize: '24px', fontWeight: '700', color: '#111827', margin: '4px 0 0 0' }}>{stats.inactive}</p>
               </div>
             </div>
 
             <div style={{
               backgroundColor: 'white',
               borderRadius: '12px',
-              padding: '20px',
+              padding: '24px',
               boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-              border: '1px solid #e5e7eb',
+              border: '2px solid #E2E8F0',
               display: 'flex',
               alignItems: 'center',
               gap: '16px',
-              transition: 'all 0.3s'
-            }}>
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
+              e.currentTarget.style.borderColor = '#526681';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+              e.currentTarget.style.borderColor = '#E2E8F0';
+            }}
+            data-aos="zoom-in"
+            data-aos-delay="300"
+            data-aos-duration="800">
               <div style={{
-                width: '50px',
-                height: '50px',
+                width: '48px',
+                height: '48px',
                 borderRadius: '10px',
                 background: '#FFFBEB',
                 display: 'flex',
@@ -296,8 +364,8 @@ export const Coaches = () => {
                 <Award size={24} color="#526681" />
               </div>
               <div>
-                <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase' }}>Avg players/Coach</p>
-                <p style={{ fontSize: '24px', fontWeight: '700', color: '#111827' }}>{stats.avgplayersPerCoach}</p>
+                <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Avg players/Coach</p>
+                <p style={{ fontSize: '24px', fontWeight: '700', color: '#111827', margin: '4px 0 0 0' }}>{stats.avgplayersPerCoach}</p>
               </div>
             </div>
           </div>
@@ -316,7 +384,7 @@ export const Coaches = () => {
             borderRadius: '12px',
             padding: '10px 14px',
             boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-            border: '2px solid #e5e7eb',
+            border: '2px solid #E2E8F0',
             display: 'flex',
             alignItems: 'center',
             gap: '10px',
@@ -324,10 +392,10 @@ export const Coaches = () => {
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.borderColor = '#526681';
-            e.currentTarget.style.boxShadow = '0 2px 8px rgba(82, 102, 129, 0.15)';
+            e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.borderColor = '#e5e7eb';
+            e.currentTarget.style.borderColor = '#E2E8F0';
             e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
           }}>
             <Search size={18} color="#526681" />

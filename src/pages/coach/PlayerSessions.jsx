@@ -60,7 +60,9 @@ export const PlayerSessions = () => {
           color: 'white',
           marginBottom: '32px',
           boxShadow: '0 4px 15px rgba(37, 44, 53, 0.1)'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-duration="800">
           <button 
             onClick={() => navigate(-1)}
             style={{
@@ -100,7 +102,10 @@ export const PlayerSessions = () => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
           gap: '16px',
           marginBottom: '32px'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="800">
           {/* Total Sessions Card */}
           <div style={{
             background: 'white',
@@ -118,7 +123,9 @@ export const PlayerSessions = () => {
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
             e.currentTarget.style.transform = 'translateY(0)';
-          }}>
+          }}
+          data-aos="zoom-in"
+          data-aos-duration="800">
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
               <div style={{ backgroundColor: '#E8F2F8', borderRadius: '8px', padding: '8px' }}>
                 <BookOpen size={24} color="#526681" />

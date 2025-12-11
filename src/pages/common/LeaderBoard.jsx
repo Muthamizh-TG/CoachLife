@@ -1,242 +1,18 @@
 import React, { useState, useMemo, useEffect } from "react";
-import { Trophy, Search, Award, Medal, Crown, Zap, X, Flame, Users, Grid3x3, List } from "lucide-react";
+import { Trophy, Search, Award, Medal, Crown, Zap, X, Flame, Users, Grid3x3, List, TrendingUp, Flame as FireIcon, Star } from "lucide-react";
 import { Layout } from "../../components/Layout";
 import { Badge } from "../../components/Badge";
 import leaderboardData from "../../data/leaderboardData.json";
 
-// Global animation styles
-const animationStyles = `
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 
-  @keyframes slideInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.6;
-    }
-  }
-
-  @keyframes shimmer {
-    0% {
-      background-position: -1000px 0;
-    }
-    100% {
-      background-position: 1000px 0;
-    }
-  }
-
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-12px);
-    }
-  }
-
-  @keyframes glow {
-    0%, 100% {
-      box-shadow: 0 0 10px rgba(252, 211, 77, 0.4), inset 0 0 20px rgba(252, 211, 77, 0.1);
-    }
-    50% {
-      box-shadow: 0 0 25px rgba(252, 211, 77, 0.8), inset 0 0 30px rgba(252, 211, 77, 0.2);
-    }
-  }
-
-  @keyframes glowSilver {
-    0%, 100% {
-      box-shadow: 0 0 10px rgba(203, 213, 225, 0.4), inset 0 0 20px rgba(203, 213, 225, 0.1);
-    }
-    50% {
-      box-shadow: 0 0 25px rgba(203, 213, 225, 0.8), inset 0 0 30px rgba(203, 213, 225, 0.2);
-    }
-  }
-
-  @keyframes glowBronze {
-    0%, 100% {
-      box-shadow: 0 0 10px rgba(251, 146, 60, 0.4), inset 0 0 20px rgba(251, 146, 60, 0.1);
-    }
-    50% {
-      box-shadow: 0 0 25px rgba(251, 146, 60, 0.8), inset 0 0 30px rgba(251, 146, 60, 0.2);
-    }
-  }
-
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-      transform: translateY(-40px) rotate(180deg);
-    }
-  }
-
-  @keyframes floatLeft {
-    0%, 100% {
-      transform: translateX(0px) translateY(0px) rotate(0deg);
-    }
-    50% {
-      transform: translateX(-60px) translateY(-40px) rotate(180deg);
-    }
-  }
-
-  @keyframes floatRight {
-    0%, 100% {
-      transform: translateX(0px) translateY(0px) rotate(0deg);
-    }
-    50% {
-      transform: translateX(60px) translateY(-40px) rotate(-180deg);
-    }
-  }
-
-  @keyframes floatSlow {
-    0%, 100% {
-      transform: translateY(0px) scale(1);
-    }
-    50% {
-      transform: translateY(-50px) scale(1.05);
-    }
-  }
-
-  @keyframes pulse2 {
-    0%, 100% {
-      box-shadow: 0 0 20px rgba(82, 102, 129, 0.4);
-    }
-    50% {
-      box-shadow: 0 0 60px rgba(82, 102, 129, 0.8);
-    }
-  }
-
-  @keyframes pulse3 {
-    0%, 100% {
-      box-shadow: 0 0 20px rgba(252, 211, 77, 0.4);
-    }
-    50% {
-      box-shadow: 0 0 60px rgba(252, 211, 77, 0.8);
-    }
-  }
-
-  @keyframes scaleUp {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  @keyframes cardHover {
-    from {
-      transform: translateY(0px) scale(1);
-    }
-    to {
-      transform: translateY(-8px) scale(1.01);
-    }
-  }
-
-  @keyframes shine {
-    0% {
-      background-position: -1000px 0;
-    }
-    100% {
-      background-position: 1000px 0;
-    }
-  }
-
-  .floating-element {
-    position: fixed;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .floating-element-1 {
-    animation: floatSlow 8s ease-in-out infinite;
-  }
-
-  .floating-element-2 {
-    animation: float 10s ease-in-out infinite;
-  }
-
-  .floating-element-3 {
-    animation: floatLeft 12s ease-in-out infinite;
-  }
-
-  .floating-element-4 {
-    animation: floatRight 14s ease-in-out infinite;
-  }
-
-  .floating-circle-1 {
-    animation: pulse2 4s ease-in-out infinite;
-  }
-
-  .floating-circle-2 {
-    animation: pulse3 5s ease-in-out infinite;
-  }
-`;
-
-// Inject styles
-if (typeof document !== "undefined") {
-  const styleSheet = document.createElement("style");
-  styleSheet.textContent = animationStyles;
-  document.head.appendChild(styleSheet);
-}
 
 export const LeaderBoard = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
   const [viewMode, setViewMode] = useState("grid"); // "grid" or "list"
 
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-  // Sort players by points (always sorted)
+  // Sort players by points
   const sortedPlayers = useMemo(() => {
-    return [...leaderboardData].sort((a, b) => b.totalPoints - a.totalPoints);
+    return leaderboardData.sort((a, b) => b.totalPoints - a.totalPoints);
   }, []);
 
   // Get rank styling based on position
@@ -244,62 +20,72 @@ export const LeaderBoard = () => {
     if (index === 0) {
       return {
         container: { 
-          background: "linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%)", 
-          border: "2px solid #526681",
-          boxShadow: "0 4px 12px rgba(252, 211, 77, 0.2)"
+          background: "linear-gradient(135deg, rgba(255, 243, 205, 0.6) 0%, rgba(255, 250, 230, 0.4) 100%)",
+          border: "2px solid rgba(255, 215, 0, 0.3)",
+          boxShadow: "0 6px 20px rgba(255, 215, 0, 0.15)"
         },
         badge: { 
-          background: "linear-gradient(135deg, #526681 0%, #252c35 100%)",
-          color: "#78350F",
-          boxShadow: "0 4px 12px rgba(252, 211, 77, 0.3)"
+          background: "linear-gradient(135deg, rgba(255, 215, 0, 0.8) 0%, rgba(255, 200, 100, 0.7) 100%)",
+          color: "#1E293B",
+          boxShadow: "0 3px 10px rgba(255, 215, 0, 0.2)"
         },
         avatar: {
-          background: "linear-gradient(135deg, #526681 0%, #252c35 100%)",
-          color: "#78350F"
+          background: "linear-gradient(135deg, rgba(255, 215, 0, 0.7) 0%, rgba(255, 200, 100, 0.6) 100%)",
+          color: "#1E293B"
         }
       };
     }
     if (index === 1) {
       return {
         container: { 
-          background: "linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%)", 
-          border: "2px solid #CBD5E1",
-          boxShadow: "0 4px 12px rgba(203, 213, 225, 0.2)"
+          background: "linear-gradient(135deg, rgba(240, 240, 245, 0.5) 0%, rgba(248, 248, 250, 0.35) 100%)",
+          border: "2px solid rgba(192, 192, 192, 0.25)",
+          boxShadow: "0 6px 20px rgba(192, 192, 192, 0.12)"
         },
         badge: { 
-          background: "linear-gradient(135deg, #E5E7EB 0%, #D1D5DB 100%)",
-          color: "#1F2937",
-          boxShadow: "0 4px 12px rgba(209, 213, 219, 0.3)"
+          background: "linear-gradient(135deg, rgba(232, 232, 232, 0.8) 0%, rgba(200, 200, 200, 0.7) 100%)",
+          color: "#1E293B",
+          boxShadow: "0 3px 10px rgba(192, 192, 192, 0.18)"
         },
         avatar: {
-          background: "linear-gradient(135deg, #E5E7EB 0%, #D1D5DB 100%)",
-          color: "#1F2937"
+          background: "linear-gradient(135deg, rgba(232, 232, 232, 0.7) 0%, rgba(200, 200, 200, 0.6) 100%)",
+          color: "#1E293B"
         }
       };
     }
     if (index === 2) {
       return {
         container: { 
-          background: "linear-gradient(135deg, #FFFAF0 0%, #FEE2CB 100%)", 
-          border: "2px solid #FDBA74",
-          boxShadow: "0 4px 12px rgba(251, 191, 36, 0.15)"
+          background: "linear-gradient(135deg, rgba(245, 222, 179, 0.4) 0%, rgba(255, 240, 220, 0.3) 100%)",
+          border: "2px solid rgba(205, 127, 50, 0.25)",
+          boxShadow: "0 6px 20px rgba(205, 127, 50, 0.12)"
         },
         badge: { 
-          background: "linear-gradient(135deg, #FDBA74 0%, #FB923C 100%)",
-          color: "white",
-          boxShadow: "0 4px 12px rgba(251, 146, 60, 0.3)"
+          background: "linear-gradient(135deg, rgba(205, 127, 50, 0.75) 0%, rgba(184, 100, 28, 0.65) 100%)",
+          color: "#1E293B",
+          boxShadow: "0 3px 10px rgba(205, 127, 50, 0.18)"
         },
         avatar: {
-          background: "linear-gradient(135deg, #FDBA74 0%, #FB923C 100%)",
-          color: "white"
+          background: "linear-gradient(135deg, rgba(205, 127, 50, 0.6) 0%, rgba(184, 100, 28, 0.5) 100%)",
+          color: "#1E293B"
         }
       };
     }
     return {
       container: { backgroundColor: "white", border: "1px solid #E2E8F0" },
-      badge: { backgroundColor: "#E2E8F0", color: "#1E293B" },
+      badge: { backgroundColor: "#252c35", color: "#ffffff" },
       avatar: { background: "linear-gradient(135deg, #252c35 0%, #526681 100%)", color: "white" }
     };
+  };
+
+  // Get achievement badges
+  const getAchievements = (player, index) => {
+    const achievements = [];
+    if (index < 3) achievements.push("top3");
+    if (player.sessionsCompleted >= 50) achievements.push("champion");
+    if (player.averageRating >= 4.7) achievements.push("rated");
+    if (player.totalPoints >= 8000) achievements.push("elite");
+    return achievements;
   };
 
   // Render stars for rating
@@ -329,146 +115,19 @@ export const LeaderBoard = () => {
 
   return (
     <Layout>
-      {/* Enhanced Floating Background Elements */}
-      {/* Gradient Circle 1 - Top Left */}
-      <div 
-        className="floating-element floating-element-1"
-        style={{ 
-          position: "fixed",
-          top: "5%", 
-          left: "2%", 
-          width: "500px", 
-          height: "500px",
-          background: "radial-gradient(circle at 30% 30%, rgba(252, 211, 77, 0.5), rgba(37, 44, 53, 0.15), transparent)",
-          borderRadius: "50%",
-          filter: "blur(60px)",
-          opacity: 0.6,
-          zIndex: 0,
-          pointerEvents: "none",
-        }} 
-      />
-
-      {/* Gradient Circle 2 - Top Right */}
-      <div 
-        className="floating-element floating-element-2"
-        style={{ 
-          position: "fixed",
-          top: "8%", 
-          right: "3%", 
-          width: "450px", 
-          height: "450px",
-          background: "radial-gradient(circle at 30% 30%, rgba(82, 102, 129, 0.5), rgba(37, 44, 53, 0.15), transparent)",
-          borderRadius: "50%",
-          filter: "blur(60px)",
-          opacity: 0.55,
-          zIndex: 0,
-          pointerEvents: "none",
-        }} 
-      />
-
-      {/* Gradient Circle 3 - Bottom Left */}
-      <div 
-        className="floating-element floating-element-3"
-        style={{ 
-          position: "fixed",
-          bottom: "2%", 
-          left: "8%", 
-          width: "480px", 
-          height: "480px",
-          background: "radial-gradient(circle at 30% 30%, rgba(82, 102, 129, 0.4), rgba(37, 44, 53, 0.12), transparent)",
-          borderRadius: "50%",
-          filter: "blur(65px)",
-          opacity: 0.5,
-          zIndex: 0,
-          pointerEvents: "none",
-        }} 
-      />
-
-      {/* Gradient Circle 4 - Bottom Right */}
-      <div 
-        className="floating-element floating-element-4"
-        style={{ 
-          position: "fixed",
-          bottom: "5%", 
-          right: "4%", 
-          width: "520px", 
-          height: "520px",
-          background: "radial-gradient(circle at 30% 30%, rgba(252, 211, 77, 0.45), rgba(37, 44, 53, 0.12), transparent)",
-          borderRadius: "50%",
-          filter: "blur(65px)",
-          opacity: 0.55,
-          zIndex: 0,
-          pointerEvents: "none",
-        }} 
-      />
-
-      {/* Pulsing Accent Circle 1 */}
-      <div 
-        className="floating-circle-1"
-        style={{ 
-          position: "fixed",
-          top: "25%", 
-          right: "20%", 
-          width: "200px", 
-          height: "200px",
-          background: "radial-gradient(circle, rgba(82, 102, 129, 0.6), rgba(82, 102, 129, 0.2), transparent)",
-          borderRadius: "50%",
-          filter: "blur(30px)",
-          zIndex: 0,
-          pointerEvents: "none",
-          opacity: 0.7,
-        }} 
-      />
-
-      {/* Pulsing Accent Circle 2 */}
-      <div 
-        className="floating-circle-2"
-        style={{ 
-          position: "fixed",
-          bottom: "20%", 
-          left: "15%", 
-          width: "220px", 
-          height: "220px",
-          background: "radial-gradient(circle, rgba(252, 211, 77, 0.5), rgba(252, 211, 77, 0.15), transparent)",
-          borderRadius: "50%",
-          filter: "blur(35px)",
-          zIndex: 0,
-          pointerEvents: "none",
-          opacity: 0.65,
-        }} 
-      />
-
-      {/* Extra shimmer effect - Top Center */}
-      <div 
-        style={{
-          position: "fixed",
-          top: "15%",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "600px",
-          height: "300px",
-          background: "linear-gradient(90deg, transparent, rgba(82, 102, 129, 0.3), transparent)",
-          borderRadius: "50%",
-          filter: "blur(80px)",
-          zIndex: 0,
-          pointerEvents: "none",
-          opacity: 0.3,
-          animation: "float 15s ease-in-out infinite",
-        }}
-      />
-
       <div style={{
-        ...styles.pageContainer,
-        animation: isLoaded ? 'fadeInDown 0.8s ease-out' : 'none',
+        padding: "32px",
+        background: "#F8FAFC",
+        minHeight: "100vh",
       }}>
         {/* Hero Section with Gradient Background */}
         <div style={{
-          ...styles.heroSection,
-          animation: isLoaded ? 'slideInUp 0.8s ease-out' : 'none',
-        }}>
+          ...styles.heroSection
+        }}
+        data-aos="fade-up"
+        data-aos-duration="800">
           <div style={styles.heroContent}>
             <div style={styles.titleWrapper}>
-              <Trophy size={48} style={{ color: "#526681" }} />
               <div>
                 <h1 style={styles.mainTitle}>Leaderboard</h1>
                 <p style={styles.heroSubtitle}>Track achievements and celebrate excellence</p>
@@ -498,27 +157,31 @@ export const LeaderBoard = () => {
                 List View
               </button>
             </div>
-
-            <Crown size={64} style={{ color: "#526681", opacity: 0.15 }} />
           </div>
         </div>
 
         {/* Enhanced Stats Cards */}
         <div style={{
-          ...styles.statsGrid,
-          animation: isLoaded ? 'slideInUp 0.8s ease-out 0.1s both' : 'none',
-        }}>
+          ...styles.statsGrid
+        }}
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="800">
           <div style={{
             ...styles.statCardPrimary,
           }} onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "translateY(-12px) scale(1.02)";
-            e.currentTarget.style.boxShadow = "0 20px 50px rgba(252, 211, 77, 0.3)";
+            e.currentTarget.style.boxShadow = "0 8px 20px rgba(82, 102, 129, 0.1)";
+            e.currentTarget.style.borderColor = "#526681";
+            e.currentTarget.style.transform = "translateY(-2px)";
           }} onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "translateY(0) scale(1)";
-            e.currentTarget.style.boxShadow = styles.statCardPrimary.boxShadow;
-          }}>
+            e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.04)";
+            e.currentTarget.style.borderColor = "#E2E8F0";
+            e.currentTarget.style.transform = "translateY(0)";
+          }}
+          data-aos="zoom-in"
+          data-aos-duration="800">
             <div style={styles.statCardIconGold}>
-              <Flame size={32} style={{ color: "#DC2626", animation: isLoaded ? 'pulse 2s infinite' : 'none' }} />
+              <Flame size={32} style={{ color: "#DC2626" }} />
             </div>
             <div style={styles.statCardInfo}>
               <span style={styles.statLabel}>Top Performer</span>
@@ -529,12 +192,17 @@ export const LeaderBoard = () => {
           <div style={{
             ...styles.statCardSecondary,
           }} onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "translateY(-12px) scale(1.02)";
-            e.currentTarget.style.boxShadow = "0 20px 50px rgba(82, 102, 129, 0.3)";
+            e.currentTarget.style.boxShadow = "0 8px 20px rgba(246, 201, 14, 0.1)";
+            e.currentTarget.style.borderColor = "#526681";
+            e.currentTarget.style.transform = "translateY(-2px)";
           }} onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "translateY(0) scale(1)";
-            e.currentTarget.style.boxShadow = styles.statCardSecondary.boxShadow;
-          }}>
+            e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.04)";
+            e.currentTarget.style.borderColor = "#E2E8F0";
+            e.currentTarget.style.transform = "translateY(0)";
+          }}
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          data-aos-duration="800">
             <div style={styles.statCardIconBlue}>
               <Users size={32} style={{ color: "#526681" }} />
             </div>
@@ -547,12 +215,17 @@ export const LeaderBoard = () => {
           <div style={{
             ...styles.statCardTertiary,
           }} onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "translateY(-12px) scale(1.02)";
-            e.currentTarget.style.boxShadow = "0 20px 50px rgba(80, 200, 120, 0.3)";
+            e.currentTarget.style.boxShadow = "0 8px 20px rgba(16, 185, 129, 0.1)";
+            e.currentTarget.style.borderColor = "#10B981";
+            e.currentTarget.style.transform = "translateY(-2px)";
           }} onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "translateY(0) scale(1)";
-            e.currentTarget.style.boxShadow = styles.statCardTertiary.boxShadow;
-          }}>
+            e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.04)";
+            e.currentTarget.style.borderColor = "#E2E8F0";
+            e.currentTarget.style.transform = "translateY(0)";
+          }}
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-duration="800">
             <div style={styles.statCardIconGreen}>
               <Zap size={32} style={{ color: "#16A34A" }} />
             </div>
@@ -565,164 +238,245 @@ export const LeaderBoard = () => {
 
         {/* Leaderboard Container */}
         <div style={{
-          ...styles.leaderboardSection,
-          animation: isLoaded ? 'slideInUp 0.8s ease-out 0.2s both' : 'none',
-        }}>
+          ...styles.leaderboardSection
+        }}
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="800">
           {sortedPlayers.length > 0 ? (
-            viewMode === "grid" ? (
-              <div style={styles.cardsGrid}>
-              {sortedPlayers.map((player, index) => {
-                const rankStyles = getRankStyles(index);
-                const isTopThree = index < 3;
-                const isHovered = hoveredIndex === index;
-                const animationDelay = `${0.3 + index * 0.08}s`;
-                const medalIcons = [<Flame key="flame" size={24} />, <Medal key="medal1" size={24} />, <Medal key="medal2" size={24} />];
+            <>
+              {/* GRID VIEW - All Players as Cards */}
+              {viewMode === "grid" && (
+                <div style={styles.gridViewSection}>
+                  {/* Top 3 Players */}
+                  <div style={styles.topThreeWrapper}>
+                    {sortedPlayers.slice(0, 3).map((player, index) => {
+                      const rankStyles = getRankStyles(index);
+                      const isHovered = hoveredIndex === index;
 
-                return (
-                  <div
-                    key={player.id}
-                    style={{
-                      ...styles.playerCard,
-                      ...rankStyles.container,
-                      ...(isHovered && styles.playerCardHovered),
-                      animation: isLoaded ? `slideInUp 0.6s ease-out ${animationDelay} both` : 'none',
-                    }}
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
-                  >
-                    {/* Rank Badge - Positioned Absolutely */}
-                    <div style={{
-                      ...styles.rankBadgeContainer,
-                      ...rankStyles.badge,
-                      animation: isTopThree && isLoaded ? (index === 0 ? 'glow 2.5s infinite' : index === 1 ? 'glowSilver 2.5s infinite' : 'glowBronze 2.5s infinite') : 'none',
-                    }}>
-                      <div style={styles.rankBadgeContent}>
-                        {index < 3 ? medalIcons[index] : <span style={styles.rankNumber}>{index + 1}</span>}
-                      </div>
-                    </div>
+                      return (
+                        <div
+                          key={player.id}
+                          style={{
+                            ...styles.playerCard,
+                            ...rankStyles.container,
+                            ...(isHovered && styles.playerCardHovered)
+                          }}
+                          onMouseEnter={() => setHoveredIndex(index)}
+                          onMouseLeave={() => setHoveredIndex(null)}
+                        >
+                          {/* Rank Badge */}
+                          <div style={{
+                            ...styles.rankBadgeContainer,
+                            ...rankStyles.badge,
+                          }}>
+                            <div style={styles.rankBadgeContent}>
+                              {[<Flame key="flame" size={24} />, <Medal key="medal1" size={24} />, <Medal key="medal2" size={24} />][index]}
+                            </div>
+                          </div>
 
-                    {/* Player Info - Centered */}
-                    <div style={styles.playerInfoContainer}>
-                      <div
-                        style={{
-                          ...styles.avatar,
-                          ...rankStyles.avatar,
-                          transform: isHovered ? 'scale(1.15) rotate(5deg)' : 'scale(1)',
-                          transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                        }}
-                      >
-                        {player.avatar}
-                      </div>
-                      <div style={styles.playerTextInfo}>
-                        <div style={{
-                          ...styles.playerName,
-                          color: isHovered ? '#526681' : '#1E293B',
-                          transform: isHovered ? 'scale(1.05)' : 'scale(1)',
-                          transition: 'all 0.3s ease',
-                        }}>
-                          {player.name}
+                          {/* Player Info */}
+                          <div style={styles.playerInfoContainer}>
+                            <div
+                              style={{
+                                ...styles.avatar,
+                                ...rankStyles.avatar,
+                                transform: isHovered ? 'scale(1.15) rotate(5deg)' : 'scale(1)',
+                                transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                              }}
+                            >
+                              {player.avatar}
+                            </div>
+                            <div style={styles.playerTextInfo}>
+                              <div style={{
+                                ...styles.playerName,
+                                color: isHovered ? '#526681' : '#1E293B',
+                                transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+                                transition: 'all 0.3s ease',
+                              }}>
+                                {player.name}
+                              </div>
+                              <div style={{
+                                ...styles.playerLevel,
+                                opacity: isHovered ? 1 : 0.7,
+                                fontSize: isHovered ? '13px' : '12px',
+                                transition: 'all 0.3s ease',
+                              }}>
+                                Level {Math.min(5, Math.floor(player.totalPoints / 1500) + 1)}
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Points */}
+                          <div style={{
+                            ...styles.pointsDisplay,
+                            transform: isHovered ? 'scale(1.1)' : 'scale(1)'
+                          }}>
+                            <div style={styles.pointsLabel}>POINTS</div>
+                            <div style={styles.pointsValue}>
+                              {player.totalPoints.toLocaleString()}
+                            </div>
+                          </div>
                         </div>
-                        <div style={{
-                          ...styles.playerLevel,
-                          opacity: isHovered ? 1 : 0.7,
-                          fontSize: isHovered ? '13px' : '12px',
-                          transition: 'all 0.3s ease',
-                        }}>
-                          Level {Math.min(5, Math.floor(player.totalPoints / 1500) + 1)} • {player.sessionsCompleted} sessions
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Points Display - Bottom */}
-                    <div style={{
-                      ...styles.pointsDisplay,
-                      transform: isHovered ? 'scale(1.1)' : 'scale(1)',
-                      transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                    }}>
-                      <div style={styles.pointsLabel}>POINTS</div>
-                      <div style={styles.pointsValue}>
-                        {player.totalPoints.toLocaleString()}
-                      </div>
-                      {isHovered && <div style={styles.pointsGlow} />}
-                    </div>
+                      );
+                    })}
                   </div>
-                );
-              })}
-            </div>
-            ) : (
-              <div style={styles.listViewContainer}>
-                {sortedPlayers.map((player, index) => {
-                  const rankStyles = getRankStyles(index);
-                  const isTopThree = index < 3;
-                  const medalIcons = [<Flame key="flame" size={20} />, <Medal key="medal1" size={20} />, <Medal key="medal2" size={20} />];
 
-                  return (
-                    <div
-                      key={player.id}
-                      style={{
-                        ...styles.listViewRow,
-                        ...(hoveredIndex === index ? styles.listViewRowHovered : {}),
-                        animation: isLoaded ? `slideInUp 0.6s ease-out ${0.3 + index * 0.04}s both` : 'none',
-                      }}
-                      onMouseEnter={() => setHoveredIndex(index)}
-                      onMouseLeave={() => setHoveredIndex(null)}
-                    >
-                      {/* Rank Badge */}
-                      <div style={{
-                        ...styles.listRankBadge,
-                        ...rankStyles.badge,
-                        animation: isTopThree && isLoaded ? (index === 0 ? 'glow 2.5s infinite' : index === 1 ? 'glowSilver 2.5s infinite' : 'glowBronze 2.5s infinite') : 'none',
-                      }}>
-                        {index < 3 ? medalIcons[index] : <span style={styles.rankNumber}>{index + 1}</span>}
-                      </div>
+                  {/* Remaining Players - 4 per row */}
+                  <div style={styles.remainingPlayersGrid}>
+                    {sortedPlayers.slice(3).map((player, index) => {
+                      const actualIndex = index + 3;
+                      const rankStyles = getRankStyles(actualIndex);
+                      const isHovered = hoveredIndex === actualIndex;
 
-                      {/* Player Avatar */}
-                      <div
-                        style={{
-                          ...styles.listAvatar,
-                          ...rankStyles.avatar,
-                          transform: hoveredIndex === index ? 'scale(1.1) rotate(5deg)' : 'scale(1)',
-                          transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                        }}
-                      >
-                        {player.avatar}
-                      </div>
+                      return (
+                        <div
+                          key={player.id}
+                          style={{
+                            ...styles.playerCard,
+                            ...rankStyles.container,
+                            ...(isHovered && styles.playerCardHovered)
+                          }}
+                          onMouseEnter={() => setHoveredIndex(actualIndex)}
+                          onMouseLeave={() => setHoveredIndex(null)}
+                        >
+                          {/* Rank Badge */}
+                          <div style={{
+                            ...styles.rankBadgeContainer,
+                            ...rankStyles.badge,
+                          }}>
+                            <div style={styles.rankBadgeContent}>
+                              <span>{actualIndex + 1}</span>
+                            </div>
+                          </div>
 
-                      {/* Player Info */}
-                      <div style={styles.listPlayerInfo}>
-                        <div style={{
-                          ...styles.listPlayerName,
-                          color: hoveredIndex === index ? '#526681' : '#1E293B',
-                          transform: hoveredIndex === index ? 'scale(1.02)' : 'scale(1)',
-                          transition: 'all 0.3s ease',
-                        }}>
-                          {player.name}
+                          {/* Player Info */}
+                          <div style={styles.playerInfoContainer}>
+                            <div
+                              style={{
+                                ...styles.avatar,
+                                ...rankStyles.avatar,
+                                transform: isHovered ? 'scale(1.15) rotate(5deg)' : 'scale(1)',
+                                transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                              }}
+                            >
+                              {player.avatar}
+                            </div>
+                            <div style={styles.playerTextInfo}>
+                              <div style={{
+                                ...styles.playerName,
+                                color: isHovered ? '#526681' : '#1E293B',
+                                transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+                                transition: 'all 0.3s ease',
+                              }}>
+                                {player.name}
+                              </div>
+                              <div style={{
+                                ...styles.playerLevel,
+                                opacity: isHovered ? 1 : 0.7,
+                                fontSize: isHovered ? '13px' : '12px',
+                                transition: 'all 0.3s ease',
+                              }}>
+                                Level {Math.min(5, Math.floor(player.totalPoints / 1500) + 1)}
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Points */}
+                          <div style={{
+                            ...styles.pointsDisplay,
+                            transform: isHovered ? 'scale(1.1)' : 'scale(1)'
+                          }}>
+                            <div style={styles.pointsLabel}>POINTS</div>
+                            <div style={styles.pointsValue}>
+                              {player.totalPoints.toLocaleString()}
+                            </div>
+                          </div>
                         </div>
-                        <div style={{
-                          ...styles.listPlayerLevel,
-                          opacity: hoveredIndex === index ? 1 : 0.7,
-                          transition: 'all 0.3s ease',
-                        }}>
-                          Level {Math.min(5, Math.floor(player.totalPoints / 1500) + 1)} • {player.sessionsCompleted} sessions
-                        </div>
-                      </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
 
-                      {/* Points */}
-                      <div style={{
-                        ...styles.listPointsDisplay,
-                        transform: hoveredIndex === index ? 'scale(1.08)' : 'scale(1)',
-                        transition: 'all 0.3s ease',
-                      }}>
-                        <div style={styles.listPointsValue}>
-                          {player.totalPoints.toLocaleString()}
+              {/* LIST VIEW - All Players as Rows */}
+              {viewMode === "list" && (
+                <div style={styles.listViewSection}>
+                  <div style={styles.listViewContainer}>
+                    {sortedPlayers.map((player, index) => {
+                      const rankStyles = getRankStyles(index);
+
+                      return (
+                        <div key={player.id}>
+                          <div
+                            style={{
+                              ...styles.listViewRow,
+                              ...(hoveredIndex === index ? styles.listViewRowHovered : {})
+                            }}
+                            onMouseEnter={() => setHoveredIndex(index)}
+                            onMouseLeave={() => setHoveredIndex(null)}
+                          >
+                            {/* Rank Badge */}
+                            <div style={{...styles.listRankBadge, ...rankStyles.badge}}>
+                              <span style={styles.rankNumber}>{index + 1}</span>
+                            </div>
+
+                            {/* Center Section - Avatar, Name, Level (Centered) */}
+                            <div style={styles.listCenterSection}>
+                              <div
+                                style={{
+                                  ...styles.listAvatar,
+                                  ...rankStyles.avatar,
+                                  transform: hoveredIndex === index ? 'scale(1.1) rotate(5deg)' : 'scale(1)',
+                                  transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                                }}
+                              >
+                                {player.avatar}
+                              </div>
+
+                              <div style={styles.listPlayerInfo}>
+                                <div style={{
+                                  ...styles.listPlayerName,
+                                  color: hoveredIndex === index ? '#526681' : '#1E293B',
+                                  transform: hoveredIndex === index ? 'scale(1.02)' : 'scale(1)',
+                                  transition: 'all 0.3s ease',
+                                }}>
+                                  {player.name}
+                                </div>
+                                <div style={{
+                                  ...styles.listPlayerLevel,
+                                  opacity: hoveredIndex === index ? 1 : 0.7,
+                                  transition: 'all 0.3s ease',
+                                }}>
+                                  Level {Math.min(5, Math.floor(player.totalPoints / 1500) + 1)}
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Points */}
+                            <div style={{
+                              ...styles.listPointsDisplay,
+                              transform: hoveredIndex === index ? 'scale(1.08)' : 'scale(1)',
+                              transition: 'all 0.3s ease',
+                            }}>
+                              <div style={styles.listPointsValue}>
+                                {player.totalPoints.toLocaleString()}
+                              </div>
+                              <div style={styles.listPointsLabel}>points</div>
+                            </div>
+                          </div>
+                          
+                          {/* Divider after top 3 */}
+                          {index === 2 && (
+                            <div style={styles.listDivider} />
+                          )}
                         </div>
-                        <div style={styles.listPointsLabel}>points</div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            )
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </>
           ) : (
             <div style={styles.emptyState}>
               <div style={styles.emptyStateIconWrapper}>
@@ -741,134 +495,142 @@ export default LeaderBoard;
 
 const styles = {
   pageContainer: {
-    padding: "40px 24px",
-    maxWidth: "1400px",
-    margin: "0 auto",
-    position: "relative",
-    zIndex: 1,
+    padding: "32px",
+    background: "#F8FAFC",
+    minHeight: "100vh",
   },
 
   // Hero Section
   heroSection: {
-    background: "linear-gradient(135deg, #252c35 0%, #526681 100%)",
-    borderRadius: "20px",
-    padding: "40px",
-    marginBottom: "48px",
+    background: "linear-gradient(135deg, #252c35, #526681)",
+    borderRadius: "16px",
+    padding: "32px",
+    marginBottom: "32px",
     position: "relative",
     overflow: "hidden",
-    boxShadow: "0 20px 60px rgba(37, 44, 53, 0.25)",
+    boxShadow: "0 4px 12px rgba(37, 44, 53, 0.2)",
+    border: "none",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
   },
 
   heroContent: {
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center",
-    gap: "30px",
+    alignItems: "flex-start",
+    width: "100%",
+    gap: "24px",
   },
 
   titleWrapper: {
     display: "flex",
-    alignItems: "center",
-    gap: "20px",
+    alignItems: "flex-start",
+    gap: "16px",
     flex: 1,
+    flexDirection: "column",
   },
 
   mainTitle: {
-    fontSize: "42px",
-    fontWeight: "900",
+    fontSize: "32px",
+    fontWeight: "bold",
     color: "white",
-    margin: "0 0 8px 0",
-    letterSpacing: "-1px",
+    margin: "0",
+    letterSpacing: "0",
   },
 
   heroSubtitle: {
-    fontSize: "16px",
-    color: "rgba(255, 255, 255, 0.85)",
+    fontSize: "17px",
+    color: "rgba(255, 255, 255, 0.9)",
     margin: 0,
     fontWeight: "500",
+    letterSpacing: "0.3px",
   },
 
   // Stats Grid
   statsGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-    gap: "20px",
-    marginBottom: "48px",
+    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+    gap: "16px",
+    marginBottom: "32px",
   },
 
   statCardPrimary: {
     display: "flex",
-    alignItems: "center",
-    gap: "20px",
-    padding: "28px",
-    background: "linear-gradient(135deg, rgba(37, 44, 53, 0.1) 0%, rgba(82, 102, 129, 0.05) 100%)",
-    border: "2px solid #252c35",
-    borderRadius: "16px",
-    boxShadow: "0 10px 30px rgba(37, 44, 53, 0.15)",
-    transition: "all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
+    flexDirection: "column",
+    gap: "12px",
+    padding: "20px",
+    background: "#FFFFFF",
+    border: "2px solid #E2E8F0",
+    borderRadius: "12px",
+    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
+    transition: "all 0.3s ease",
     cursor: "pointer",
   },
 
   statCardSecondary: {
     display: "flex",
-    alignItems: "center",
-    gap: "20px",
-    padding: "28px",
-    background: "linear-gradient(135deg, rgba(82, 102, 129, 0.1) 0%, rgba(37, 44, 53, 0.05) 100%)",
-    border: "2px solid #526681",
-    borderRadius: "16px",
-    boxShadow: "0 10px 30px rgba(82, 102, 129, 0.15)",
-    transition: "all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
+    flexDirection: "column",
+    gap: "12px",
+    padding: "20px",
+    background: "#FFFFFF",
+    border: "2px solid #E2E8F0",
+    borderRadius: "12px",
+    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
+    transition: "all 0.3s ease",
     cursor: "pointer",
   },
 
   statCardTertiary: {
     display: "flex",
-    alignItems: "center",
-    gap: "20px",
-    padding: "28px",
-    background: "linear-gradient(135deg, rgba(37, 44, 53, 0.08) 0%, rgba(82, 102, 129, 0.08) 100%)",
-    border: "2px solid #252c35",
-    borderRadius: "16px",
-    boxShadow: "0 10px 30px rgba(37, 44, 53, 0.12)",
-    transition: "all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
+    flexDirection: "column",
+    gap: "12px",
+    padding: "20px",
+    background: "#FFFFFF",
+    border: "2px solid #E2E8F0",
+    borderRadius: "12px",
+    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
+    transition: "all 0.3s ease",
     cursor: "pointer",
   },
 
   statCardIconGold: {
-    width: "64px",
-    height: "64px",
-    borderRadius: "12px",
+    width: "44px",
+    height: "44px",
+    borderRadius: "10px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    background: "rgba(37, 44, 53, 0.2)",
+    background: "#FFFBEB",
     flexShrink: 0,
-    animation: "bounce 2s infinite",
+    animation: "none",
+    border: "none",
   },
 
   statCardIconBlue: {
-    width: "64px",
-    height: "64px",
-    borderRadius: "12px",
+    width: "44px",
+    height: "44px",
+    borderRadius: "10px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    background: "rgba(82, 102, 129, 0.2)",
+    background: "#E8F2F8",
     flexShrink: 0,
-    animation: "bounce 2s infinite 0.2s",
+    animation: "none",
+    border: "none",
   },
 
   statCardIconGreen: {
-    width: "64px",
-    height: "64px",
-    borderRadius: "12px",
+    width: "44px",
+    height: "44px",
+    borderRadius: "10px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    background: "rgba(37, 44, 53, 0.15)",
+    background: "#F0FDF4",
     flexShrink: 0,
-    animation: "bounce 2s infinite 0.4s",
+    animation: "none",
+    border: "none",
   },
 
   statCardInfo: {
@@ -879,17 +641,20 @@ const styles = {
 
   statLabel: {
     fontSize: "12px",
-    fontWeight: "700",
+    fontWeight: "600",
     color: "#64748B",
-    textTransform: "uppercase",
-    letterSpacing: "0.5px",
+    textTransform: "none",
+    letterSpacing: "0",
   },
 
   statNumber: {
-    fontSize: "24px",
-    fontWeight: "900",
-    color: "#1E293B",
+    fontSize: "28px",
+    fontWeight: "bold",
+    color: "#252c35",
     lineHeight: 1,
+    background: "none",
+    WebkitBackgroundClip: "unset",
+    WebkitTextFillColor: "unset",
   },
 
   // Leaderboard Section
@@ -897,95 +662,164 @@ const styles = {
     marginBottom: "40px",
   },
 
+  gridViewSection: {
+    marginBottom: "64px",
+    padding: "40px",
+    borderRadius: "24px",
+    backdropFilter: "blur(10px)"
+  },
+
+  listViewSection: {
+    marginBottom: "64px",
+    padding: "40px",
+    borderRadius: "24px",
+    backdropFilter: "blur(10px)"
+  },
+
+  topThreeSection: {
+    marginBottom: "64px",
+    padding: "40px",
+    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%)",
+    borderRadius: "24px",
+    border: "2px solid rgba(82, 102, 129, 0.15)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 8px 32px rgba(37, 44, 53, 0.08)",
+  },
+
+  remainingPlayersSection: {
+    marginBottom: "40px",
+    padding: "40px",
+    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%)",
+    borderRadius: "24px",
+    border: "2px solid rgba(82, 102, 129, 0.15)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 8px 32px rgba(37, 44, 53, 0.08)",
+  },
+
+  sectionTitle: {
+    fontSize: "28px",
+    fontWeight: "900",
+    color: "#252c35",
+    marginBottom: "40px",
+    margin: "0 0 40px 0",
+    letterSpacing: "-1px",
+    background: "linear-gradient(135deg, #252c35 0%, #526681 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  },
+
   // View Toggle
   viewToggleContainer: {
     display: "flex",
-    gap: "12px",
-    alignItems: "center",
+    gap: "10px",
+    background: "rgba(255, 255, 255, 0.15)",
+    padding: "6px",
+    borderRadius: "10px",
+    border: "1px solid rgba(255, 255, 255, 0.3)",
   },
 
   viewToggleButton: {
     display: "flex",
     alignItems: "center",
-    gap: "8px",
-    padding: "10px 18px",
-    borderRadius: "10px",
-    border: "2px solid",
-    fontSize: "14px",
-    fontWeight: "700",
+    gap: "6px",
+    padding: "8px 12px",
+    borderRadius: "8px",
+    border: "none",
+    fontSize: "13px",
+    fontWeight: "600",
     cursor: "pointer",
-    transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+    transition: "all 0.2s ease",
     fontFamily: "inherit",
   },
 
   viewToggleButtonActive: {
-    backgroundColor: "white",
-    color: "#252c35",
-    borderColor: "white",
-    boxShadow: "0 6px 20px rgba(255, 255, 255, 0.3)",
+    backgroundColor: "#FFFFFF",
+    color: "#526681",
+    borderColor: "none",
+    boxShadow: "none",
   },
 
   viewToggleButtonInactive: {
-    backgroundColor: "rgba(255, 255, 255, 0.2)",
+    backgroundColor: "transparent",
     color: "white",
-    borderColor: "white",
-    opacity: 0.7,
+    borderColor: "none",
+    opacity: 1,
   },
 
   cardsGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
-    gap: "24px",
+    gridTemplateColumns: "repeat(4, 1fr)",
+    gap: "28px",
+    marginBottom: "32px",
+  },
+
+  topThreeWrapper: {
+    gridColumn: "1 / -1",
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gap: "28px",
+    marginBottom: "28px",
+  },
+
+  remainingPlayersGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(4, 1fr)",
+    gap: "28px",
+    marginBottom: "32px",
   },
 
   listViewContainer: {
     display: "flex",
     flexDirection: "column",
-    gap: "16px",
+    gap: "18px",
   },
 
   listViewRow: {
     display: "flex",
     alignItems: "center",
-    gap: "16px",
-    padding: "20px 24px",
-    backgroundColor: "white",
-    border: "2px solid #E2E8F0",
-    borderRadius: "12px",
-    transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+    gap: "24px",
+    padding: "22px 28px",
+    backgroundColor: "#FFFFFF",
+    border: "2px solid rgba(82, 102, 129, 0.15)",
+    borderRadius: "16px",
+    transition: "all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)",
     cursor: "pointer",
+    boxShadow: "0 4px 16px rgba(37, 44, 53, 0.1)",
   },
 
   listViewRowHovered: {
-    transform: "translateX(8px)",
-    borderColor: "#526681",
-    boxShadow: "0 10px 30px rgba(82, 102, 129, 0.15)",
+    transform: "translateY(-4px) scale(1.01)",
+    borderColor: "rgba(82, 102, 129, 0.4)",
+    boxShadow: "0 16px 48px rgba(82, 102, 129, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
+    backgroundColor: "white",
   },
 
   listRankBadge: {
-    width: "48px",
-    height: "48px",
+    width: "52px",
+    height: "52px",
     borderRadius: "50%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     border: "3px solid white",
-    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.12)",
+    boxShadow: "0 6px 16px rgba(37, 44, 53, 0.15)",
     flexShrink: 0,
     color: "white",
+    fontWeight: "900",
+    fontSize: "18px",
   },
 
   listAvatar: {
-    width: "50px",
-    height: "50px",
+    width: "56px",
+    height: "56px",
     borderRadius: "50%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontSize: "20px",
+    fontSize: "24px",
     fontWeight: "800",
-    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.12)",
-    border: "2px solid white",
+    boxShadow: "0 6px 16px rgba(37, 44, 53, 0.15)",
+    border: "3px solid white",
     flexShrink: 0,
   },
 
@@ -994,6 +828,15 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     gap: "4px",
+  },
+
+  listCenterSection: {
+    flex: 1,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    gap: "14px",
+    minWidth: 0,
   },
 
   listPlayerName: {
@@ -1032,47 +875,55 @@ const styles = {
     letterSpacing: "0.5px",
   },
 
+  listDivider: {
+    height: "10px",
+    background: "linear-gradient(90deg, transparent, #000000ff, transparent)",
+    margin: "20px 0 0 0",
+    borderRadius: "2px",
+  },
+
   playerCard: {
     position: "relative",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    gap: "16px",
-    padding: "32px 24px 28px 24px",
-    borderRadius: "16px",
+    gap: "20px",
+    padding: "48px 32px 36px 32px",
+    borderRadius: "24px",
     border: "2px solid",
-    transition: "all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
+    transition: "all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)",
     cursor: "pointer",
-    minHeight: "320px",
+    minHeight: "350px",
     justifyContent: "space-between",
+    boxShadow: "0 12px 40px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.5)",
   },
 
   playerCardHovered: {
-    transform: "translateY(-12px) scale(1.02)",
-    boxShadow: "0 30px 60px rgba(0, 0, 0, 0.2)",
+    transform: "translateY(-16px) scale(1.03)",
+    boxShadow: "0 40px 80px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.5)",
   },
 
   rankBadgeContainer: {
     position: "absolute",
-    top: "-16px",
+    top: "-20px",
     left: "50%",
     transform: "translateX(-50%)",
-    width: "64px",
-    height: "64px",
+    width: "72px",
+    height: "72px",
     borderRadius: "50%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    border: "4px solid white",
-    boxShadow: "0 8px 24px rgba(0, 0, 0, 0.15)",
+    border: "5px solid white",
+    boxShadow: "0 12px 32px rgba(0, 0, 0, 0.2)",
   },
 
   rankBadgeContent: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontSize: "28px",
-    fontWeight: "900",
+    fontSize: "32px",
+    fontWeight: "950",
     color: "white",
   },
 
@@ -1091,16 +942,16 @@ const styles = {
   },
 
   avatar: {
-    width: "60px",
-    height: "60px",
+    width: "68px",
+    height: "68px",
     borderRadius: "50%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontSize: "24px",
+    fontSize: "28px",
     fontWeight: "800",
-    boxShadow: "0 6px 16px rgba(0, 0, 0, 0.15)",
-    border: "3px solid white",
+    boxShadow: "0 8px 24px rgba(0, 0, 0, 0.18)",
+    border: "4px solid white",
   },
 
   playerTextInfo: {
@@ -1111,8 +962,8 @@ const styles = {
   },
 
   playerName: {
-    fontSize: "18px",
-    fontWeight: "800",
+    fontSize: "20px",
+    fontWeight: "900",
     color: "#1E293B",
     lineHeight: 1.2,
   },
@@ -1125,41 +976,149 @@ const styles = {
 
   pointsDisplay: {
     textAlign: "center",
-    padding: "12px 20px",
-    background: "rgba(37, 44, 53, 0.08)",
-    borderRadius: "12px",
+    padding: "16px 24px",
+    background: "linear-gradient(135deg, rgba(252, 211, 77, 0.15) 0%, rgba(252, 211, 77, 0.08) 100%)",
+    borderRadius: "14px",
     width: "100%",
     position: "relative",
     transition: "all 0.3s ease",
+    border: "1px solid rgba(252, 211, 77, 0.2)",
   },
 
   pointsLabel: {
-    fontSize: "10px",
+    fontSize: "11px",
     fontWeight: "800",
     color: "#252c35",
     textTransform: "uppercase",
-    letterSpacing: "1px",
-    marginBottom: "4px",
+    letterSpacing: "1.2px",
+    marginBottom: "6px",
   },
 
   pointsValue: {
-    fontSize: "28px",
-    fontWeight: "900",
+    fontSize: "32px",
+    fontWeight: "950",
     color: "#252c35",
+    lineHeight: 1,
+    background: "linear-gradient(135deg, #252c35 0%, #526681 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  },
+
+  // Search and Filter Section
+  searchFilterSection: {
+    display: "grid",
+    gridTemplateColumns: "1fr auto",
+    gap: "28px",
+    marginBottom: "48px",
+    alignItems: "center",
+    padding: "32px 36px",
+    background: "linear-gradient(135deg, #FFFFFF 0%, #F5F7FA 100%)",
+    borderRadius: "20px",
+    border: "2px solid rgba(82, 102, 129, 0.2)",
+    backdropFilter: "blur(10px)",
+    boxShadow: "0 12px 40px rgba(37, 44, 53, 0.12)",
+  },
+
+  searchContainer: {
+    display: "flex",
+    alignItems: "center",
+    gap: "14px",
+    padding: "16px 22px",
+    backgroundColor: "white",
+    border: "2px solid rgba(82, 102, 129, 0.2)",
+    borderRadius: "14px",
+    transition: "all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
+    boxShadow: "0 4px 12px rgba(37, 44, 53, 0.08)",
+  },
+
+  searchInput: {
+    flex: 1,
+    border: "none",
+    outline: "none",
+    fontSize: "16px",
+    fontFamily: "inherit",
+    color: "#1E293B",
+    backgroundColor: "transparent",
+    fontWeight: "500",
+  },
+
+  clearButton: {
+    backgroundColor: "rgba(37, 44, 53, 0.1)",
+    border: "none",
+    cursor: "pointer",
+    color: "#252c35",
+    display: "flex",
+    alignItems: "center",
+    transition: "all 0.3s ease",
+    padding: "8px",
+    borderRadius: "8px",
+    fontWeight: "700",
+  },
+
+  filterContainer: {
+    display: "flex",
+    gap: "14px",
+    alignItems: "center",
+  },
+
+  filterSelect: {
+    padding: "13px 20px",
+    borderRadius: "12px",
+    border: "2px solid #252c35",
+    backgroundColor: "white",
+    color: "#252c35",
+    fontSize: "15px",
+    fontWeight: "800",
+    cursor: "pointer",
+    transition: "all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)",
+    fontFamily: "inherit",
+    minWidth: "180px",
+    boxShadow: "0 6px 16px rgba(37, 44, 53, 0.15)",
+  },
+
+  // Rating Styles
+  ratingContainer: {
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
+    justifyContent: "center",
+  },
+
+  ratingStarsContainer: {
+    display: "flex",
+    gap: "2px",
+  },
+
+  star: {
+    fontSize: "16px",
+    color: "#FFD700",
     lineHeight: 1,
   },
 
-  pointsGlow: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: "100%",
-    height: "100%",
-    background: "radial-gradient(circle, rgba(252, 211, 77, 0.4), transparent)",
-    borderRadius: "12px",
-    animation: "pulse 1.5s infinite",
-    pointerEvents: "none",
+  halfStar: {
+    fontSize: "16px",
+    color: "#FFD700",
+    lineHeight: 1,
+    opacity: 0.6,
+  },
+
+  ratingText: {
+    fontSize: "13px",
+    fontWeight: "700",
+    color: "#64748B",
+  },
+
+  listRatingContainer: {
+    display: "flex",
+    alignItems: "center",
+    gap: "6px",
+    flexShrink: 0,
+  },
+
+  listRatingText: {
+    fontSize: "12px",
+    fontWeight: "700",
+    color: "#64748B",
   },
 
   // Empty State

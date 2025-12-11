@@ -47,7 +47,9 @@ export const Analytics = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-duration="800">
           <div>
             <h1 style={{ fontSize: '32px', fontWeight: 'bold', marginBottom: '8px', margin: 0 }}>Analytics</h1>
             <p style={{ fontSize: '14px', opacity: 0.95, margin: 0 }}>Comprehensive system performance and user metrics</p>
@@ -67,7 +69,10 @@ export const Analytics = () => {
 
         <div style={{ padding: '0 32px' }}>
           {/* Key Metrics Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '32px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '32px' }}
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="800">
             <div style={{
               backgroundColor: 'white',
               borderRadius: '12px',
@@ -425,7 +430,7 @@ export const Analytics = () => {
                       }}>
                         <div style={{
                           height: '100%',
-                          background: 'linear-gradient(90deg, #526681, #FFB800)',
+                          background: 'linear-gradient(90deg, #252c35, #526681)',
                           width: `${((count / totalPlayers) * 100)}%`,
                           transition: 'width 0.3s ease'
                         }} />

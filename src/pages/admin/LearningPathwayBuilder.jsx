@@ -209,7 +209,9 @@ export const LearningPathwayBuilder = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-duration="800">
           <div>
             <h1 style={{ fontSize: '32px', fontWeight: 'bold', margin: '0 0 8px 0' }}>Learning Pathway</h1>
             <p style={{ fontSize: '14px', opacity: 0.95, margin: 0 }}>Create and manage learning activities and progression stages</p>
@@ -229,7 +231,10 @@ export const LearningPathwayBuilder = () => {
 
         <div style={{ padding: '0 32px' }}>
           {/* Stats Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '32px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '32px' }}
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="800">
             <div style={{
               backgroundColor: 'white',
               borderRadius: '12px',
@@ -687,7 +692,7 @@ export const LearningPathwayBuilder = () => {
           <input
             type="number"
             min="0"
-            max="1000"
+            max="800"
             value={formData.defaultPoints}
             onChange={(e) => setFormData({ ...formData, defaultPoints: Number(e.target.value) })}
             style={{

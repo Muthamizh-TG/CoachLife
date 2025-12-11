@@ -79,7 +79,9 @@ export const AdminDashboard = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-duration="800">
           <div>
             <h1 style={{ fontSize: '32px', fontWeight: 'bold', marginBottom: '8px', margin: 0 }}>Admin Dashboard</h1>
             <p style={{ fontSize: '14px', opacity: 0.95, margin: 0 }}>Welcome back! Here's your system overview</p>
@@ -112,7 +114,10 @@ export const AdminDashboard = () => {
 
         <div style={{ padding: '0 32px' }}>
           {/* Primary Stats Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '32px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '32px' }}
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="800">
             <div style={{
               backgroundColor: 'white',
               borderRadius: '12px',

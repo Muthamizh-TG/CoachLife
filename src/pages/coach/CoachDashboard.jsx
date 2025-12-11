@@ -44,7 +44,9 @@ export const CoachDashboard = () => {
           color: 'white',
           marginBottom: '32px',
           boxShadow: '0 4px 12px rgba(37, 44, 53, 0.2)'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-duration="800">
           <div style={{
             display: 'flex',
             justifyContent: 'space-between',
@@ -102,7 +104,10 @@ export const CoachDashboard = () => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
           gap: '20px',
           marginBottom: '32px'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="800">
           {/* My players */}
           <div style={{
             background: '#FFFFFF',
@@ -112,6 +117,9 @@ export const CoachDashboard = () => {
             boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
             transition: 'all 0.3s ease'
           }}
+          data-aos="zoom-in"
+          data-aos-delay="0"
+          data-aos-duration="800"
           onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
             e.currentTarget.style.borderColor = '#526681';
@@ -146,6 +154,9 @@ export const CoachDashboard = () => {
             boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
             transition: 'all 0.3s ease'
           }}
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          data-aos-duration="800"
           onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = '0 8px 20px rgba(16, 185, 129, 0.1)';
             e.currentTarget.style.borderColor = '#10B981';
@@ -180,6 +191,9 @@ export const CoachDashboard = () => {
             boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
             transition: 'all 0.3s ease'
           }}
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-duration="800"
           onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = '0 8px 20px rgba(246, 201, 14, 0.1)';
             e.currentTarget.style.borderColor = '#526681';
@@ -214,6 +228,9 @@ export const CoachDashboard = () => {
             boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
             transition: 'all 0.3s ease'
           }}
+          data-aos="zoom-in"
+          data-aos-delay="300"
+          data-aos-duration="800"
           onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = '0 8px 20px rgba(239, 68, 68, 0.1)';
             e.currentTarget.style.borderColor = '#EF4444';

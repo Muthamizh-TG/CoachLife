@@ -1,4 +1,5 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 import { useStore } from '../context/store';
 import { Button } from './Button';
 import logo from '../assets/favicon.png'; // If you need to use the image, use this syntax
@@ -22,12 +23,18 @@ import {
 
 export const Sidebar = ({ onClose }) => {
   const { currentUser, logout } = useStore();
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleLogout = () => {
-    logout();
-    navigate('/');
+  const handleLogout = async () => {
+    setIsLoggingOut(true);
+    try {
+      await logout();
+      navigate('/');
+    } finally {
+      setIsLoggingOut(false);
+    }
   };
 
   const handleNavigation = () => {
@@ -275,8 +282,8 @@ export const Sidebar = ({ onClose }) => {
           style={{
             width: '100%',
             padding: '11px 14px',
-            background: 'rgba(255, 0, 0, 0.60)',
-            border: '2px solid rgba(255, 0, 0, 0.60)',
+            background: 'rgba(255, 255, 255, 0.2)',
+            border: '2px solid rgba(255, 255, 255, 0.6)',
             borderRadius: '10px',
             color: '#ffffffff',
             fontSize: '13px',
@@ -290,12 +297,12 @@ export const Sidebar = ({ onClose }) => {
             letterSpacing: '0.3px'
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = 'rgba(255, 0, 0, 0.75)';
-            e.currentTarget.style.borderColor = 'rgba(255, 0, 0, 0.75)';
+            e.currentTarget.style.background = 'rgba(255, 0, 0, 0.2)';
+            e.currentTarget.style.borderColor = 'rgba(255, 0, 0, 0.6)';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'rgba(255, 0, 0, 0.60)';
-            e.currentTarget.style.borderColor = 'rgba(255, 0, 0, 0.60)';
+            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
+            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
           }}
           title="Logout"
           aria-label="Logout"

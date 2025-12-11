@@ -124,7 +124,9 @@ export const RedeemHistory = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-duration="800">
           <div>
             <h1 style={{ fontSize: '32px', fontWeight: 'bold', margin: '0 0 8px 0' }}>Redeem History</h1>
             <p style={{ fontSize: '14px', opacity: 0.95, margin: 0 }}>Track reward redemptions and player engagement</p>

@@ -52,52 +52,69 @@ export const StartSession = () => {
   const styles = {
     container: {
       minHeight: '100vh',
-      backgroundColor: '#f8fafc',
-      padding: '2.5rem 0',
+      backgroundColor: '#F8FAFC',
+      padding: '32px',
     },
     contentWrapper: {
-      maxWidth: '80rem',
+      maxWidth: '1200px',
       margin: '0 auto',
-      padding: '0 1rem',
     },
     header: {
-      marginBottom: '2rem',
+      background: 'linear-gradient(135deg, #252c35, #526681)',
+      borderRadius: '16px',
+      padding: '32px',
+      color: 'white',
+      marginBottom: '32px',
+      boxShadow: '0 4px 12px rgba(37, 44, 53, 0.2)',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'flex-start',
+    },
+    headerContent: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '8px',
     },
     title: {
-      fontSize: '1.875rem',
+      fontSize: '32px',
       fontWeight: 'bold',
-      color: '#1e293b',
-      marginBottom: '0.25rem',
+      color: 'white',
+      margin: '0',
     },
     subtitle: {
-      color: '#64748b',
-      marginTop: '0.25rem',
+      fontSize: '15px',
+      opacity: 0.9,
+      margin: '0',
+      fontWeight: '400',
     },
     emptyState: {
-      backgroundColor: 'white',
-      borderRadius: '0.75rem',
-      padding: '3rem',
+      backgroundColor: '#FFFFFF',
+      borderRadius: '14px',
+      padding: '48px 32px',
       textAlign: 'center',
-      border: '1px solid #e2e8f0',
+      border: '1.5px solid #E2E8F0',
+      boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
     },
     emptyIcon: {
-      width: '4rem',
-      height: '4rem',
-      backgroundColor: '#f1f5f9',
+      width: '56px',
+      height: '56px',
+      backgroundColor: '#F1F5F9',
       borderRadius: '50%',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      margin: '0 auto 1rem',
+      margin: '0 auto 16px',
+      opacity: 0.3,
+      color: '#D1D5DB',
     },
     emptyTitle: {
-      fontSize: '1.125rem',
-      fontWeight: '600',
-      color: '#1e293b',
-      marginBottom: '0.5rem',
+      fontSize: '18px',
+      fontWeight: '700',
+      color: '#111827',
+      marginBottom: '8px',
     },
     emptyText: {
-      color: '#64748b',
+      color: '#64748B',
     },
     grid: {
       display: 'grid',
@@ -105,12 +122,12 @@ export const StartSession = () => {
       gap: '1.5rem',
     },
     studentCard: {
-      backgroundColor: 'white',
-      borderRadius: '0.75rem',
-      padding: '1.5rem',
-      boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
+      backgroundColor: '#FFFFFF',
+      borderRadius: '12px',
+      padding: '20px',
+      boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
       transition: 'all 0.3s ease',
-      border: '1px solid #e2e8f0',
+      border: '2px solid #E2E8F0',
       cursor: 'pointer',
       width: '100%',
       textAlign: 'left',
@@ -182,12 +199,12 @@ export const StartSession = () => {
       transition: 'color 0.2s',
     },
     playerHeader: {
-      backgroundColor: 'white',
-      borderRadius: '0.75rem',
-      padding: '1.5rem',
-      marginBottom: '2rem',
-      border: '1px solid #e2e8f0',
-      boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
+      backgroundColor: '#FFFFFF',
+      borderRadius: '12px',
+      padding: '20px',
+      marginBottom: '32px',
+      border: '2px solid #E2E8F0',
+      boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
     },
     playerHeaderContent: {
       display: 'flex',
@@ -221,33 +238,37 @@ export const StartSession = () => {
       marginBottom: '2.5rem',
     },
     statCard: {
-      backgroundColor: 'white',
-      borderRadius: '0.75rem',
-      padding: '1.25rem',
-      border: '1px solid #e2e8f0',
+      backgroundColor: '#FFFFFF',
+      borderRadius: '12px',
+      padding: '20px',
+      border: '2px solid #E2E8F0',
       display: 'flex',
-      alignItems: 'center',
-      gap: '1rem',
+      flexDirection: 'column',
+      gap: '12px',
+      boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
+      transition: 'all 0.3s ease',
     },
     statIcon: {
-      width: '2.5rem',
-      height: '2.5rem',
+      width: '44px',
+      height: '44px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      borderRadius: '50%',
+      borderRadius: '10px',
+      backgroundColor: '#E8F2F8',
     },
     statContent: {
       flex: 1,
     },
     statCardLabel: {
-      fontSize: '0.875rem',
-      color: '#64748b',
+      fontSize: '12px',
+      fontWeight: '600',
+      color: '#64748B',
     },
     statCardValue: {
-      fontSize: '1.25rem',
+      fontSize: '28px',
       fontWeight: 'bold',
-      color: '#1e293b',
+      color: '#252c35',
     },
     sectionTitle: {
       fontSize: '1.25rem',
@@ -264,14 +285,14 @@ export const StartSession = () => {
       gap: '1.5rem',
     },
     sessionCard: {
-      backgroundColor: 'white',
-      borderRadius: '1rem',
-      padding: '1.75rem',
-      border: '2px solid #e2e8f0',
-      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+      backgroundColor: '#FFFFFF',
+      borderRadius: '12px',
+      padding: '20px',
+      border: '2px solid #E2E8F0',
+      transition: 'all 0.3s ease',
       textDecoration: 'none',
       display: 'block',
-      boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)',
+      boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
       position: 'relative',
       overflow: 'hidden',
     },
@@ -407,25 +428,36 @@ export const StartSession = () => {
 
   return (
     <Layout>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '24px' }}>
+      <div style={{
+        padding: '32px',
+        background: '#F8FAFC',
+        minHeight: '100vh',
+      }}>
         {/* Students List View */}
         {!selectedPlayerId && (
           <>
             {/* Header */}
             <div style={{
-              background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
-              borderRadius: '12px',
+              background: 'linear-gradient(135deg, #252c35, #526681)',
+              borderRadius: '16px',
               padding: '32px',
               color: 'white',
               marginBottom: '32px',
-              boxShadow: '0 4px 15px rgba(37, 44, 53, 0.1)'
-            }}>
-              <h1 style={{ fontSize: '32px', fontWeight: '700', margin: '0 0 8px 0' }}>
-                My Players
-              </h1>
-              <p style={{ fontSize: '16px', opacity: 0.9, margin: '0' }}>
-                Select a player to view their sessions and manage coaching activities
-              </p>
+              boxShadow: '0 4px 12px rgba(37, 44, 53, 0.2)',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'flex-start',
+            }}
+            data-aos="fade-up"
+            data-aos-duration="800">
+              <div>
+                <h1 style={{ fontSize: '32px', fontWeight: 'bold', margin: '0 0 8px 0', color: 'white' }}>
+                  My Players
+                </h1>
+                <p style={{ fontSize: '15px', opacity: 0.9, margin: '0', fontWeight: '400' }}>
+                  Select a player to view their sessions and manage coaching activities
+                </p>
+              </div>
             </div>
             
             {/* Search and Filter */}
@@ -492,7 +524,9 @@ export const StartSession = () => {
                 padding: '48px 20px',
                 textAlign: 'center',
                 boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
-              }}>
+              }}
+              data-aos="fade-up"
+              data-aos-duration="800">
                 <div style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -517,30 +551,33 @@ export const StartSession = () => {
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
                 gap: '20px'
-              }}>
+              }}
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="800">
                 {coachStudents.map(student => (
                   <button
                     key={student.playerId}
                     onClick={() => setSelectedPlayerId(student.playerId)}
                     style={{
-                      background: 'white',
+                      background: '#FFFFFF',
                       borderRadius: '12px',
                       padding: '20px',
-                      boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-                      border: '1px solid #E2E8F0',
+                      boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
+                      border: '2px solid #E2E8F0',
                       cursor: 'pointer',
-                      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                      transition: 'all 0.3s ease',
                       textAlign: 'left',
                       textDecoration: 'none',
-                      color: 'inherit'
+                      color: 'inherit',
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.12)';
-                      e.currentTarget.style.transform = 'translateY(-4px)';
+                      e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
+                      e.currentTarget.style.transform = 'translateY(-2px)';
                       e.currentTarget.style.borderColor = '#526681';
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+                      e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
                       e.currentTarget.style.transform = 'translateY(0)';
                       e.currentTarget.style.borderColor = '#E2E8F0';
                     }}

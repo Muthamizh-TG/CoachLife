@@ -31,7 +31,9 @@ export const PastSessions = () => {
           color: 'white',
           marginBottom: '32px',
           boxShadow: '0 4px 15px rgba(37, 44, 53, 0.1)'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-duration="800">
           <h1 style={{ fontSize: '32px', fontWeight: '700', margin: '0 0 8px 0' }}>
             Past Sessions
           </h1>
@@ -46,7 +48,10 @@ export const PastSessions = () => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
           gap: '16px',
           marginBottom: '32px'
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="800">
           {/* Total Sessions Card */}
           <div style={{
             background: 'white',
@@ -60,7 +65,9 @@ export const PastSessions = () => {
             e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.12)';
             e.currentTarget.style.transform = 'translateY(-4px)';
           }}
-          onMouseLeave={(e) => {
+          on
+          data-aos="zoom-in"
+          data-aos-duration="800"MouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
             e.currentTarget.style.transform = 'translateY(0)';
           }}>
@@ -91,7 +98,10 @@ export const PastSessions = () => {
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
             e.currentTarget.style.transform = 'translateY(0)';
-          }}>
+          }}
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          data-aos-duration="800">
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
               <div style={{ backgroundColor: '#F0FDF4', borderRadius: '8px', padding: '8px' }}>
                 <CheckCircle size={24} color="#10B981" />
@@ -119,7 +129,10 @@ export const PastSessions = () => {
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
             e.currentTarget.style.transform = 'translateY(0)';
-          }}>
+          }}
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-duration="800">
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
               <div style={{ backgroundColor: '#FFFBEB', borderRadius: '8px', padding: '8px' }}>
                 <Star size={24} color="#526681" />
