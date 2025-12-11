@@ -40,7 +40,7 @@ export const Rewards = () => {
       <div style={{ maxWidth: '100%', padding: '0' }}>
         {/* Enhanced Header */}
         <div style={{
-          background: 'linear-gradient(135deg, #0F4C81 0%, #1E88E5 100%)',
+          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
           color: 'white',
           padding: '40px 32px',
           marginBottom: '32px',
@@ -86,7 +86,7 @@ export const Rewards = () => {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <Package size={24} color="#0F4C81" />
+                  <Package size={24} color="#252c35" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Total Rewards</p>
@@ -112,7 +112,7 @@ export const Rewards = () => {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <Gift size={24} color="#F6C90E" />
+                  <Gift size={24} color="#526681" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Reward Types</p>
@@ -162,7 +162,7 @@ export const Rewards = () => {
                 left: '12px',
                 top: '50%',
                 transform: 'translateY(-50%)',
-                color: '#1E88E5'
+                color: '#526681'
               }} />
               <input
                 type="text"
@@ -180,8 +180,8 @@ export const Rewards = () => {
                   backgroundColor: 'white'
                 }}
                 onFocus={(e) => {
-                  e.target.style.borderColor = '#1E88E5';
-                  e.target.style.boxShadow = '0 0 0 3px rgba(30, 136, 229, 0.1)';
+                  e.target.style.borderColor = '#526681';
+                  e.target.style.boxShadow = '0 0 0 3px rgba(82, 102, 129, 0.1)';
                 }}
                 onBlur={(e) => {
                   e.target.style.borderColor = '#E2E8F0';
@@ -288,7 +288,7 @@ export const Rewards = () => {
                     display: 'inline-block',
                     padding: '6px 10px',
                     backgroundColor: '#E8F2F8',
-                    color: '#0F4C81',
+                    color: '#252c35',
                     borderRadius: '4px',
                     fontSize: '11px',
                     fontWeight: '700',
@@ -307,7 +307,7 @@ export const Rewards = () => {
                       style={{
                         flex: 1,
                         padding: '8px 12px',
-                        background: '#1E88E5',
+                        background: '#526681',
                         color: 'white',
                         border: 'none',
                         borderRadius: '6px',
@@ -321,10 +321,10 @@ export const Rewards = () => {
                         transition: 'all 0.2s ease'
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.background = '#0F4C81';
+                        e.currentTarget.style.background = '#252c35';
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.background = '#1E88E5';
+                        e.currentTarget.style.background = '#526681';
                       }}
                     >
                       <Edit2 size={14} /> Edit
@@ -483,3 +483,5 @@ export const Rewards = () => {
     </Layout>
   );
 };
+
+

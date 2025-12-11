@@ -43,14 +43,14 @@ export const CoachProfile = () => {
       <div style={{ padding: '32px', background: '#F8FAFC', minHeight: '100vh' }}>
         {/* Hero Section with Profile Card */}
         <div style={{
-          background: 'linear-gradient(135deg, #0F4C81, #1E88E5)',
+          background: 'linear-gradient(135deg, #252c35, #526681)',
           borderRadius: '16px',
           padding: '40px 32px',
           marginBottom: '32px',
           color: 'white',
           position: 'relative',
           overflow: 'hidden',
-          boxShadow: '0 8px 24px rgba(15, 76, 129, 0.2)'
+          boxShadow: '0 8px 24px rgba(37, 44, 53, 0.2)'
         }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '32px' }}>
             {/* Avatar & Info */}
@@ -191,8 +191,8 @@ export const CoachProfile = () => {
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.boxShadow = '0 8px 20px rgba(30, 136, 229, 0.1)';
-            e.currentTarget.style.borderColor = '#1E88E5';
+            e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
+            e.currentTarget.style.borderColor = '#526681';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
@@ -208,10 +208,10 @@ export const CoachProfile = () => {
               justifyContent: 'center',
               marginBottom: '12px'
             }}>
-              <Users size={24} color="#1E88E5" />
+              <Users size={24} color="#526681" />
             </div>
             <p style={{ fontSize: '12px', color: '#64748B', margin: 0, marginBottom: '6px' }}>Total players</p>
-            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#0F4C81', margin: 0 }}>{myplayers.length}</p>
+            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#252c35', margin: 0 }}>{myplayers.length}</p>
           </div>
 
           {/* Sessions Conducted */}
@@ -244,7 +244,7 @@ export const CoachProfile = () => {
               <CheckCircle2 size={24} color="#10B981" />
             </div>
             <p style={{ fontSize: '12px', color: '#64748B', margin: 0, marginBottom: '6px' }}>Sessions Completed</p>
-            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#0F4C81', margin: 0 }}>{completedSessions}</p>
+            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#252c35', margin: 0 }}>{completedSessions}</p>
           </div>
 
           {/* Total Student Points */}
@@ -258,7 +258,7 @@ export const CoachProfile = () => {
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = '0 8px 20px rgba(246, 201, 14, 0.1)';
-            e.currentTarget.style.borderColor = '#F6C90E';
+            e.currentTarget.style.borderColor = '#526681';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
@@ -274,10 +274,10 @@ export const CoachProfile = () => {
               justifyContent: 'center',
               marginBottom: '12px'
             }}>
-              <Zap size={24} color="#F6C90E" />
+              <Zap size={24} color="#526681" />
             </div>
             <p style={{ fontSize: '12px', color: '#64748B', margin: 0, marginBottom: '6px' }}>Total Student Points</p>
-            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#0F4C81', margin: 0 }}>{totalStudentPoints}</p>
+            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#252c35', margin: 0 }}>{totalStudentPoints}</p>
           </div>
 
           {/* Rating */}
@@ -310,7 +310,7 @@ export const CoachProfile = () => {
               <Star size={24} color="#EF4444" fill="#EF4444" />
             </div>
             <p style={{ fontSize: '12px', color: '#64748B', margin: 0, marginBottom: '6px' }}>Average Rating</p>
-            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#0F4C81', margin: 0 }}>{avgRating} <span style={{ fontSize: '14px' }}>⭐</span></p>
+            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#252c35', margin: 0 }}>{avgRating} <span style={{ fontSize: '14px' }}>⭐</span></p>
           </div>
         </div>
 
@@ -345,7 +345,7 @@ export const CoachProfile = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Briefcase size={24} color="#1E88E5" />
+                <Briefcase size={24} color="#526681" />
               </div>
               <h3 style={{
                 fontSize: '16px',
@@ -385,7 +385,7 @@ export const CoachProfile = () => {
                       alignItems: 'center',
                       justifyContent: 'center'
                     }}>
-                      <Icon size={20} color="#1E88E5" />
+                      <Icon size={20} color="#526681" />
                     </div>
                     <div>
                       <p style={{ fontSize: '11px', color: '#64748B', margin: 0, marginBottom: '4px', fontWeight: '600', textTransform: 'uppercase' }}>
@@ -425,7 +425,7 @@ export const CoachProfile = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Target size={24} color="#1E88E5" />
+                <Target size={24} color="#526681" />
               </div>
               <h3 style={{
                 fontSize: '16px',
@@ -438,10 +438,10 @@ export const CoachProfile = () => {
             </div>
             <div style={{ padding: '16px' }}>
               {[
-                { icon: Edit2, label: 'Edit Profile', color: '#1E88E5' },
-                { icon: Lock, label: 'Change Password', color: '#F6C90E' },
+                { icon: Edit2, label: 'Edit Profile', color: '#526681' },
+                { icon: Lock, label: 'Change Password', color: '#526681' },
                 { icon: Settings, label: 'Preferences', color: '#10B981' },
-                { icon: BarChart3, label: 'View Analytics', color: '#0F4C81' }
+                { icon: BarChart3, label: 'View Analytics', color: '#252c35' }
               ].map((action, idx) => {
                 const Icon = action.icon;
                 return (
@@ -508,7 +508,7 @@ export const CoachProfile = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Users size={24} color="#1E88E5" />
+                <Users size={24} color="#526681" />
               </div>
               <h3 style={{
                 fontSize: '16px',
@@ -522,7 +522,7 @@ export const CoachProfile = () => {
             <span style={{
               padding: '6px 12px',
               background: '#E8F2F8',
-              color: '#0F4C81',
+              color: '#252c35',
               borderRadius: '6px',
               fontSize: '12px',
               fontWeight: '700'
@@ -555,8 +555,8 @@ export const CoachProfile = () => {
                       cursor: 'pointer'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.borderColor = '#1E88E5';
-                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(30, 136, 229, 0.1)';
+                      e.currentTarget.style.borderColor = '#526681';
+                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(82, 102, 129, 0.1)';
                       e.currentTarget.style.transform = 'translateY(-2px)';
                     }}
                     onMouseLeave={(e) => {
@@ -570,7 +570,7 @@ export const CoachProfile = () => {
                         width: '44px',
                         height: '44px',
                         borderRadius: '10px',
-                        background: 'linear-gradient(135deg, #1E88E5, #0F4C81)',
+                        background: 'linear-gradient(135deg, #526681, #252c35)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -595,7 +595,7 @@ export const CoachProfile = () => {
                       fontSize: '12px'
                     }}>
                       <span style={{ color: '#64748B' }}>Progress</span>
-                      <span style={{ fontWeight: '700', color: '#0F4C81' }}>{student.progress}%</span>
+                      <span style={{ fontWeight: '700', color: '#252c35' }}>{student.progress}%</span>
                     </div>
 
                     <div style={{
@@ -607,7 +607,7 @@ export const CoachProfile = () => {
                     }}>
                       <div style={{
                         height: '100%',
-                        background: 'linear-gradient(90deg, #1E88E5, #0F4C81)',
+                        background: 'linear-gradient(90deg, #526681, #252c35)',
                         width: `${student.progress}%`,
                         transition: 'width 0.3s'
                       }} />
@@ -619,7 +619,7 @@ export const CoachProfile = () => {
                       fontSize: '12px',
                       color: '#64748B'
                     }}>
-                      <span style={{ fontWeight: '600', color: '#1E88E5' }}>{student.totalPoints} pts</span>
+                      <span style={{ fontWeight: '600', color: '#526681' }}>{student.totalPoints} pts</span>
                       <span style={{ fontWeight: '600' }}>View →</span>
                     </div>
                   </a>
@@ -642,3 +642,5 @@ export const CoachProfile = () => {
     </Layout>
   );
 };
+
+

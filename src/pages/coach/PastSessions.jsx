@@ -25,12 +25,12 @@ export const PastSessions = () => {
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '24px' }}>
         {/* Gradient Header */}
         <div style={{
-          background: 'linear-gradient(135deg, #0F4C81 0%, #1E88E5 100%)',
+          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
           borderRadius: '12px',
           padding: '32px',
           color: 'white',
           marginBottom: '32px',
-          boxShadow: '0 4px 15px rgba(15, 76, 129, 0.1)'
+          boxShadow: '0 4px 15px rgba(37, 44, 53, 0.1)'
         }}>
           <h1 style={{ fontSize: '32px', fontWeight: '700', margin: '0 0 8px 0' }}>
             Past Sessions
@@ -52,7 +52,7 @@ export const PastSessions = () => {
             background: 'white',
             borderRadius: '12px',
             padding: '20px',
-            borderLeft: '4px solid #1E88E5',
+            borderLeft: '4px solid #526681',
             boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
             transition: 'all 0.3s'
           }}
@@ -66,7 +66,7 @@ export const PastSessions = () => {
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
               <div style={{ backgroundColor: '#E8F2F8', borderRadius: '8px', padding: '8px' }}>
-                <BookOpen size={24} color="#1E88E5" />
+                <BookOpen size={24} color="#526681" />
               </div>
               <span style={{ fontSize: '14px', color: '#64748B', fontWeight: '500' }}>Total Sessions</span>
             </div>
@@ -108,7 +108,7 @@ export const PastSessions = () => {
             background: 'white',
             borderRadius: '12px',
             padding: '20px',
-            borderLeft: '4px solid #F6C90E',
+            borderLeft: '4px solid #526681',
             boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
             transition: 'all 0.3s'
           }}
@@ -122,7 +122,7 @@ export const PastSessions = () => {
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
               <div style={{ backgroundColor: '#FFFBEB', borderRadius: '8px', padding: '8px' }}>
-                <Star size={24} color="#F6C90E" />
+                <Star size={24} color="#526681" />
               </div>
               <span style={{ fontSize: '14px', color: '#64748B', fontWeight: '500' }}>Average Rating</span>
             </div>
@@ -136,7 +136,7 @@ export const PastSessions = () => {
             background: 'white',
             borderRadius: '12px',
             padding: '20px',
-            borderLeft: '4px solid #0F4C81',
+            borderLeft: '4px solid #252c35',
             boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
             transition: 'all 0.3s'
           }}
@@ -150,7 +150,7 @@ export const PastSessions = () => {
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
               <div style={{ backgroundColor: '#E8F2F8', borderRadius: '8px', padding: '8px' }}>
-                <Clock size={24} color="#0F4C81" />
+                <Clock size={24} color="#252c35" />
               </div>
               <span style={{ fontSize: '14px', color: '#64748B', fontWeight: '500' }}>Pending</span>
             </div>
@@ -171,13 +171,13 @@ export const PastSessions = () => {
               paddingBottom: '12px',
               borderBottom: '2px solid #E2E8F0'
             }}>
-              <Clock size={20} color="#F6C90E" />
+              <Clock size={20} color="#526681" />
               <h2 style={{ fontSize: '18px', fontWeight: '600', color: '#111827', margin: '0' }}>
                 Pending Sessions
               </h2>
               <span style={{
                 backgroundColor: '#FFFBEB',
-                color: '#F6C90E',
+                color: '#526681',
                 fontSize: '12px',
                 fontWeight: '600',
                 padding: '4px 10px',
@@ -231,7 +231,7 @@ export const PastSessions = () => {
                         padding: '4px 10px',
                         borderRadius: '6px',
                         backgroundColor: '#FFFBEB',
-                        color: '#F6C90E'
+                        color: '#526681'
                       }}>⏳ Pending</span>
                     </div>
                     <div>
@@ -333,7 +333,7 @@ export const PastSessions = () => {
                           color: '#10B981'
                         }}>✓ Completed</span>
                         {session.rating && (
-                          <span style={{ fontSize: '13px', fontWeight: '600', color: '#F6C90E' }}>⭐ {session.rating}/5</span>
+                          <span style={{ fontSize: '13px', fontWeight: '600', color: '#526681' }}>⭐ {session.rating}/5</span>
                         )}
                       </div>
                     </div>
@@ -380,7 +380,7 @@ export const PastSessions = () => {
               borderRadius: '50%',
               marginBottom: '16px'
             }}>
-              <BookOpen size={40} color="#0F4C81" />
+              <BookOpen size={40} color="#252c35" />
             </div>
             <p style={{ fontSize: '16px', fontWeight: '500', marginBottom: '8px', color: '#64748B' }}>
               No sessions yet
@@ -394,3 +394,5 @@ export const PastSessions = () => {
     </Layout>
   );
 };
+
+

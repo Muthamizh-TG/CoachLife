@@ -98,7 +98,7 @@ export const AssignPlayers = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Users size={24} color="#0F4C81" />
+                <Users size={24} color="#252c35" />
               </div>
               <div>
                 <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase' }}>Total Players</p>
@@ -179,7 +179,7 @@ export const AssignPlayers = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Link2 size={24} color="#F6C90E" />
+                <Link2 size={24} color="#526681" />
               </div>
               <div>
                 <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase' }}>Total Assignments</p>
@@ -203,7 +203,7 @@ export const AssignPlayers = () => {
               width: '40px',
               height: '40px',
               borderRadius: '8px',
-              background: 'linear-gradient(135deg, #0F4C81, #1E88E5)',
+              background: 'linear-gradient(135deg, #252c35, #526681)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center'
@@ -291,23 +291,23 @@ export const AssignPlayers = () => {
                 padding: '10px 24px',
                 borderRadius: '8px',
                 fontWeight: '600',
-                background: selectedPlayer && selectedCoach ? 'linear-gradient(135deg, #0F4C81, #1E88E5)' : '#e5e7eb',
+                background: selectedPlayer && selectedCoach ? 'linear-gradient(135deg, #252c35, #526681)' : '#e5e7eb',
                 color: selectedPlayer && selectedCoach ? 'white' : '#999',
                 border: 'none',
                 cursor: selectedPlayer && selectedCoach ? 'pointer' : 'not-allowed',
                 transition: 'all 0.3s',
-                boxShadow: selectedPlayer && selectedCoach ? '0 4px 12px rgba(15, 76, 129, 0.3)' : 'none'
+                boxShadow: selectedPlayer && selectedCoach ? '0 4px 12px rgba(37, 44, 53, 0.3)' : 'none'
               }}
               onMouseEnter={(e) => {
                 if (selectedPlayer && selectedCoach) {
                   e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(15, 76, 129, 0.4)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(37, 44, 53, 0.4)';
                 }
               }}
               onMouseLeave={(e) => {
                 if (selectedPlayer && selectedCoach) {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(15, 76, 129, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(37, 44, 53, 0.3)';
                 }
               }}
             >
@@ -336,7 +336,7 @@ export const AssignPlayers = () => {
             gap: '10px',
             transition: 'all 0.3s'
           }}>
-            <Search size={18} color="#1E88E5" />
+            <Search size={18} color="#526681" />
             <input
               type="text"
               placeholder="Search players..."
@@ -410,7 +410,7 @@ export const AssignPlayers = () => {
                         width: '36px',
                         height: '36px',
                         borderRadius: '50%',
-                        background: 'linear-gradient(135deg, #0F4C81, #1E88E5)',
+                        background: 'linear-gradient(135deg, #252c35, #526681)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -432,7 +432,7 @@ export const AssignPlayers = () => {
                     <div style={{
                       display: 'inline-block',
                       backgroundColor: '#E8F2F8',
-                      color: '#0F4C81',
+                      color: '#252c35',
                       padding: '4px 8px',
                       borderRadius: '4px',
                       fontSize: '12px',
@@ -526,3 +526,5 @@ export const AssignPlayers = () => {
     </Layout>
   );
 };
+
+

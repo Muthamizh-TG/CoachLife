@@ -16,6 +16,7 @@ import {
   Home,
   ChevronRight,
   Menu,
+  Trophy,
   X
 } from 'lucide-react';
 
@@ -42,6 +43,7 @@ export const Sidebar = ({ onClose }) => {
       { label: 'Coaches', path: '/admin/coaches', icon: UserCheck },
       { label: 'Assign Players', path: '/admin/assign-players', icon: UserCheck },
       { label: 'Learning Pathway', path: '/admin/learning-pathway', icon: BookOpen },
+      { label: "Leader Board", path: '/leaderboard', icon: Trophy },
       { label: 'Rewards', path: '/admin/rewards', icon: Gift },
       { label: 'Redeem History', path: '/admin/redeem-history', icon: BarChart3 },
       { label: 'Analytics', path: '/admin/analytics', icon: TrendingUp },
@@ -49,6 +51,7 @@ export const Sidebar = ({ onClose }) => {
     coach: [
       { label: 'Dashboard', path: '/coach', icon: LayoutDashboard },
       { label: 'My Players', path: '/coach/players', icon: Users },
+      { label: 'Leader Board', path: '/leaderboard', icon: Trophy },
       { label: 'Start Session', path: '/coach/start-session', icon: BookOpen },
       { label: 'Profile', path: '/coach/profile', icon: UserCheck },
     ],
@@ -60,7 +63,7 @@ export const Sidebar = ({ onClose }) => {
     <div style={{
       width: '280px',
       height: '100vh',
-      background: 'linear-gradient(135deg, #0F4C81 0%, #1E88E5 100%)',
+      background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
       display: 'flex',
       flexDirection: 'column',
       boxShadow: '2px 0 8px rgba(0, 0, 0, 0.1)',
@@ -85,12 +88,12 @@ export const Sidebar = ({ onClose }) => {
             width: '44px',
             height: '44px',
             borderRadius: '12px',
-            background: 'rgba(246, 201, 14, 0.2)',
+            background: '#dde3e8',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            border: '2px solid rgba(246, 201, 14, 0.4)',
-            boxShadow: '0 4px 12px rgba(246, 201, 14, 0.1)'
+            border: '2px solid rgba(82, 102, 129, 0.4)',
+            boxShadow: '0 4px 12px rgba(82, 102, 129, 0.1)'
           }}>
             <img src={logo} alt="CoachLife Logo" style={{ width: '26px', height: '26px' }} />
           </div>
@@ -100,6 +103,7 @@ export const Sidebar = ({ onClose }) => {
               fontWeight: 'bold',
               margin: 0,
               letterSpacing: '0.5px',
+              color: '#ffffffff',
               textShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'
             }}>CoachLife</h1>
             <p style={{
@@ -137,15 +141,15 @@ export const Sidebar = ({ onClose }) => {
                 margin: '6px 0',
                 borderRadius: '10px',
                 textDecoration: 'none',
-                color: isActive ? '#F6C90E' : 'rgba(255, 255, 255, 0.75)',
-                background: isActive ? 'rgba(246, 201, 14, 0.15)' : 'transparent',
-                border: isActive ? '1.5px solid #F6C90E' : '1.5px solid transparent',
+                color: isActive ? '#dde3e8' : 'rgba(255, 255, 255, 0.75)',
+                background: isActive ? 'rgba(82, 102, 129, 0.15)' : 'transparent',
+                border: isActive ? '1.5px solid #526681' : '1.5px solid transparent',
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 cursor: 'pointer',
                 position: 'relative',
                 fontSize: '14px',
                 fontWeight: isActive ? '600' : '500',
-                boxShadow: isActive ? '0 4px 12px rgba(246, 201, 14, 0.1)' : 'none'
+                boxShadow: isActive ? '0 4px 12px rgba(82, 102, 129, 0.1)' : 'none'
               }}
               onMouseEnter={(e) => {
                 if (!isActive) {
@@ -228,15 +232,15 @@ export const Sidebar = ({ onClose }) => {
             width: '44px',
             height: '44px',
             borderRadius: '12px',
-            background: 'linear-gradient(135deg, #F6C90E, #FFB800)',
+            background: 'linear-gradient(135deg, #252c35, #526681)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             fontSize: '16px',
             fontWeight: 'bold',
-            color: '#0F4C81',
+            color: '#dde3e8',
             flexShrink: 0,
-            boxShadow: '0 4px 12px rgba(246, 201, 14, 0.2)'
+            boxShadow: '0 4px 12px #dde3e84d'
           }}>
             {currentUser?.username?.charAt(0).toUpperCase()}
           </div>
@@ -303,3 +307,5 @@ export const Sidebar = ({ onClose }) => {
     </div>
   );
 };
+
+

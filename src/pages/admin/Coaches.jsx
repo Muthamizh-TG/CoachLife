@@ -62,7 +62,7 @@ export const Coaches = () => {
             width: '36px',
             height: '36px',
             borderRadius: '50%',
-            background: 'linear-gradient(135deg, #0F4C81, #1E88E5)',
+            background: 'linear-gradient(135deg, #252c35, #526681)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -89,7 +89,7 @@ export const Coaches = () => {
           display: 'inline-block',
           padding: '6px 12px',
           backgroundColor: '#FFFBEB',
-          color: '#F6C90E',
+          color: '#526681',
           borderRadius: '6px',
           fontWeight: '600',
           fontSize: '12px'
@@ -103,8 +103,8 @@ export const Coaches = () => {
       label: 'players',
       render: (value) => (
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <Users size={16} color="#1E88E5" />
-          <span style={{ fontWeight: '700', color: '#1E88E5', fontSize: '14px' }}>{value.length}</span>
+          <Users size={16} color="#526681" />
+          <span style={{ fontWeight: '700', color: '#526681', fontSize: '14px' }}>{value.length}</span>
         </div>
       ),
     },
@@ -167,20 +167,20 @@ export const Coaches = () => {
                 padding: '12px 24px',
                 borderRadius: '8px',
                 fontWeight: '600',
-                background: 'linear-gradient(135deg, #0F4C81, #1E88E5)',
+                background: 'linear-gradient(135deg, #252c35, #526681)',
                 color: 'white',
                 border: 'none',
                 cursor: 'pointer',
                 transition: 'all 0.3s',
-                boxShadow: '0 4px 12px rgba(15, 76, 129, 0.3)'
+                boxShadow: '0 4px 12px rgba(37, 44, 53, 0.3)'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 6px 20px rgba(15, 76, 129, 0.4)';
+                e.currentTarget.style.boxShadow = '0 6px 20px rgba(37, 44, 53, 0.4)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(15, 76, 129, 0.3)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(37, 44, 53, 0.3)';
               }}
             >
               <Plus size={18} /> Add New Coach
@@ -209,7 +209,7 @@ export const Coaches = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Users size={24} color="#0F4C81" />
+                <Users size={24} color="#252c35" />
               </div>
               <div>
                 <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase' }}>Total Coaches</p>
@@ -293,7 +293,7 @@ export const Coaches = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Award size={24} color="#F6C90E" />
+                <Award size={24} color="#526681" />
               </div>
               <div>
                 <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase' }}>Avg players/Coach</p>
@@ -323,14 +323,14 @@ export const Coaches = () => {
             transition: 'all 0.3s'
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.borderColor = '#1E88E5';
-            e.currentTarget.style.boxShadow = '0 2px 8px rgba(30, 136, 229, 0.15)';
+            e.currentTarget.style.borderColor = '#526681';
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(82, 102, 129, 0.15)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.borderColor = '#e5e7eb';
             e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
           }}>
-            <Search size={18} color="#1E88E5" />
+            <Search size={18} color="#526681" />
             <input
               type="text"
               placeholder="Search by name, email, or specialization..."
@@ -396,8 +396,8 @@ export const Coaches = () => {
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.backgroundColor = '#E8F2F8';
-                      e.currentTarget.style.borderColor = '#1E88E5';
-                      e.currentTarget.style.color = '#1E88E5';
+                      e.currentTarget.style.borderColor = '#526681';
+                      e.currentTarget.style.color = '#526681';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.backgroundColor = '#f3f4f6';
@@ -629,3 +629,5 @@ export const Coaches = () => {
     </Layout>
   );
 };
+
+

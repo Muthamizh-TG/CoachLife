@@ -76,7 +76,7 @@ export const Players = () => {
             width: '36px',
             height: '36px',
             borderRadius: '50%',
-            background: 'linear-gradient(135deg, #0F4C81, #1E88E5)',
+            background: 'linear-gradient(135deg, #252c35, #526681)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -103,7 +103,7 @@ export const Players = () => {
           display: 'inline-block',
           padding: '6px 12px',
           backgroundColor: '#E8F2F8',
-          color: '#0F4C81',
+          color: '#252c35',
           borderRadius: '6px',
           fontWeight: '600',
           fontSize: '12px'
@@ -120,7 +120,7 @@ export const Players = () => {
           display: 'inline-block',
           padding: '6px 12px',
           backgroundColor: '#FFFBEB',
-          color: '#F6C90E',
+          color: '#526681',
           borderRadius: '6px',
           fontWeight: '600',
           fontSize: '12px'
@@ -154,7 +154,7 @@ export const Players = () => {
           }}>
             <div style={{
               height: '100%',
-              background: `linear-gradient(90deg, #0F4C81, #1E88E5)`,
+              background: `linear-gradient(90deg, #252c35, #526681)`,
               width: `${value}%`,
               transition: 'width 0.3s ease'
             }} />
@@ -190,12 +190,12 @@ export const Players = () => {
                 padding: '12px 24px', 
                 borderRadius: '8px', 
                 fontWeight: '600',
-                background: 'linear-gradient(135deg, #0F4C81, #1E88E5)',
+                background: 'linear-gradient(135deg, #252c35, #526681)',
                 color: 'white',
                 border: 'none',
                 cursor: 'pointer',
                 transition: 'all 0.3s',
-                boxShadow: '0 4px 12px rgba(15, 76, 129, 0.3)'
+                boxShadow: '0 4px 12px rgba(37, 44, 53, 0.3)'
               }}
             >
               <Plus size={18} /> Add New Player
@@ -224,7 +224,7 @@ export const Players = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Users size={24} color="#0F4C81" />
+                <Users size={24} color="#252c35" />
               </div>
               <div>
                 <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase' }}>Total Players</p>
@@ -252,7 +252,7 @@ export const Players = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Target size={24} color="#F6C90E" />
+                <Target size={24} color="#526681" />
               </div>
               <div>
                 <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase' }}>Avg Level</p>
@@ -338,14 +338,14 @@ export const Players = () => {
             transition: 'all 0.3s'
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.borderColor = '#1E88E5';
-            e.currentTarget.style.boxShadow = '0 2px 8px rgba(30, 136, 229, 0.15)';
+            e.currentTarget.style.borderColor = '#526681';
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(82, 102, 129, 0.15)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.borderColor = '#e5e7eb';
             e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
           }}>
-            <Search size={18} color="#1E88E5" />
+            <Search size={18} color="#526681" />
             <input
               type="text"
               placeholder="Search by name or email..."
@@ -470,8 +470,8 @@ export const Players = () => {
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.backgroundColor = '#E8F2F8';
-                      e.currentTarget.style.borderColor = '#1E88E5';
-                      e.currentTarget.style.color = '#1E88E5';
+                      e.currentTarget.style.borderColor = '#526681';
+                      e.currentTarget.style.color = '#526681';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.backgroundColor = '#f3f4f6';
@@ -738,3 +738,5 @@ export const Players = () => {
     </Layout>
   );
 };
+
+

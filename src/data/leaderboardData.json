@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Arjun Kumar",
+    "avatar": "AK",
+    "totalPoints": 8950,
+    "sessionsCompleted": 45,
+    "averageRating": 4.8
+  },
+  {
+    "id": 2,
+    "name": "Priya Sharma",
+    "avatar": "PS",
+    "totalPoints": 8420,
+    "sessionsCompleted": 42,
+    "averageRating": 4.7
+  },
+  {
+    "id": 3,
+    "name": "Vikram Singh",
+    "avatar": "VS",
+    "totalPoints": 7890,
+    "sessionsCompleted": 38,
+    "averageRating": 4.6
+  },
+  {
+    "id": 4,
+    "name": "Anjali Desai",
+    "avatar": "AD",
+    "totalPoints": 7650,
+    "sessionsCompleted": 36,
+    "averageRating": 4.5
+  },
+  {
+    "id": 5,
+    "name": "Rohan Patel",
+    "avatar": "RP",
+    "totalPoints": 7420,
+    "sessionsCompleted": 35,
+    "averageRating": 4.4
+  },
+  {
+    "id": 6,
+    "name": "Deepa Menon",
+    "avatar": "DM",
+    "totalPoints": 7180,
+    "sessionsCompleted": 34,
+    "averageRating": 4.3
+  },
+  {
+    "id": 7,
+    "name": "Aditya Gupta",
+    "avatar": "AG",
+    "totalPoints": 6950,
+    "sessionsCompleted": 32,
+    "averageRating": 4.2
+  },
+  {
+    "id": 8,
+    "name": "Shruti Iyer",
+    "avatar": "SI",
+    "totalPoints": 6720,
+    "sessionsCompleted": 30,
+    "averageRating": 4.1
+  },
+  {
+    "id": 9,
+    "name": "Nikhil Verma",
+    "avatar": "NV",
+    "totalPoints": 6500,
+    "sessionsCompleted": 28,
+    "averageRating": 4.0
+  },
+  {
+    "id": 10,
+    "name": "Neha Nair",
+    "avatar": "NN",
+    "totalPoints": 6280,
+    "sessionsCompleted": 26,
+    "averageRating": 3.9
+  },
+  {
+    "id": 11,
+    "name": "Sanjay Reddy",
+    "avatar": "SR",
+    "totalPoints": 6050,
+    "sessionsCompleted": 24,
+    "averageRating": 3.8
+  },
+  {
+    "id": 12,
+    "name": "Pooja Kapoor",
+    "avatar": "PK",
+    "totalPoints": 5820,
+    "sessionsCompleted": 22,
+    "averageRating": 3.7
+  },
+  {
+    "id": 13,
+    "name": "Ravi Mahajan",
+    "avatar": "RM",
+    "totalPoints": 5600,
+    "sessionsCompleted": 20,
+    "averageRating": 3.6
+  },
+  {
+    "id": 14,
+    "name": "Ananya Das",
+    "avatar": "AD",
+    "totalPoints": 5380,
+    "sessionsCompleted": 18,
+    "averageRating": 3.5
+  },
+  {
+    "id": 15,
+    "name": "Karan Chopra",
+    "avatar": "KC",
+    "totalPoints": 5150,
+    "sessionsCompleted": 16,
+    "averageRating": 3.4
+  }
+]

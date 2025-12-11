@@ -12,7 +12,7 @@ export function Home() {
       password: 'admin',
       description: 'Full system control and analytics',
       icon: BarChart3,
-      color: '#0F4C81'
+      color: '#252c35'
     },
     {
       role: 'Coach',
@@ -20,7 +20,7 @@ export function Home() {
       password: 'coach',
       description: 'Manage players and sessions',
       icon: Target,
-      color: '#1E88E5'
+      color: '#526681'
     }
   ];
 
@@ -63,7 +63,7 @@ export function Home() {
         }
 
         .home-header {
-          background: linear-gradient(135deg, #0F4C81 0%, #1E88E5 100%);
+          background: linear-gradient(135deg, #252c35 0%, #526681 100%);
           color: white;
           padding: 60px 20px;
           text-align: center;
@@ -85,6 +85,7 @@ export function Home() {
         .home-logo h1 {
           font-size: 40px;
           font-weight: 800;
+          colot: ddee3e8;
           margin: 0;
           letter-spacing: -0.5px;
         }
@@ -105,7 +106,7 @@ export function Home() {
           font-size: 14px !important;
           border-radius: 6px !important;
           background: white !important;
-          color: #0F4C81 !important;
+          color: #252c35 !important;
           font-weight: 700 !important;
           border: none !important;
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -151,7 +152,7 @@ export function Home() {
         .feature-icon {
           width: 50px;
           height: 50px;
-          background: linear-gradient(135deg, #0F4C81, #1E88E5);
+          background: linear-gradient(135deg, #252c35, #526681);
           border-radius: 8px;
           display: flex;
           align-items: center;
@@ -210,14 +211,14 @@ export function Home() {
         }
 
         .credential-card:hover {
-          border-color: #0F4C81;
-          box-shadow: 0 4px 12px rgba(15, 76, 129, 0.1);
+          border-color: #252c35;
+          box-shadow: 0 4px 12px rgba(37, 44, 53, 0.1);
         }
 
         .credential-icon {
           width: 60px;
           height: 60px;
-          background: linear-gradient(135deg, #0F4C81, #1E88E5);
+          background: linear-gradient(135deg, #252c35, #526681);
           border-radius: 8px;
           display: flex;
           align-items: center;
@@ -249,7 +250,7 @@ export function Home() {
         }
 
         .credential-info strong {
-          color: #0F4C81;
+          color: #252c35;
           font-weight: 700;
         }
 
@@ -266,13 +267,13 @@ export function Home() {
           font-size: 13px !important;
           font-weight: 700 !important;
           border-radius: 6px !important;
-          background: linear-gradient(135deg, #0F4C81, #1E88E5) !important;
+          background: linear-gradient(135deg, #252c35, #526681) !important;
           color: white !important;
           border: none !important;
         }
 
         .credential-button:hover {
-          box-shadow: 0 4px 12px rgba(15, 76, 129, 0.2);
+          box-shadow: 0 4px 12px rgba(37, 44, 53, 0.2);
         }
 
         .home-footer {

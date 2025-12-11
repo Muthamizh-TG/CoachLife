@@ -62,7 +62,7 @@ export const RedeemHistory = () => {
       key: 'playerId',
       label: 'Player',
       render: (value) => (
-        <div style={{ fontWeight: '500', color: '#0F4C81' }}>{getPlayerName(value)}</div>
+        <div style={{ fontWeight: '500', color: '#252c35' }}>{getPlayerName(value)}</div>
       ),
     },
     {
@@ -116,7 +116,7 @@ export const RedeemHistory = () => {
       <div style={{ maxWidth: '100%', padding: '0' }}>
         {/* Enhanced Header */}
         <div style={{
-          background: 'linear-gradient(135deg, #0F4C81 0%, #1E88E5 100%)',
+          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
           color: 'white',
           padding: '40px 32px',
           marginBottom: '32px',
@@ -162,7 +162,7 @@ export const RedeemHistory = () => {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <BarChart3 size={24} color="#0F4C81" />
+                  <BarChart3 size={24} color="#252c35" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Total Redeems</p>
@@ -214,7 +214,7 @@ export const RedeemHistory = () => {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <Clock size={24} color="#F6C90E" />
+                  <Clock size={24} color="#526681" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Pending</p>
@@ -240,7 +240,7 @@ export const RedeemHistory = () => {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <Gift size={24} color="#F6C90E" />
+                  <Gift size={24} color="#526681" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Total Points Used</p>
@@ -264,7 +264,7 @@ export const RedeemHistory = () => {
                 left: '12px',
                 top: '50%',
                 transform: 'translateY(-50%)',
-                color: '#1E88E5'
+                color: '#526681'
               }} />
               <input
                 type="text"
@@ -282,8 +282,8 @@ export const RedeemHistory = () => {
                   transition: 'all 0.3s ease'
                 }}
                 onFocus={(e) => {
-                  e.target.style.borderColor = '#1E88E5';
-                  e.target.style.boxShadow = '0 0 0 3px rgba(30, 136, 229, 0.1)';
+                  e.target.style.borderColor = '#526681';
+                  e.target.style.boxShadow = '0 0 0 3px rgba(82, 102, 129, 0.1)';
                 }}
                 onBlur={(e) => {
                   e.target.style.borderColor = '#E2E8F0';
@@ -363,3 +363,5 @@ export const RedeemHistory = () => {
     </Layout>
   );
 };
+
+

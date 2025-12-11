@@ -33,8 +33,8 @@ export const AdminDashboard = () => {
   // Chart Data: Session Status Distribution
   const sessionStatusData = [
     { name: 'Submitted', value: submittedSessions, fill: '#10B981' },
-    { name: 'Draft', value: draftSessions, fill: '#F6C90E' },
-    { name: 'Completed', value: completedSessions, fill: '#0F4C81' }
+    { name: 'Draft', value: draftSessions, fill: '#526681' },
+    { name: 'Completed', value: completedSessions, fill: '#252c35' }
   ];
 
   // Chart Data: Player Progress Distribution
@@ -71,7 +71,7 @@ export const AdminDashboard = () => {
       <div style={{ maxWidth: '100%', padding: '0' }}>
         {/* Enhanced Header */}
         <div style={{
-          background: 'linear-gradient(135deg, #0F4C81 0%, #1E88E5 100%)',
+          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
           color: 'white',
           padding: '40px 32px',
           marginBottom: '32px',
@@ -132,7 +132,7 @@ export const AdminDashboard = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Users size={28} color="#0F4C81" />
+                <Users size={28} color="#252c35" />
               </div>
               <div>
                 <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Total Players</p>
@@ -186,7 +186,7 @@ export const AdminDashboard = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <BookOpen size={28} color="#F6C90E" />
+                <BookOpen size={28} color="#526681" />
               </div>
               <div>
                 <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Total Sessions</p>
@@ -264,9 +264,9 @@ export const AdminDashboard = () => {
                         fontSize: '13px'
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.borderColor = '#1E88E5';
+                        e.currentTarget.style.borderColor = '#526681';
                         e.currentTarget.style.backgroundColor = '#E8F2F8';
-                        e.currentTarget.style.color = '#1E88E5';
+                        e.currentTarget.style.color = '#526681';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.borderColor = '#e5e7eb';
@@ -330,7 +330,7 @@ export const AdminDashboard = () => {
                       <p style={{ fontSize: '11px', color: '#666', margin: '2px 0 0 0' }}>Level {player.level}</p>
                     </div>
                     <div style={{ textAlign: 'right' }}>
-                      <p style={{ fontSize: '13px', fontWeight: '700', color: '#0F4C81', margin: 0 }}>{player.totalPoints}pts</p>
+                      <p style={{ fontSize: '13px', fontWeight: '700', color: '#252c35', margin: 0 }}>{player.totalPoints}pts</p>
                       <p style={{ fontSize: '11px', color: '#666', margin: '2px 0 0 0' }}>{player.progress}%</p>
                     </div>
                   </div>
@@ -351,7 +351,7 @@ export const AdminDashboard = () => {
             }}>
               <div style={{
                 fontSize: '24px',
-                background: 'linear-gradient(135deg, #0F4C81, #1E88E5)',
+                background: 'linear-gradient(135deg, #252c35, #526681)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
@@ -374,14 +374,14 @@ export const AdminDashboard = () => {
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 4px 15px rgba(15, 76, 129, 0.12)';
+                e.currentTarget.style.boxShadow = '0 4px 15px rgba(37, 44, 53, 0.12)';
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}>
-                <h3 style={{ fontSize: '14px', fontWeight: '700', color: '#0F4C81', marginBottom: '12px', margin: '0 0 12px 0' }}>Session Status</h3>
+                <h3 style={{ fontSize: '14px', fontWeight: '700', color: '#252c35', marginBottom: '12px', margin: '0 0 12px 0' }}>Session Status</h3>
                 <ResponsiveContainer width="100%" height={220}>
                   <PieChart>
                     <Pie
@@ -414,26 +414,26 @@ export const AdminDashboard = () => {
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 4px 15px rgba(30, 136, 229, 0.12)';
+                e.currentTarget.style.boxShadow = '0 4px 15px rgba(82, 102, 129, 0.12)';
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}>
-                <h3 style={{ fontSize: '14px', fontWeight: '700', color: '#1E88E5', marginBottom: '12px', margin: '0 0 12px 0' }}>Players by Level</h3>
+                <h3 style={{ fontSize: '14px', fontWeight: '700', color: '#526681', marginBottom: '12px', margin: '0 0 12px 0' }}>Players by Level</h3>
                 <ResponsiveContainer width="100%" height={220}>
                   <BarChart data={playerLevelData} margin={{ top: 10, right: 15, bottom: 15, left: -5 }}>
                     <defs>
                       <linearGradient id="colorLevel" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%" stopColor="#1E88E5" stopOpacity={1}/>
-                        <stop offset="95%" stopColor="#0F4C81" stopOpacity={0.8}/>
+                        <stop offset="5%" stopColor="#526681" stopOpacity={1}/>
+                        <stop offset="95%" stopColor="#252c35" stopOpacity={0.8}/>
                       </linearGradient>
                     </defs>
                     <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" vertical={false} />
                     <XAxis dataKey="level" stroke="#999" style={{ fontSize: '11px' }} />
                     <YAxis stroke="#999" style={{ fontSize: '11px' }} width={25} />
-                    <Tooltip contentStyle={{ backgroundColor: '#fff', border: '1px solid #ddd', borderRadius: '6px', padding: '8px' }} cursor={{ fill: 'rgba(30, 136, 229, 0.1)' }} />
+                    <Tooltip contentStyle={{ backgroundColor: '#fff', border: '1px solid #ddd', borderRadius: '6px', padding: '8px' }} cursor={{ fill: 'rgba(82, 102, 129, 0.1)' }} />
                     <Bar dataKey="count" fill="url(#colorLevel)" radius={[6, 6, 0, 0]} />
                   </BarChart>
                 </ResponsiveContainer>
@@ -450,14 +450,14 @@ export const AdminDashboard = () => {
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 4px 15px rgba(15, 76, 129, 0.12)';
+                e.currentTarget.style.boxShadow = '0 4px 15px rgba(37, 44, 53, 0.12)';
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}>
-                <h3 style={{ fontSize: '14px', fontWeight: '700', color: '#0F4C81', marginBottom: '12px', margin: '0 0 12px 0' }}>Top Players Performance</h3>
+                <h3 style={{ fontSize: '14px', fontWeight: '700', color: '#252c35', marginBottom: '12px', margin: '0 0 12px 0' }}>Top Players Performance</h3>
                 <ResponsiveContainer width="100%" height={220}>
                   <LineChart data={topPlayersForChart} margin={{ top: 10, right: 15, bottom: 60, left: -5 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" vertical={false} />
@@ -468,18 +468,18 @@ export const AdminDashboard = () => {
                     <Line 
                       type="linear" 
                       dataKey="points" 
-                      stroke="#0F4C81" 
+                      stroke="#252c35" 
                       strokeWidth={2.5} 
-                      dot={{ fill: '#0F4C81', r: 3 }} 
+                      dot={{ fill: '#252c35', r: 3 }} 
                       activeDot={{ r: 5 }}
                       animationDuration={1000}
                     />
                     <Line 
                       type="linear" 
                       dataKey="progress" 
-                      stroke="#F6C90E" 
+                      stroke="#526681" 
                       strokeWidth={2.5} 
-                      dot={{ fill: '#F6C90E', r: 3 }} 
+                      dot={{ fill: '#526681', r: 3 }} 
                       activeDot={{ r: 5 }}
                       animationDuration={1000}
                     />
@@ -493,3 +493,5 @@ export const AdminDashboard = () => {
     </Layout>
   );
 };
+
+

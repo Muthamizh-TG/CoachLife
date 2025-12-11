@@ -5,6 +5,7 @@ import './App.css';
 import { Home } from './pages/common/Home';
 import { Login } from './pages/common/Login';
 import { NotFound } from './pages/common/NotFound';
+import { LeaderBoard } from './pages/common/LeaderBoard';
 import { ProtectedRoute } from './components/ProtectedRoute';
 
 // Admin Pages
@@ -61,6 +62,7 @@ function App() {
 
         {/* Redirects and Error */}
         <Route path="/404" element={<NotFound />} />
+        <Route path="/leaderboard" element={<LeaderBoard />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

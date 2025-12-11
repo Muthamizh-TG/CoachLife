@@ -59,21 +59,21 @@ export const Login = () => {
           border-radius: 6px;
           font-size: 14px;
           font-weight: 600;
-          color: #0F4C81;
+          color: #252c35;
           cursor: pointer;
           transition: all 0.3s ease;
           z-index: 100;
         }
 
         .back-to-home-btn:hover {
-          background: #0F4C81;
+          background: #252c35;
           color: white;
-          box-shadow: 0 2px 8px rgba(15, 76, 129, 0.2);
+          box-shadow: 0 2px 8px rgba(37, 44, 53, 0.2);
         }
 
         .login-left {
           flex: 1;
-          background: linear-gradient(135deg, #0F4C81 0%, #1E88E5 100%);
+          background: linear-gradient(135deg, #252c35 0%, #526681 100%);
           color: white;
           padding: 60px 40px;
           display: flex;
@@ -191,7 +191,7 @@ export const Login = () => {
         }
 
         .login-submit-btn {
-          background: linear-gradient(135deg, #0F4C81, #1E88E5) !important;
+          background: linear-gradient(135deg, #252c35, #526681) !important;
           color: white !important;
           border: none !important;
           padding: 12px !important;
@@ -201,7 +201,7 @@ export const Login = () => {
         }
 
         .login-submit-btn:hover {
-          box-shadow: 0 4px 12px rgba(15, 76, 129, 0.3);
+          box-shadow: 0 4px 12px rgba(37, 44, 53, 0.3);
         }
 
         .login-divider-new {
@@ -246,19 +246,19 @@ export const Login = () => {
 
         .demo-btn:hover {
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-          border-color: #0F4C81;
+          border-color: #252c35;
         }
 
         .demo-btn-admin:hover {
-          background: #0F4C81;
+          background: #252c35;
           color: white;
-          border-color: #0F4C81;
+          border-color: #252c35;
         }
 
         .demo-btn-coach:hover {
-          background: #1E88E5;
+          background: #526681;
           color: white;
-          border-color: #1E88E5;
+          border-color: #526681;
         }
 
         @media (max-width: 1024px) {
@@ -413,3 +413,4 @@ export const Login = () => {
     </div>
   );
 };
+

@@ -64,7 +64,7 @@ export const LearningPathwayBuilder = () => {
           display: 'inline-block',
           padding: '6px 12px',
           backgroundColor: '#E8F2F8',
-          color: '#0F4C81',
+          color: '#252c35',
           borderRadius: '6px',
           fontSize: '12px',
           fontWeight: '700'
@@ -147,7 +147,7 @@ export const LearningPathwayBuilder = () => {
             onClick={() => {}}
             style={{
               padding: '6px 10px',
-              background: '#1E88E5',
+              background: '#526681',
               color: 'white',
               border: 'none',
               borderRadius: '4px',
@@ -159,8 +159,8 @@ export const LearningPathwayBuilder = () => {
               fontWeight: '600',
               transition: 'all 0.2s ease'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.background = '#0F4C81'}
-            onMouseLeave={(e) => e.currentTarget.style.background = '#1E88E5'}
+            onMouseEnter={(e) => e.currentTarget.style.background = '#252c35'}
+            onMouseLeave={(e) => e.currentTarget.style.background = '#526681'}
           >
             <Edit2 size={12} /> Edit
           </button>
@@ -201,7 +201,7 @@ export const LearningPathwayBuilder = () => {
       <div style={{ maxWidth: '100%', padding: '0' }}>
         {/* Enhanced Header */}
         <div style={{
-          background: 'linear-gradient(135deg, #0F4C81 0%, #1E88E5 100%)',
+          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
           color: 'white',
           padding: '40px 32px',
           marginBottom: '32px',
@@ -247,7 +247,7 @@ export const LearningPathwayBuilder = () => {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <BookOpen size={24} color="#0F4C81" />
+                  <BookOpen size={24} color="#252c35" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Total Activities</p>
@@ -273,7 +273,7 @@ export const LearningPathwayBuilder = () => {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <Layers size={24} color="#0F4C81" />
+                  <Layers size={24} color="#252c35" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Total Stages</p>
@@ -299,7 +299,7 @@ export const LearningPathwayBuilder = () => {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <BarChart3 size={24} color="#F6C90E" />
+                  <BarChart3 size={24} color="#526681" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Unique Levels</p>
@@ -375,7 +375,7 @@ export const LearningPathwayBuilder = () => {
                 left: '12px',
                 top: '50%',
                 transform: 'translateY(-50%)',
-                color: '#1E88E5'
+                color: '#526681'
               }} />
               <input
                 type="text"
@@ -393,8 +393,8 @@ export const LearningPathwayBuilder = () => {
                   transition: 'all 0.3s ease'
                 }}
                 onFocus={(e) => {
-                  e.target.style.borderColor = '#1E88E5';
-                  e.target.style.boxShadow = '0 0 0 3px rgba(30, 136, 229, 0.1)';
+                  e.target.style.borderColor = '#526681';
+                  e.target.style.boxShadow = '0 0 0 3px rgba(82, 102, 129, 0.1)';
                 }}
                 onBlur={(e) => {
                   e.target.style.borderColor = '#E2E8F0';
@@ -429,7 +429,7 @@ export const LearningPathwayBuilder = () => {
               onClick={() => setIsModalOpen(true)}
               style={{
                 padding: '10px 16px',
-                background: 'linear-gradient(135deg, #0F4C81, #1E88E5)',
+                background: 'linear-gradient(135deg, #252c35, #526681)',
                 color: 'white',
                 border: 'none',
                 borderRadius: '8px',
@@ -441,7 +441,7 @@ export const LearningPathwayBuilder = () => {
                 gap: '8px',
                 transition: 'all 0.2s ease'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 4px 12px rgba(15, 76, 129, 0.3)'}
+              onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 4px 12px rgba(37, 44, 53, 0.3)'}
               onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'none'}
             >
               <Plus size={18} /> Add Activity
@@ -656,7 +656,7 @@ export const LearningPathwayBuilder = () => {
               outline: 'none',
               backgroundColor: 'white'
             }}
-            onFocus={(e) => e.target.style.borderColor = '#1E88E5'}
+            onFocus={(e) => e.target.style.borderColor = '#526681'}
             onBlur={(e) => e.target.style.borderColor = '#E2E8F0'}
           />
         </div>
@@ -677,7 +677,7 @@ export const LearningPathwayBuilder = () => {
               outline: 'none',
               backgroundColor: 'white'
             }}
-            onFocus={(e) => e.target.style.borderColor = '#1E88E5'}
+            onFocus={(e) => e.target.style.borderColor = '#526681'}
             onBlur={(e) => e.target.style.borderColor = '#E2E8F0'}
           />
         </div>
@@ -699,7 +699,7 @@ export const LearningPathwayBuilder = () => {
               outline: 'none',
               backgroundColor: 'white'
             }}
-            onFocus={(e) => e.target.style.borderColor = '#1E88E5'}
+            onFocus={(e) => e.target.style.borderColor = '#526681'}
             onBlur={(e) => e.target.style.borderColor = '#E2E8F0'}
           />
         </div>
@@ -757,3 +757,5 @@ export const LearningPathwayBuilder = () => {
   </Layout>
   );
 };
+
+

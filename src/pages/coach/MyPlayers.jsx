@@ -56,12 +56,12 @@ export const MyPlayers = () => {
       <div style={{ padding: '32px', background: '#F8FAFC', minHeight: '100vh' }}>
         {/* Header Section */}
         <div style={{
-          background: 'linear-gradient(135deg, #0F4C81, #1E88E5)',
+          background: 'linear-gradient(135deg, #252c35, #526681)',
           borderRadius: '16px',
           padding: '32px',
           color: 'white',
           marginBottom: '32px',
-          boxShadow: '0 4px 12px rgba(15, 76, 129, 0.2)',
+          boxShadow: '0 4px 12px rgba(37, 44, 53, 0.2)',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'flex-start'
@@ -100,7 +100,7 @@ export const MyPlayers = () => {
                 borderRadius: '8px',
                 border: 'none',
                 background: viewMode === 'grid' ? '#FFFFFF' : 'transparent',
-                color: viewMode === 'grid' ? '#1E88E5' : 'white',
+                color: viewMode === 'grid' ? '#526681' : 'white',
                 cursor: 'pointer',
                 transition: 'all 0.2s ease',
                 fontWeight: '600',
@@ -129,7 +129,7 @@ export const MyPlayers = () => {
                 borderRadius: '8px',
                 border: 'none',
                 background: viewMode === 'list' ? '#FFFFFF' : 'transparent',
-                color: viewMode === 'list' ? '#1E88E5' : 'white',
+                color: viewMode === 'list' ? '#526681' : 'white',
                 cursor: 'pointer',
                 transition: 'all 0.2s ease',
                 fontWeight: '600',
@@ -171,8 +171,8 @@ export const MyPlayers = () => {
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.boxShadow = '0 8px 20px rgba(30, 136, 229, 0.1)';
-            e.currentTarget.style.borderColor = '#1E88E5';
+            e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
+            e.currentTarget.style.borderColor = '#526681';
             e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
@@ -190,10 +190,10 @@ export const MyPlayers = () => {
               justifyContent: 'center',
               marginBottom: '12px'
             }}>
-              <Users size={24} color="#1E88E5" />
+              <Users size={24} color="#526681" />
             </div>
             <p style={{ fontSize: '12px', color: '#64748B', margin: 0, marginBottom: '6px' }}>Total Players</p>
-            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#0F4C81', margin: 0 }}>{totalplayers}</p>
+            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#252c35', margin: 0 }}>{totalplayers}</p>
           </div>
 
           {/* Average Progress */}
@@ -207,7 +207,7 @@ export const MyPlayers = () => {
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = '0 8px 20px rgba(246, 201, 14, 0.1)';
-            e.currentTarget.style.borderColor = '#F6C90E';
+            e.currentTarget.style.borderColor = '#526681';
             e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
@@ -225,10 +225,10 @@ export const MyPlayers = () => {
               justifyContent: 'center',
               marginBottom: '12px'
             }}>
-              <TrendingUp size={24} color="#F6C90E" />
+              <TrendingUp size={24} color="#526681" />
             </div>
             <p style={{ fontSize: '12px', color: '#64748B', margin: 0, marginBottom: '6px' }}>Avg Progress</p>
-            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#0F4C81', margin: 0 }}>{avgProgress}%</p>
+            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#252c35', margin: 0 }}>{avgProgress}%</p>
           </div>
 
           {/* Total Sessions */}
@@ -263,7 +263,7 @@ export const MyPlayers = () => {
               <BookOpen size={24} color="#10B981" />
             </div>
             <p style={{ fontSize: '12px', color: '#64748B', margin: 0, marginBottom: '6px' }}>Total Sessions</p>
-            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#0F4C81', margin: 0 }}>{totalSessions}</p>
+            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#252c35', margin: 0 }}>{totalSessions}</p>
           </div>
 
           {/* Avg Points Per Student */}
@@ -298,7 +298,7 @@ export const MyPlayers = () => {
               <Star size={24} color="#EF4444" fill="#EF4444" />
             </div>
             <p style={{ fontSize: '12px', color: '#64748B', margin: 0, marginBottom: '6px' }}>Avg Points/Players</p>
-            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#0F4C81', margin: 0 }}>{avgPointsPerStudent}</p>
+            <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#252c35', margin: 0 }}>{avgPointsPerStudent}</p>
           </div>
         </div>
 
@@ -328,8 +328,8 @@ export const MyPlayers = () => {
               transition: 'all 0.2s ease'
             }}
             onFocus={(e) => {
-              e.currentTarget.style.borderColor = '#1E88E5';
-              e.currentTarget.style.boxShadow = '0 0 0 4px rgba(30, 136, 229, 0.1)';
+              e.currentTarget.style.borderColor = '#526681';
+              e.currentTarget.style.boxShadow = '0 0 0 4px rgba(82, 102, 129, 0.1)';
             }}
             onBlur={(e) => {
               e.currentTarget.style.borderColor = '#E2E8F0';
@@ -369,7 +369,7 @@ export const MyPlayers = () => {
                 transition: 'all 0.2s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#1E88E5';
+                e.currentTarget.style.borderColor = '#526681';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = '#E2E8F0';
@@ -389,15 +389,15 @@ export const MyPlayers = () => {
               overflowX: 'auto',
               paddingBottom: '4px'
             }}>
-              <Filter size={18} color="#1E88E5" style={{ flexShrink: 0 }} />
+              <Filter size={18} color="#526681" style={{ flexShrink: 0 }} />
               <button
                 onClick={() => setFilterLevel('all')}
                 style={{
                   padding: '8px 14px',
                   borderRadius: '8px',
-                  border: filterLevel === 'all' ? '2px solid #1E88E5' : '1.5px solid #E2E8F0',
+                  border: filterLevel === 'all' ? '2px solid #526681' : '1.5px solid #E2E8F0',
                   background: filterLevel === 'all' ? '#E8F2F8' : '#FFFFFF',
-                  color: filterLevel === 'all' ? '#1E88E5' : '#64748B',
+                  color: filterLevel === 'all' ? '#526681' : '#64748B',
                   cursor: 'pointer',
                   fontWeight: '600',
                   fontSize: '13px',
@@ -406,7 +406,7 @@ export const MyPlayers = () => {
                 }}
                 onMouseEnter={(e) => {
                   if (filterLevel !== 'all') {
-                    e.currentTarget.style.borderColor = '#1E88E5';
+                    e.currentTarget.style.borderColor = '#526681';
                   }
                 }}
                 onMouseLeave={(e) => {
@@ -424,9 +424,9 @@ export const MyPlayers = () => {
                   style={{
                     padding: '8px 14px',
                     borderRadius: '8px',
-                    border: filterLevel === level.toString() ? '2px solid #F6C90E' : '1.5px solid #E2E8F0',
+                    border: filterLevel === level.toString() ? '2px solid #526681' : '1.5px solid #E2E8F0',
                     background: filterLevel === level.toString() ? '#FFFBEB' : '#FFFFFF',
-                    color: filterLevel === level.toString() ? '#F6C90E' : '#64748B',
+                    color: filterLevel === level.toString() ? '#526681' : '#64748B',
                     cursor: 'pointer',
                     fontWeight: '600',
                     fontSize: '13px',
@@ -435,7 +435,7 @@ export const MyPlayers = () => {
                   }}
                   onMouseEnter={(e) => {
                     if (filterLevel !== level.toString()) {
-                      e.currentTarget.style.borderColor = '#F6C90E';
+                      e.currentTarget.style.borderColor = '#526681';
                     }
                   }}
                   onMouseLeave={(e) => {
@@ -471,8 +471,8 @@ export const MyPlayers = () => {
                   cursor: 'pointer'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(30, 136, 229, 0.15)';
-                  e.currentTarget.style.borderColor = '#1E88E5';
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(82, 102, 129, 0.15)';
+                  e.currentTarget.style.borderColor = '#526681';
                   e.currentTarget.style.transform = 'translateY(-4px)';
                 }}
                 onMouseLeave={(e) => {
@@ -494,7 +494,7 @@ export const MyPlayers = () => {
                       <h3 style={{ fontSize: '15px', fontWeight: '700', color: '#111827', margin: 0, marginBottom: '4px' }}>{student.name}</h3>
                       <p style={{ fontSize: '12px', color: '#64748B', margin: 0 }}>{student.email}</p>
                     </div>
-                    <ChevronRight size={20} color="#1E88E5" style={{ flexShrink: 0 }} />
+                    <ChevronRight size={20} color="#526681" style={{ flexShrink: 0 }} />
                   </div>
 
                   {/* Badges */}
@@ -502,7 +502,7 @@ export const MyPlayers = () => {
                     <span style={{
                       padding: '4px 10px',
                       background: '#E8F2F8',
-                      color: '#0F4C81',
+                      color: '#252c35',
                       borderRadius: '6px',
                       fontSize: '11px',
                       fontWeight: '700'
@@ -531,11 +531,11 @@ export const MyPlayers = () => {
                   }}>
                     <div style={{ background: '#F8FAFC', padding: '12px', borderRadius: '8px', textAlign: 'center' }}>
                       <p style={{ fontSize: '11px', color: '#64748B', margin: 0, marginBottom: '4px', fontWeight: '600' }}>Points</p>
-                      <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#1E88E5', margin: 0 }}>{student.totalPoints}</p>
+                      <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#526681', margin: 0 }}>{student.totalPoints}</p>
                     </div>
                     <div style={{ background: '#F8FAFC', padding: '12px', borderRadius: '8px', textAlign: 'center' }}>
                       <p style={{ fontSize: '11px', color: '#64748B', margin: 0, marginBottom: '4px', fontWeight: '600' }}>Sessions</p>
-                      <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#F6C90E', margin: 0 }}>{getplayersessionCount(student.playerId)}</p>
+                      <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#526681', margin: 0 }}>{getplayersessionCount(student.playerId)}</p>
                     </div>
                   </div>
 
@@ -543,7 +543,7 @@ export const MyPlayers = () => {
                   <div style={{ padding: '16px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
                       <span style={{ fontSize: '12px', color: '#64748B', fontWeight: '600' }}>Progress</span>
-                      <span style={{ fontSize: '14px', fontWeight: '700', color: '#0F4C81' }}>{student.progress}%</span>
+                      <span style={{ fontSize: '14px', fontWeight: '700', color: '#252c35' }}>{student.progress}%</span>
                     </div>
                     <div style={{
                       height: '8px',
@@ -553,7 +553,7 @@ export const MyPlayers = () => {
                     }}>
                       <div style={{
                         height: '100%',
-                        background: 'linear-gradient(90deg, #1E88E5, #0F4C81)',
+                        background: 'linear-gradient(90deg, #526681, #252c35)',
                         width: `${student.progress}%`,
                         transition: 'width 0.5s ease'
                       }} />
@@ -569,7 +569,7 @@ export const MyPlayers = () => {
                         textAlign: 'center',
                         padding: '10px 12px',
                         borderRadius: '8px',
-                        background: 'linear-gradient(135deg, #1E88E5, #0F4C81)',
+                        background: 'linear-gradient(135deg, #526681, #252c35)',
                         color: 'white',
                         textDecoration: 'none',
                         fontSize: '12px',
@@ -579,7 +579,7 @@ export const MyPlayers = () => {
                         cursor: 'pointer'
                       }}
                       onMouseEnter={(e) => {
-                        e.target.style.boxShadow = '0 4px 12px rgba(30, 136, 229, 0.3)';
+                        e.target.style.boxShadow = '0 4px 12px rgba(82, 102, 129, 0.3)';
                       }}
                       onMouseLeave={(e) => {
                         e.target.style.boxShadow = 'none';
@@ -594,7 +594,7 @@ export const MyPlayers = () => {
                         textAlign: 'center',
                         padding: '10px 12px',
                         borderRadius: '8px',
-                        background: '#F6C90E',
+                        background: '#526681',
                         color: 'white',
                         textDecoration: 'none',
                         fontSize: '12px',
@@ -675,7 +675,7 @@ export const MyPlayers = () => {
                     <span style={{
                       padding: '4px 10px',
                       background: '#E8F2F8',
-                      color: '#0F4C81',
+                      color: '#252c35',
                       borderRadius: '6px',
                       fontSize: '11px',
                       fontWeight: '700'
@@ -685,10 +685,10 @@ export const MyPlayers = () => {
                   </div>
 
                   {/* Points */}
-                  <div style={{ fontWeight: '700', color: '#1E88E5', fontSize: '13px' }}>{student.totalPoints}</div>
+                  <div style={{ fontWeight: '700', color: '#526681', fontSize: '13px' }}>{student.totalPoints}</div>
 
                   {/* Sessions */}
-                  <div style={{ fontWeight: '700', color: '#F6C90E', fontSize: '13px' }}>{getplayersessionCount(student.playerId)}</div>
+                  <div style={{ fontWeight: '700', color: '#526681', fontSize: '13px' }}>{getplayersessionCount(student.playerId)}</div>
 
                   {/* Progress */}
                   <div>
@@ -702,7 +702,7 @@ export const MyPlayers = () => {
                       }}>
                         <div style={{
                           height: '100%',
-                          background: 'linear-gradient(90deg, #1E88E5, #0F4C81)',
+                          background: 'linear-gradient(90deg, #526681, #252c35)',
                           width: `${student.progress}%`
                         }} />
                       </div>
@@ -717,7 +717,7 @@ export const MyPlayers = () => {
                       style={{
                         padding: '6px 12px',
                         borderRadius: '6px',
-                        background: '#1E88E5',
+                        background: '#526681',
                         color: 'white',
                         textDecoration: 'none',
                         fontSize: '11px',
@@ -726,7 +726,7 @@ export const MyPlayers = () => {
                         border: 'none',
                         cursor: 'pointer'
                       }}
-                      onMouseEnter={(e) => e.target.style.boxShadow = '0 2px 6px rgba(30, 136, 229, 0.3)'}
+                      onMouseEnter={(e) => e.target.style.boxShadow = '0 2px 6px rgba(82, 102, 129, 0.3)'}
                       onMouseLeave={(e) => e.target.style.boxShadow = 'none'}
                     >
                       View
@@ -736,7 +736,7 @@ export const MyPlayers = () => {
                       style={{
                         padding: '6px 12px',
                         borderRadius: '6px',
-                        background: '#F6C90E',
+                        background: '#526681',
                         color: 'white',
                         textDecoration: 'none',
                         fontSize: '11px',
@@ -796,3 +796,5 @@ export const MyPlayers = () => {
     </Layout>
   );
 };
+
+
