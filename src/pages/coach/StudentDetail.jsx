@@ -50,7 +50,7 @@ export const StudentDetail = () => {
             alignItems: 'center',
             gap: '8px',
             backgroundColor: 'rgba(82, 102, 129, 0.1)',
-            color: '#526681',
+            color: '#060030ff',
             border: 'none',
             padding: '8px 12px',
             borderRadius: '6px',
@@ -69,7 +69,7 @@ export const StudentDetail = () => {
 
         {/* Gradient Header with Student Info */}
         <div style={{
-          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
+          background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
           borderRadius: '12px',
           padding: '32px',
           color: 'white',
@@ -123,7 +123,7 @@ export const StudentDetail = () => {
             background: 'white',
             borderRadius: '12px',
             padding: '20px',
-            borderLeft: '4px solid #526681',
+            borderLeft: '4px solid #060030ff',
             boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
             transition: 'all 0.3s'
           }}
@@ -139,7 +139,7 @@ export const StudentDetail = () => {
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
               <div style={{ backgroundColor: '#E8F2F8', borderRadius: '8px', padding: '8px' }}>
-                <Target size={24} color="#526681" />
+                <Target size={24} color="#060030ff" />
               </div>
               <span style={{ fontSize: '14px', color: '#64748B', fontWeight: '500' }}>Current Level</span>
             </div>
@@ -153,7 +153,7 @@ export const StudentDetail = () => {
             background: 'white',
             borderRadius: '12px',
             padding: '20px',
-            borderLeft: '4px solid #526681',
+            borderLeft: '4px solid #060030ff',
             boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
             transition: 'all 0.3s'
           }}
@@ -170,7 +170,7 @@ export const StudentDetail = () => {
           data-aos-duration="800">
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
               <div style={{ backgroundColor: '#FFFBEB', borderRadius: '8px', padding: '8px' }}>
-                <Zap size={24} color="#526681" />
+                <Zap size={24} color="#060030ff" />
               </div>
               <span style={{ fontSize: '14px', color: '#64748B', fontWeight: '500' }}>Current Stage</span>
             </div>
@@ -254,7 +254,7 @@ export const StudentDetail = () => {
             <span style={{
               fontSize: '18px',
               fontWeight: '700',
-              color: '#526681'
+              color: '#060030ff'
             }}>
               {student.progress}%
             </span>
@@ -269,7 +269,7 @@ export const StudentDetail = () => {
             <div style={{
               width: `${student.progress}%`,
               height: '100%',
-              background: 'linear-gradient(90deg, #526681, #252c35)',
+              background: 'linear-gradient(90deg, #060030ff, #252c35)',
               transition: 'width 0.3s ease'
             }}></div>
           </div>
@@ -296,7 +296,7 @@ export const StudentDetail = () => {
             <div style={{ display: 'grid', gap: '12px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px', backgroundColor: '#F8FAFC', borderRadius: '8px' }}>
                 <div style={{ backgroundColor: '#E8F2F8', borderRadius: '6px', padding: '6px' }}>
-                  <BookOpen size={18} color="#526681" />
+                  <BookOpen size={18} color="#060030ff" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#64748B', margin: '0' }}>Sessions Completed</p>
@@ -306,7 +306,7 @@ export const StudentDetail = () => {
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px', backgroundColor: '#F8FAFC', borderRadius: '8px' }}>
                 <div style={{ backgroundColor: '#FFFBEB', borderRadius: '6px', padding: '6px' }}>
-                  <Star size={18} color="#526681" />
+                  <Star size={18} color="#060030ff" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#64748B', margin: '0' }}>Average Rating</p>
@@ -355,21 +355,21 @@ export const StudentDetail = () => {
                 width: '100%',
                 padding: '12px 14px',
                 backgroundColor: '#E8F2F8',
-                border: '1px solid #526681',
+                border: '1px solid #060030ff',
                 borderRadius: '8px',
                 cursor: 'pointer',
-                color: '#526681',
+                color: '#060030ff',
                 fontWeight: '500',
                 fontSize: '14px',
                 transition: 'all 0.3s'
               }}
               onMouseEnter={(e) => {
-                e.target.style.backgroundColor = '#526681';
+                e.target.style.backgroundColor = '#060030ff';
                 e.target.style.color = 'white';
               }}
               onMouseLeave={(e) => {
                 e.target.style.backgroundColor = '#E8F2F8';
-                e.target.style.color = '#526681';
+                e.target.style.color = '#060030ff';
               }}>
                 <MessageSquare size={18} />
                 Send Message
@@ -382,21 +382,21 @@ export const StudentDetail = () => {
                 width: '100%',
                 padding: '12px 14px',
                 backgroundColor: '#FFFBEB',
-                border: '1px solid #526681',
+                border: '1px solid #060030ff',
                 borderRadius: '8px',
                 cursor: 'pointer',
-                color: '#526681',
+                color: '#060030ff',
                 fontWeight: '500',
                 fontSize: '14px',
                 transition: 'all 0.3s'
               }}
               onMouseEnter={(e) => {
-                e.target.style.backgroundColor = '#526681';
+                e.target.style.backgroundColor = '#060030ff';
                 e.target.style.color = 'white';
               }}
               onMouseLeave={(e) => {
                 e.target.style.backgroundColor = '#FFFBEB';
-                e.target.style.color = '#526681';
+                e.target.style.color = '#060030ff';
               }}>
                 <FileText size={18} />
                 View Report
@@ -499,7 +499,7 @@ export const StudentDetail = () => {
                   </div>
                   <div>
                     <p style={{ fontSize: '12px', color: '#64748B', margin: '0 0 4px 0' }}>Rating</p>
-                    <p style={{ fontSize: '14px', fontWeight: '600', color: '#526681', margin: '0' }}>
+                    <p style={{ fontSize: '14px', fontWeight: '600', color: '#060030ff', margin: '0' }}>
                       {session.rating ? `⭐ ${session.rating}/5` : '-'}
                     </p>
                   </div>

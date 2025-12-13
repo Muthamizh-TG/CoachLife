@@ -39,7 +39,7 @@ export const Analytics = () => {
       <div style={{ maxWidth: '100%', padding: '0' }}>
         {/* Enhanced Header */}
         <div style={{
-          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
+          background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
           color: 'white',
           padding: '40px 32px',
           marginBottom: '32px',
@@ -142,7 +142,7 @@ export const Analytics = () => {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <CheckCircle2 size={24} color="#526681" />
+                  <CheckCircle2 size={24} color="#060030ff" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Completed Sessions</p>
@@ -215,7 +215,7 @@ export const Analytics = () => {
                 }}>
                   <div style={{
                     height: '100%',
-                    background: 'linear-gradient(90deg, #252c35, #526681)',
+                    background: 'linear-gradient(90deg, #252c35, #060030ff)',
                     width: `${((completedSessions / totalSessions) * 100)}%`,
                     transition: 'width 0.3s ease'
                   }} />
@@ -237,7 +237,7 @@ export const Analytics = () => {
                     alignItems: 'center',
                     justifyContent: 'center'
                   }}>
-                    <Star size={20} color="#526681" />
+                    <Star size={20} color="#060030ff" />
                   </div>
                   <div>
                     <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', margin: 0 }}>Avg Session Rating</p>
@@ -316,7 +316,7 @@ export const Analytics = () => {
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
                     <span style={{ fontSize: '12px', color: '#92400e', fontWeight: '600', textTransform: 'uppercase' }}>Avg Points/Player</span>
-                    <Target size={18} color="#526681" />
+                    <Target size={18} color="#060030ff" />
                   </div>
                   <p style={{ fontSize: '24px', fontWeight: '700', color: '#111827', margin: 0 }}>{avgPlayerPoints}</p>
                   <p style={{ fontSize: '11px', color: '#666', margin: '4px 0 0 0' }}>Per player average</p>
@@ -379,7 +379,7 @@ export const Analytics = () => {
                       }}>
                         <div style={{
                           height: '100%',
-                          background: 'linear-gradient(90deg, #252c35, #526681)',
+                          background: 'linear-gradient(90deg, #252c35, #060030ff)',
                           width: `${((count / totalPlayers) * 100)}%`,
                           transition: 'width 0.3s ease'
                         }} />
@@ -413,7 +413,7 @@ export const Analytics = () => {
                           display: 'inline-block',
                           padding: '4px 8px',
                           backgroundColor: '#FFFBEB',
-                          color: '#526681',
+                          color: '#060030ff',
                           borderRadius: '4px',
                           fontSize: '11px',
                           fontWeight: '700'
@@ -430,7 +430,7 @@ export const Analytics = () => {
                       }}>
                         <div style={{
                           height: '100%',
-                          background: 'linear-gradient(90deg, #252c35, #526681)',
+                          background: 'linear-gradient(90deg, #252c35, #060030ff)',
                           width: `${((count / totalPlayers) * 100)}%`,
                           transition: 'width 0.3s ease'
                         }} />

@@ -59,7 +59,7 @@ export const Navbar = () => {
   return (
     <div style={{
       width: '100%',
-      height: '88px',
+      height: '90px',
       background: 'linear-gradient(90deg, #FFFFFF 0%, #F8FAFC 100%)',
       borderBottom: '2px solid #E2E8F0',
       display: 'flex',
@@ -84,7 +84,7 @@ export const Navbar = () => {
           <h1 style={{
             fontSize: '24px',
             fontWeight: 'bold',
-            background: 'linear-gradient(135deg, #252c35, #526681)',
+            background: 'linear-gradient(135deg, #000000ff, #060030ff)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             margin: 0,
@@ -133,7 +133,7 @@ export const Navbar = () => {
         <div style={{
           width: '1px',
           height: '35px',
-          background: 'linear-gradient(180deg, transparent, #006effff, transparent)'
+          background: 'linear-gradient(180deg, transparent, #060030ff, transparent)'
         }} />
 
         {/* Notifications */}
@@ -160,8 +160,8 @@ export const Navbar = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = '#F3F4F6';
-              e.currentTarget.style.borderColor = '#526681';
-              e.currentTarget.style.color = '#526681';
+              e.currentTarget.style.borderColor = '#060030ff';
+              e.currentTarget.style.color = '#060030ff';
               e.currentTarget.style.boxShadow = '0 2px 8px rgba(82, 102, 129, 0.15)';
             }}
             onMouseLeave={(e) => {
@@ -250,7 +250,7 @@ export const Navbar = () => {
                         justifyContent: 'center',
                         flexShrink: 0,
                         background: notif.type === 'success' ? '#F0FDF4' : notif.type === 'warning' ? '#FFFBEB' : '#EFF6FF',
-                        color: notif.type === 'success' ? '#10B981' : notif.type === 'warning' ? '#526681' : '#526681'
+                        color: notif.type === 'success' ? '#10B981' : notif.type === 'warning' ? '#060030ff' : '#060030ff'
                       }}>
                         <NotifIcon size={18} />
                       </div>
@@ -334,8 +334,8 @@ export const Navbar = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = '#F3F4F6';
-              e.currentTarget.style.borderColor = '#526681';
-              e.currentTarget.style.color = '#526681';
+              e.currentTarget.style.borderColor = '#060030ff';
+              e.currentTarget.style.color = '#060030ff';
               e.currentTarget.style.boxShadow = '0 2px 8px rgba(82, 102, 129, 0.15)';
             }}
             onMouseLeave={(e) => {
@@ -408,7 +408,7 @@ export const Navbar = () => {
               height: '42px',
               borderRadius: '10px',
               border: '1.5px solid #E5E7EB',
-              background: 'linear-gradient(135deg, #252c35, #526681)',
+              background: 'linear-gradient(135deg, #000000ff, #060030ff)',
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
@@ -454,7 +454,7 @@ export const Navbar = () => {
                     width: '44px',
                     height: '44px',
                     borderRadius: '10px',
-                    background: 'linear-gradient(135deg, #252c35, #526681)',
+                    background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',

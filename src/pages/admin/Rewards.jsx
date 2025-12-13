@@ -40,7 +40,7 @@ export const Rewards = () => {
       <div style={{ maxWidth: '100%', padding: '0' }}>
         {/* Enhanced Header */}
         <div style={{
-          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
+          background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
           color: 'white',
           padding: '40px 32px',
           marginBottom: '32px',
@@ -117,7 +117,7 @@ export const Rewards = () => {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <Gift size={24} color="#526681" />
+                  <Gift size={24} color="#060030ff" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Reward Types</p>
@@ -167,7 +167,7 @@ export const Rewards = () => {
                 left: '12px',
                 top: '50%',
                 transform: 'translateY(-50%)',
-                color: '#526681'
+                color: '#060030ff'
               }} />
               <input
                 type="text"
@@ -185,7 +185,7 @@ export const Rewards = () => {
                   backgroundColor: 'white'
                 }}
                 onFocus={(e) => {
-                  e.target.style.borderColor = '#526681';
+                  e.target.style.borderColor = '#060030ff';
                   e.target.style.boxShadow = '0 0 0 3px rgba(82, 102, 129, 0.1)';
                 }}
                 onBlur={(e) => {
@@ -312,7 +312,7 @@ export const Rewards = () => {
                       style={{
                         flex: 1,
                         padding: '8px 12px',
-                        background: '#526681',
+                        background: '#060030ff',
                         color: 'white',
                         border: 'none',
                         borderRadius: '6px',
@@ -329,7 +329,7 @@ export const Rewards = () => {
                         e.currentTarget.style.background = '#252c35';
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.background = '#526681';
+                        e.currentTarget.style.background = '#060030ff';
                       }}
                     >
                       <Edit2 size={14} /> Edit

@@ -43,7 +43,7 @@ export const CoachProfile = () => {
       <div style={{ padding: '32px', background: '#F8FAFC', minHeight: '100vh' }}>
         {/* Hero Section with Profile Card */}
         <div style={{
-          background: 'linear-gradient(135deg, #252c35, #526681)',
+          background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
           borderRadius: '16px',
           padding: '32px',
           marginBottom: '32px',
@@ -197,7 +197,7 @@ export const CoachProfile = () => {
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
-            e.currentTarget.style.borderColor = '#526681';
+            e.currentTarget.style.borderColor = '#060030ff';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
@@ -215,7 +215,7 @@ export const CoachProfile = () => {
               justifyContent: 'center',
               marginBottom: '12px'
             }}>
-              <Users size={24} color="#526681" />
+              <Users size={24} color="#060030ff" />
             </div>
             <p style={{ fontSize: '12px', color: '#64748B', margin: 0, marginBottom: '6px' }}>Total players</p>
             <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#252c35', margin: 0 }}>{myplayers.length}</p>
@@ -268,7 +268,7 @@ export const CoachProfile = () => {
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = '0 8px 20px rgba(246, 201, 14, 0.1)';
-            e.currentTarget.style.borderColor = '#526681';
+            e.currentTarget.style.borderColor = '#060030ff';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
@@ -287,7 +287,7 @@ export const CoachProfile = () => {
               justifyContent: 'center',
               marginBottom: '12px'
             }}>
-              <Zap size={24} color="#526681" />
+              <Zap size={24} color="#060030ff" />
             </div>
             <p style={{ fontSize: '12px', color: '#64748B', margin: 0, marginBottom: '6px' }}>Total Student Points</p>
             <p style={{ fontSize: '28px', fontWeight: 'bold', color: '#252c35', margin: 0 }}>{totalStudentPoints}</p>
@@ -348,7 +348,7 @@ export const CoachProfile = () => {
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
-            e.currentTarget.style.borderColor = '#526681';
+            e.currentTarget.style.borderColor = '#060030ff';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
@@ -370,7 +370,7 @@ export const CoachProfile = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Briefcase size={24} color="#526681" />
+                <Briefcase size={24} color="#060030ff" />
               </div>
               <h3 style={{
                 fontSize: '16px',
@@ -410,7 +410,7 @@ export const CoachProfile = () => {
                       alignItems: 'center',
                       justifyContent: 'center'
                     }}>
-                      <Icon size={20} color="#526681" />
+                      <Icon size={20} color="#060030ff" />
                     </div>
                     <div>
                       <p style={{ fontSize: '11px', color: '#64748B', margin: 0, marginBottom: '4px', fontWeight: '600', textTransform: 'uppercase' }}>
@@ -450,7 +450,7 @@ export const CoachProfile = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Target size={24} color="#526681" />
+                <Target size={24} color="#060030ff" />
               </div>
               <h3 style={{
                 fontSize: '16px',
@@ -463,8 +463,8 @@ export const CoachProfile = () => {
             </div>
             <div style={{ padding: '16px' }}>
               {[
-                { icon: Edit2, label: 'Edit Profile', color: '#526681' },
-                { icon: Lock, label: 'Change Password', color: '#526681' },
+                { icon: Edit2, label: 'Edit Profile', color: '#060030ff' },
+                { icon: Lock, label: 'Change Password', color: '#060030ff' },
                 { icon: Settings, label: 'Preferences', color: '#10B981' },
                 { icon: BarChart3, label: 'View Analytics', color: '#252c35' }
               ].map((action, idx) => {
@@ -533,7 +533,7 @@ export const CoachProfile = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Users size={24} color="#526681" />
+                <Users size={24} color="#060030ff" />
               </div>
               <h3 style={{
                 fontSize: '16px',
@@ -580,7 +580,7 @@ export const CoachProfile = () => {
                       cursor: 'pointer'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.borderColor = '#526681';
+                      e.currentTarget.style.borderColor = '#060030ff';
                       e.currentTarget.style.boxShadow = '0 4px 12px rgba(82, 102, 129, 0.1)';
                       e.currentTarget.style.transform = 'translateY(-2px)';
                     }}
@@ -595,7 +595,7 @@ export const CoachProfile = () => {
                         width: '44px',
                         height: '44px',
                         borderRadius: '10px',
-                        background: 'linear-gradient(135deg, #526681, #252c35)',
+                        background: 'linear-gradient(135deg, #060030ff, #252c35)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -632,7 +632,7 @@ export const CoachProfile = () => {
                     }}>
                       <div style={{
                         height: '100%',
-                        background: 'linear-gradient(90deg, #526681, #252c35)',
+                        background: 'linear-gradient(90deg, #060030ff, #252c35)',
                         width: `${student.progress}%`,
                         transition: 'width 0.3s'
                       }} />
@@ -644,7 +644,7 @@ export const CoachProfile = () => {
                       fontSize: '12px',
                       color: '#64748B'
                     }}>
-                      <span style={{ fontWeight: '600', color: '#526681' }}>{student.totalPoints} pts</span>
+                      <span style={{ fontWeight: '600', color: '#060030ff' }}>{student.totalPoints} pts</span>
                       <span style={{ fontWeight: '600' }}>View →</span>
                     </div>
                   </a>

@@ -76,7 +76,7 @@ export const Players = () => {
             width: '36px',
             height: '36px',
             borderRadius: '50%',
-            background: 'linear-gradient(135deg, #252c35, #526681)',
+            background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -120,7 +120,7 @@ export const Players = () => {
           display: 'inline-block',
           padding: '6px 12px',
           backgroundColor: '#FFFBEB',
-          color: '#526681',
+          color: '#060030ff',
           borderRadius: '6px',
           fontWeight: '600',
           fontSize: '12px'
@@ -154,7 +154,7 @@ export const Players = () => {
           }}>
             <div style={{
               height: '100%',
-              background: `linear-gradient(90deg, #252c35, #526681)`,
+              background: `linear-gradient(90deg, #252c35, #060030ff)`,
               width: `${value}%`,
               transition: 'width 0.3s ease'
             }} />
@@ -170,7 +170,7 @@ export const Players = () => {
       <div style={{ maxWidth: '100%', padding: '0' }}>
         {/* Enhanced Header */}
         <div style={{
-          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
+          background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
           backdropFilter: 'blur(20px)',
           color: 'white',
           padding: '40px 32px',
@@ -248,7 +248,7 @@ export const Players = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
-              e.currentTarget.style.borderColor = '#526681';
+              e.currentTarget.style.borderColor = '#060030ff';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
@@ -287,7 +287,7 @@ export const Players = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
-              e.currentTarget.style.borderColor = '#526681';
+              e.currentTarget.style.borderColor = '#060030ff';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
@@ -305,7 +305,7 @@ export const Players = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Target size={24} color="#526681" />
+                <Target size={24} color="#060030ff" />
               </div>
               <div>
                 <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Avg Level</p>
@@ -326,7 +326,7 @@ export const Players = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
-              e.currentTarget.style.borderColor = '#526681';
+              e.currentTarget.style.borderColor = '#060030ff';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
@@ -365,7 +365,7 @@ export const Players = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
-              e.currentTarget.style.borderColor = '#526681';
+              e.currentTarget.style.borderColor = '#060030ff';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
@@ -413,14 +413,14 @@ export const Players = () => {
             transition: 'all 0.3s'
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.borderColor = '#526681';
+            e.currentTarget.style.borderColor = '#060030ff';
             e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.borderColor = '#E2E8F0';
             e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
           }}>
-            <Search size={18} color="#526681" />
+            <Search size={18} color="#060030ff" />
             <input
               type="text"
               placeholder="Search by name or email..."
@@ -545,8 +545,8 @@ export const Players = () => {
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.backgroundColor = '#E8F2F8';
-                      e.currentTarget.style.borderColor = '#526681';
-                      e.currentTarget.style.color = '#526681';
+                      e.currentTarget.style.borderColor = '#060030ff';
+                      e.currentTarget.style.color = '#060030ff';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.backgroundColor = '#f3f4f6';

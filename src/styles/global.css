@@ -10,7 +10,7 @@
  * CoachLife Design System - Color Overrides
  * This file provides comprehensive color and typography updates
  * Primary: #252c35
- * Secondary: #526681
+ * Secondary: #060030ff
  * Body: #dde3e8
  * Font: Metropolis Light/Bold
  */
@@ -19,16 +19,16 @@
 :root {
   /* Core Colors */
   --primary: #252c35;
-  --secondary: #526681;
+  --secondary: #060030ff;
   --body-bg: #dde3e8;
   --text: #252c35;
-  --text-secondary: #526681;
+  --text-secondary: #060030ff;
   --white: #ffffff;
   --light: #f8f9fa;
   
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #252c35 0%, #526681 100%);
-  --gradient-reverse: linear-gradient(135deg, #526681 0%, #252c35 100%);
+  --gradient-primary: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
+  --gradient-reverse: linear-gradient(135deg, #060030ff 0%, #252c35 100%);
 }
 
 /* ===== GLOBAL OVERRIDES ===== */
@@ -195,7 +195,7 @@ table tbody tr:hover {
 
 .alert-warning {
   background: rgba(252, 211, 77, 0.1);
-  border-color: #526681;
+  border-color: #060030ff;
   color: #F59E0B;
 }
 
@@ -888,7 +888,7 @@ body {
   font-size: 22px;
   font-weight: 800;
   margin: 0;
-  background: linear-gradient(135deg, #526681, #526681);
+  background: linear-gradient(135deg, #060030ff, #060030ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -963,8 +963,8 @@ body {
 
 .sidebar-nav-item:hover {
   background-color: rgba(82, 102, 129, 0.15);
-  color: #526681;
-  border-left-color: #526681;
+  color: #060030ff;
+  border-left-color: #060030ff;
   padding-left: 18px;
 }
 
@@ -975,7 +975,7 @@ body {
 .sidebar-nav-item.active {
   background: linear-gradient(135deg, rgba(82, 102, 129, 0.3), rgba(82, 102, 129, 0.2));
   color: #fff;
-  border-left: 3px solid #526681;
+  border-left: 3px solid #060030ff;
   box-shadow: inset 0 0 10px rgba(82, 102, 129, 0.1);
 }
 
@@ -1009,7 +1009,7 @@ body {
 .sidebar-user-avatar {
   width: 36px;
   height: 36px;
-  background: linear-gradient(135deg, #252c35, #526681);
+  background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -1051,7 +1051,7 @@ body {
   padding: 12px 16px;
   background: linear-gradient(135deg, rgba(82, 102, 129, 0.1), rgba(82, 102, 129, 0.05));
   border: 1px solid rgba(82, 102, 129, 0.3);
-  color: #526681;
+  color: #060030ff;
   border-radius: 10px;
   font-size: 13px;
   font-weight: 500;
@@ -1095,7 +1095,7 @@ body {
 }
 
 .navbar {
-  background: linear-gradient(135deg, #252c35 0%, #526681 50%, #1565B8 100%);
+  background: linear-gradient(135deg, #252c35 0%, #060030ff 50%, #1565B8 100%);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(82, 102, 129, 0.1);
   padding: clamp(14px, 3vw, 20px) clamp(20px, 4vw, 32px);
   display: flex;
@@ -1134,7 +1134,7 @@ body {
 }
 
 .navbar-title-text {
-  background: linear-gradient(135deg, #526681 0%, #526681 100%);
+  background: linear-gradient(135deg, #060030ff 0%, #060030ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1175,7 +1175,7 @@ body {
 .navbar-avatar {
   width: clamp(36px, 6vw, 44px);
   height: clamp(36px, 6vw, 44px);
-  background: linear-gradient(135deg, #252c35 0%, #526681 100%);
+  background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1197,7 +1197,7 @@ body {
   height: clamp(36px, 6vw, 44px);
   border-radius: 12px;
   background: #fff;
-  color: #526681;
+  color: #060030ff;
   border: 1px solid rgba(82, 102, 129, 0.3);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -1367,12 +1367,12 @@ body {
 }
 
 .button:focus {
-  outline: 2px solid #526681;
+  outline: 2px solid #060030ff;
   outline-offset: 2px;
 }
 
 .button-primary {
-  background-color: #526681;
+  background-color: #060030ff;
   color: white;
 }
 
@@ -1399,7 +1399,7 @@ body {
 }
 
 .button-success {
-  background-color: linear-gradient(135deg, #252c35 0%, #526681 100%);
+  background-color: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
   color: white;
 }
 
@@ -1408,8 +1408,8 @@ body {
 }
 
 .button-outline {
-  border: 2px solid #526681;
-  color: #526681;
+  border: 2px solid #060030ff;
+  color: #060030ff;
   background-color: transparent;
 }
 
@@ -1461,7 +1461,7 @@ body {
 
 .form-input:focus {
   outline: none;
-  border-color: #526681;
+  border-color: #060030ff;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
@@ -1501,7 +1501,7 @@ body {
 
 .form-select:focus {
   outline: none;
-  border-color: #526681;
+  border-color: #060030ff;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
@@ -1519,7 +1519,7 @@ body {
 
 .form-textarea:focus {
   outline: none;
-  border-color: #526681;
+  border-color: #060030ff;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
@@ -1574,7 +1574,7 @@ body {
 
 .badge-primary {
   background-color: #dbeafe;
-  color: #526681;
+  color: #060030ff;
 }
 
 .badge-success {
@@ -1617,7 +1617,7 @@ body {
 
 .progress-fill {
   height: 100%;
-  background-color: #526681;
+  background-color: #060030ff;
   transition: width 0.3s;
 }
 
@@ -1686,7 +1686,7 @@ body {
 
 .login-left {
   flex: 1;
-  background: linear-gradient(135deg, #252c35 0%, #526681 100%);
+  background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
   color: white;
   padding: 60px 40px;
   display: flex;
@@ -1873,7 +1873,7 @@ body {
 
 .demo-btn:hover {
   transform: translateY(-2px);
-  border-color: #526681;
+  border-color: #060030ff;
   background: #f0f9ff;
 }
 
@@ -2097,7 +2097,7 @@ body {
   .login-left {
     flex: 0 0 auto;
     padding: 32px 16px 28px;
-    background: linear-gradient(135deg, #252c35 0%, #526681 100%);
+    background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
   }
 
   .login-right {
@@ -2238,7 +2238,7 @@ body {
 
 .login-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #526681 0%, #252c35 100%);
+  background: linear-gradient(135deg, #060030ff 0%, #252c35 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2261,7 +2261,7 @@ body {
 .login-title {
   font-size: 32px;
   font-weight: bold;
-  color: #526681;
+  color: #060030ff;
   margin-bottom: 8px;
 }
 
@@ -2325,7 +2325,7 @@ body {
 .not-found-code {
   font-size: 60px;
   font-weight: bold;
-  color: #526681;
+  color: #060030ff;
   margin-bottom: 16px;
 }
 
@@ -2480,7 +2480,7 @@ body {
 .bg-yellow-50 { background-color: #fffbeb; }
 .bg-purple-50 { background-color: #f5f3ff; }
 
-.text-blue-600 { color: #526681; }
+.text-blue-600 { color: #060030ff; }
 .text-green-600 { color: #16a34a; }
 .text-red-600 { color: #EF4444; }
 .text-yellow-600 { color: #ca8a04; }
@@ -2510,7 +2510,7 @@ body {
 .border-b { border-bottom: 1px solid #d1d5db; }
 .border-l-4 { border-left: 4px solid transparent; }
 
-.border-blue-600 { border-color: #526681; }
+.border-blue-600 { border-color: #060030ff; }
 .border-green-600 { border-color: #16a34a; }
 .border-red-600 { border-color: #EF4444; }
 
@@ -2546,7 +2546,7 @@ body {
 /* Home Page Styles */
 .home-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #252c35 0%, #526681 100%);
+  background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
   color: white;
 }
 
@@ -2637,7 +2637,7 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 16px;
-  color: #526681;
+  color: #060030ff;
   font-size: 32px;
 }
 
@@ -2692,7 +2692,7 @@ body {
 }
 
 .credential-card:hover {
-  border-color: #526681;
+  border-color: #060030ff;
   box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
   transform: translateY(-4px);
 }
@@ -2701,7 +2701,7 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 16px;
-  color: #526681;
+  color: #060030ff;
 }
 
 .credential-card h3 {
@@ -2863,7 +2863,7 @@ body {
   height: 56px;
   background: linear-gradient(135deg, rgba(82, 102, 129, 0.1), rgba(82, 102, 129, 0.05));
   border-radius: 12px;
-  color: #526681;
+  color: #060030ff;
   flex-shrink: 0;
 }
 
@@ -2924,7 +2924,7 @@ body {
 }
 
 .search-box:focus-within {
-  border-color: #526681;
+  border-color: #060030ff;
   box-shadow: 0 0 0 3px rgba(82, 102, 129, 0.1);
 }
 
@@ -2968,14 +2968,14 @@ body {
 }
 
 .filter-btn:hover {
-  border-color: #526681;
+  border-color: #060030ff;
   background: #E8F2F8;
-  color: #526681;
+  color: #060030ff;
 }
 
 .filter-btn.active {
   background: linear-gradient(135deg, rgba(82, 102, 129, 0.2), rgba(82, 102, 129, 0.1));
-  border-color: #526681;
+  border-color: #060030ff;
   color: #252c35;
   font-weight: 600;
 }
@@ -3005,9 +3005,9 @@ body {
 }
 
 .quick-action-btn:hover {
-  border-color: #526681;
+  border-color: #060030ff;
   background: #E8F2F8;
-  color: #526681;
+  color: #060030ff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
 }
@@ -3093,7 +3093,7 @@ body {
 
 .analytics-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #252c35, #526681);
+  background: linear-gradient(90deg, #252c35, #060030ff);
   transition: width 0.3s ease;
 }
 
@@ -3111,7 +3111,7 @@ body {
   padding: 14px;
   background: #f9fafb;
   border-radius: 10px;
-  border-left: 4px solid #526681;
+  border-left: 4px solid #060030ff;
   transition: all 0.2s;
 }
 
@@ -3126,7 +3126,7 @@ body {
   justify-content: center;
   width: 32px;
   height: 32px;
-  background: linear-gradient(135deg, #252c35, #526681);
+  background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
   color: white;
   border-radius: 50%;
   font-weight: 700;
@@ -3179,15 +3179,15 @@ body {
 }
 
 .stat-badge-points {
-  border: 1px solid #526681;
+  border: 1px solid #060030ff;
 }
 
 .stat-badge-points .stat-badge-value {
-  color: #526681;
+  color: #060030ff;
 }
 
 .stat-badge-progress {
-  border: 1px solid #526681;
+  border: 1px solid #060030ff;
 }
 
 .stat-badge-progress .stat-badge-value {
@@ -3215,7 +3215,7 @@ body {
 }
 
 .student-card:hover {
-  border-color: #526681;
+  border-color: #060030ff;
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
   transform: translateY(-4px);
   background: white;
@@ -3255,7 +3255,7 @@ body {
 
 .progress-mini-bar {
   height: 100%;
-  background: linear-gradient(90deg, #252c35, #526681);
+  background: linear-gradient(90deg, #252c35, #060030ff);
   transition: width 0.3s ease;
 }
 
@@ -3297,7 +3297,7 @@ body {
 
 .progress-bar-fill-animated {
   height: 100%;
-  background: linear-gradient(90deg, #252c35, #526681);
+  background: linear-gradient(90deg, #252c35, #060030ff);
   transition: width 0.4s ease;
   box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
 }
@@ -3469,7 +3469,7 @@ body {
 .progress-percentage {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #526681;
+  color: #060030ff;
 }
 
 .progress-bar-large {
@@ -3483,7 +3483,7 @@ body {
 
 .progress-bar-fill-animated {
   height: 100%;
-  background: linear-gradient(90deg, #252c35, #526681);
+  background: linear-gradient(90deg, #252c35, #060030ff);
   border-radius: 9999px;
   transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
@@ -3531,7 +3531,7 @@ body {
 
 .level-item.current {
   background: linear-gradient(135deg, #E8F2F8, #E0F1FD);
-  border-left-color: #526681;
+  border-left-color: #060030ff;
 }
 
 .level-item.current:hover {
@@ -3628,7 +3628,7 @@ body {
 
 .activity-badge.pending {
   background: #dbeafe;
-  color: #526681;
+  color: #060030ff;
 }
 
 /* ==================== REDEEM PAGE ==================== */
@@ -3639,7 +3639,7 @@ body {
   gap: 1.5rem;
   padding: 1.5rem;
   background: linear-gradient(135deg, #E8F2F8, #E0F1FD);
-  border: 2px solid #526681;
+  border: 2px solid #060030ff;
   border-radius: 0.75rem;
   margin-bottom: 1rem;
 }
@@ -3650,7 +3650,7 @@ body {
   justify-content: center;
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #252c35, #526681);
+  background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
   border-radius: 0.75rem;
   color: white;
   flex-shrink: 0;
@@ -3669,7 +3669,7 @@ body {
 .points-value {
   font-size: 2rem;
   font-weight: 700;
-  color: #526681;
+  color: #060030ff;
 }
 
 .rewards-section {
@@ -3832,7 +3832,7 @@ body {
 }
 
 .session-card:hover {
-  border-color: #526681;
+  border-color: #060030ff;
   box-shadow: 0 8px 16px rgba(82, 102, 129, 0.1);
 }
 
@@ -3904,7 +3904,7 @@ body {
 }
 
 .activity-points {
-  color: #526681;
+  color: #060030ff;
   font-weight: 600;
 }
 
@@ -3932,7 +3932,7 @@ body {
 .stat-val {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #526681;
+  color: #060030ff;
 }
 
 .session-feedback {
@@ -3963,7 +3963,7 @@ body {
   gap: 1.5rem;
   padding: 1.5rem;
   background: linear-gradient(135deg, #E8F2F8, #E0F1FD);
-  border: 2px solid #526681;
+  border: 2px solid #060030ff;
   border-radius: 0.75rem;
   margin-bottom: 1.5rem;
 }
@@ -4367,8 +4367,8 @@ body {
 
   .sidebar-nav a:hover {
     background-color: rgba(82, 102, 129, 0.15);
-    color: #526681;
-    border-left-color: #526681;
+    color: #060030ff;
+    border-left-color: #060030ff;
     padding-left: 20px;
   }
 
@@ -4378,8 +4378,8 @@ body {
 
   .sidebar-nav a.active {
     background: linear-gradient(135deg, rgba(82, 102, 129, 0.3), rgba(82, 102, 129, 0.2));
-    color: #526681;
-    border-left: 3px solid #526681;
+    color: #060030ff;
+    border-left: 3px solid #060030ff;
     box-shadow: inset 0 0 10px rgba(59, 130, 246, 0.1);
   }
 
@@ -4389,7 +4389,7 @@ body {
     right: 12px;
     width: 5px;
     height: 5px;
-    background: #526681;
+    background: #060030ff;
     border-radius: 50%;
     box-shadow: 0 0 6px rgba(59, 130, 246, 0.6);
   }
@@ -4747,7 +4747,7 @@ body {
 }
 
 .reward-card:hover {
-  border-color: #526681;
+  border-color: #060030ff;
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(82, 102, 129, 0.15);
 }
@@ -5063,7 +5063,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-left: 4px solid #526681;
+  border-left: 4px solid #060030ff;
 }
 
 .student-card:hover {
@@ -5160,7 +5160,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-left: 4px solid #526681;
+  border-left: 4px solid #060030ff;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -5477,7 +5477,7 @@ body {
   padding: 1rem;
   background: #f9fafb;
   border-radius: 0.5rem;
-  border-left: 4px solid #526681;
+  border-left: 4px solid #060030ff;
   transition: all 0.2s ease;
 }
 
@@ -5639,7 +5639,7 @@ body {
   align-items: center;
   padding: 1rem;
   background: linear-gradient(135deg, #E8F2F8 0%, #E0F1FD 100%);
-  border-left: 4px solid #526681;
+  border-left: 4px solid #060030ff;
   border-radius: 0.5rem;
 }
 

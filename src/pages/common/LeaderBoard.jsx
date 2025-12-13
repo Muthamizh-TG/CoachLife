@@ -74,7 +74,7 @@ export const LeaderBoard = () => {
     return {
       container: { backgroundColor: "white", border: "1px solid #E2E8F0" },
       badge: { backgroundColor: "#252c35", color: "#ffffff" },
-      avatar: { background: "linear-gradient(135deg, #252c35 0%, #526681 100%)", color: "white" }
+      avatar: { background: "linear-gradient(135deg, #060030ff 0%, #000000ff 100%)", color: "white" }
     };
   };
 
@@ -171,7 +171,7 @@ export const LeaderBoard = () => {
             ...styles.statCardPrimary,
           }} onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = "0 8px 20px rgba(82, 102, 129, 0.1)";
-            e.currentTarget.style.borderColor = "#526681";
+            e.currentTarget.style.borderColor = "#060030ff";
             e.currentTarget.style.transform = "translateY(-2px)";
           }} onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.04)";
@@ -193,7 +193,7 @@ export const LeaderBoard = () => {
             ...styles.statCardSecondary,
           }} onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = "0 8px 20px rgba(246, 201, 14, 0.1)";
-            e.currentTarget.style.borderColor = "#526681";
+            e.currentTarget.style.borderColor = "#060030ff";
             e.currentTarget.style.transform = "translateY(-2px)";
           }} onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.04)";
@@ -204,7 +204,7 @@ export const LeaderBoard = () => {
           data-aos-delay="100"
           data-aos-duration="800">
             <div style={styles.statCardIconBlue}>
-              <Users size={32} style={{ color: "#526681" }} />
+              <Users size={32} style={{ color: "#060030ff" }} />
             </div>
             <div style={styles.statCardInfo}>
               <span style={styles.statLabel}>Total Players</span>
@@ -290,7 +290,7 @@ export const LeaderBoard = () => {
                             <div style={styles.playerTextInfo}>
                               <div style={{
                                 ...styles.playerName,
-                                color: isHovered ? '#526681' : '#1E293B',
+                                color: isHovered ? '#060030ff' : '#1E293B',
                                 transform: isHovered ? 'scale(1.05)' : 'scale(1)',
                                 transition: 'all 0.3s ease',
                               }}>
@@ -365,7 +365,7 @@ export const LeaderBoard = () => {
                             <div style={styles.playerTextInfo}>
                               <div style={{
                                 ...styles.playerName,
-                                color: isHovered ? '#526681' : '#1E293B',
+                                color: isHovered ? '#060030ff' : '#1E293B',
                                 transform: isHovered ? 'scale(1.05)' : 'scale(1)',
                                 transition: 'all 0.3s ease',
                               }}>
@@ -437,7 +437,7 @@ export const LeaderBoard = () => {
                               <div style={styles.listPlayerInfo}>
                                 <div style={{
                                   ...styles.listPlayerName,
-                                  color: hoveredIndex === index ? '#526681' : '#1E293B',
+                                  color: hoveredIndex === index ? '#060030ff' : '#1E293B',
                                   transform: hoveredIndex === index ? 'scale(1.02)' : 'scale(1)',
                                   transition: 'all 0.3s ease',
                                 }}>
@@ -502,7 +502,7 @@ const styles = {
 
   // Hero Section
   heroSection: {
-    background: "linear-gradient(135deg, #252c35, #526681)",
+    background: "linear-gradient(135deg, #060030ff 0%, #000000ff 100%)",
     borderRadius: "16px",
     padding: "32px",
     marginBottom: "32px",
@@ -703,7 +703,7 @@ const styles = {
     marginBottom: "40px",
     margin: "0 0 40px 0",
     letterSpacing: "-1px",
-    background: "linear-gradient(135deg, #252c35 0%, #526681 100%)",
+    background: "linear-gradient(135deg, #060030ff 0%, #000000ff 100%)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
   },
@@ -734,7 +734,7 @@ const styles = {
 
   viewToggleButtonActive: {
     backgroundColor: "#FFFFFF",
-    color: "#526681",
+    color: "#060030ff",
     borderColor: "none",
     boxShadow: "none",
   },
@@ -999,7 +999,7 @@ const styles = {
     fontWeight: "950",
     color: "#252c35",
     lineHeight: 1,
-    background: "linear-gradient(135deg, #252c35 0%, #526681 100%)",
+    background: "linear-gradient(135deg, #060030ff 0%, #000000ff 100%)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
   },

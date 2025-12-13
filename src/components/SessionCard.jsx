@@ -53,7 +53,7 @@ const styles = `
 
     /* ===== SECTION TOP - HEADER PANEL ===== */
     .Section-Top {
-        background: linear-gradient(135deg, #252c35, #526681);
+        background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
         border-radius: 12px;
         padding: 16px;
         margin-bottom: 20px;
@@ -114,7 +114,7 @@ const styles = `
     }
 
     .label svg {
-        color: #526681;
+        color: #060030ff;
         flex-shrink: 0;
         opacity: 1;
         filter: drop-shadow(0 2px 4px rgba(82, 102, 129, 0.3));
@@ -270,7 +270,7 @@ const styles = `
     }
 
     .activity-field label svg {
-        color: #526681;
+        color: #060030ff;
         width: clamp(14px, 2.5vw, 18px);
         height: clamp(14px, 2.5vw, 18px);
         flex-shrink: 0;
@@ -359,12 +359,12 @@ const styles = `
     }
 
     .activity-radio-group label:hover {
-        color: #526681;
+        color: #060030ff;
         transform: none;
         box-shadow: none;
     }
 
-        accent-color: #526681;
+        accent-color: #060030ff;
 
     /* ===== RATING STARS ===== */
     .rating-container,
@@ -464,7 +464,7 @@ const styles = `
         display: flex;
         align-items: center;
         gap: 12px;
-        background: linear-gradient(135deg, #144e82 0%, #526681 100%);
+        background: linear-gradient(135deg, #144e82 0%, #060030ff 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -588,7 +588,7 @@ const styles = `
         justify-content: center;
         width: 28px;
         height: 28px;
-        background: linear-gradient(135deg, #252c35, #526681);
+        background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
         color: white;
         border-radius: 50%;
         font-size: 12px;
@@ -738,7 +738,7 @@ const styles = `
         cursor: pointer;
         width: 20px;
         height: 20px;
-        accent-color: #526681;
+        accent-color: #060030ff;
         flex-shrink: 0;
     }
 
@@ -1059,7 +1059,7 @@ const styles = `
     }
 
     .btn-secondary {
-        background: linear-gradient(135deg, #252c35 0%, #526681 100%);
+        background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
         color: #fff;
         border: 1px solid rgba(177, 156, 217, 0.3);
         backdrop-filter: blur(10px);
@@ -1166,7 +1166,7 @@ const styles = `
     }
 
     .toast-info {
-        background: linear-gradient(135deg, #526681 0%, #526681 100%);
+        background: linear-gradient(135deg, #060030ff 0%, #060030ff 100%);
         color: white;
     }
 
@@ -1205,7 +1205,7 @@ const styles = `
     }
 
     .summary-title svg {
-        color: #526681;
+        color: #060030ff;
         width: clamp(24px, 5vw, 32px);
         height: clamp(24px, 5vw, 32px);
         filter: drop-shadow(0 4px 12px rgba(177, 156, 217, 0.3));
@@ -1324,7 +1324,7 @@ const styles = `
 
     .progress-fill {
         height: 100%;
-        background: linear-gradient(90deg, #dde3e8, #526681);
+        background: linear-gradient(90deg, #dde3e8, #060030ff);
         transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
         border-radius: 6px;
         box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);

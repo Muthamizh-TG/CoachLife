@@ -73,7 +73,7 @@ export const Login = () => {
 
         .login-left {
           flex: 1;
-          background: linear-gradient(135deg, #252c35 0%, #526681 100%);
+          background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
           color: white;
           padding: 60px 40px;
           display: flex;
@@ -191,7 +191,7 @@ export const Login = () => {
         }
 
         .login-submit-btn {
-          background: linear-gradient(135deg, #252c35, #526681) !important;
+          background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%) !important;
           color: white !important;
           border: none !important;
           padding: 12px !important;
@@ -256,9 +256,9 @@ export const Login = () => {
         }
 
         .demo-btn-coach:hover {
-          background: #526681;
+          background: #060030ff;
           color: white;
-          border-color: #526681;
+          border-color: #060030ff;
         }
 
         @media (max-width: 1024px) {

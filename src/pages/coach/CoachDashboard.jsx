@@ -38,7 +38,7 @@ export const CoachDashboard = () => {
       <div style={{ padding: '32px', background: '#F8FAFC', minHeight: '100vh' }}>
         {/* Header Section */}
         <div style={{
-          background: 'linear-gradient(135deg, #252c35, #526681)',
+          background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
           borderRadius: '16px',
           padding: '32px',
           color: 'white',
@@ -122,7 +122,7 @@ export const CoachDashboard = () => {
           data-aos-duration="800"
           onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
-            e.currentTarget.style.borderColor = '#526681';
+            e.currentTarget.style.borderColor = '#060030ff';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
@@ -138,7 +138,7 @@ export const CoachDashboard = () => {
               justifyContent: 'center',
               marginBottom: '16px'
             }}>
-              <Users size={28} color="#526681" />
+              <Users size={28} color="#060030ff" />
             </div>
             <p style={{ fontSize: '13px', color: '#64748B', margin: 0, marginBottom: '8px' }}>My players</p>
             <p style={{ fontSize: '32px', fontWeight: 'bold', color: '#252c35', margin: 0 }}>{myplayers.length}</p>
@@ -196,7 +196,7 @@ export const CoachDashboard = () => {
           data-aos-duration="800"
           onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = '0 8px 20px rgba(246, 201, 14, 0.1)';
-            e.currentTarget.style.borderColor = '#526681';
+            e.currentTarget.style.borderColor = '#060030ff';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
@@ -212,11 +212,11 @@ export const CoachDashboard = () => {
               justifyContent: 'center',
               marginBottom: '16px'
             }}>
-              <Zap size={28} color="#526681" />
+              <Zap size={28} color="#060030ff" />
             </div>
             <p style={{ fontSize: '13px', color: '#64748B', margin: 0, marginBottom: '8px' }}>Draft Sessions</p>
             <p style={{ fontSize: '32px', fontWeight: 'bold', color: '#252c35', margin: 0 }}>{myDrafts.length}</p>
-            <p style={{ fontSize: '12px', color: '#526681', margin: '12px 0 0 0' }}>Ready to submit</p>
+            <p style={{ fontSize: '12px', color: '#060030ff', margin: '12px 0 0 0' }}>Ready to submit</p>
           </div>
 
           {/* Average Rating */}
@@ -288,7 +288,7 @@ export const CoachDashboard = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <Target size={24} color="#526681" />
+                <Target size={24} color="#060030ff" />
               </div>
               <h2 style={{
                 fontSize: '18px',
@@ -327,7 +327,7 @@ export const CoachDashboard = () => {
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.background = '#E8F2F8';
-                      e.currentTarget.style.borderColor = '#526681';
+                      e.currentTarget.style.borderColor = '#060030ff';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.background = '#F8FAFC';
@@ -339,10 +339,10 @@ export const CoachDashboard = () => {
                       alignItems: 'center',
                       gap: '12px'
                     }}>
-                      <Icon size={20} color="#526681" />
+                      <Icon size={20} color="#060030ff" />
                       <span style={{ fontWeight: '600', fontSize: '14px' }}>{action.label}</span>
                     </div>
-                    <ChevronRight size={18} color="#526681" />
+                    <ChevronRight size={18} color="#060030ff" />
                   </Link>
                 );
               })}
@@ -433,7 +433,7 @@ export const CoachDashboard = () => {
                         fontSize: '11px',
                         fontWeight: '700',
                         background: session.status === 'completed' ? '#F0FDF4' : '#FFFBEB',
-                        color: session.status === 'completed' ? '#10B981' : '#526681'
+                        color: session.status === 'completed' ? '#10B981' : '#060030ff'
                       }}>
                         {session.status === 'completed' ? '✓' : '⏱'} {session.status}
                       </div>
@@ -584,7 +584,7 @@ export const CoachDashboard = () => {
               alignItems: 'center',
               justifyContent: 'center'
             }}>
-              <Users size={24} color="#526681" />
+              <Users size={24} color="#060030ff" />
             </div>
             <h2 style={{
               fontSize: '18px',
@@ -628,7 +628,7 @@ export const CoachDashboard = () => {
               transition: 'all 0.2s ease'
             }}
             onFocus={(e) => {
-              e.currentTarget.style.borderColor = '#526681';
+              e.currentTarget.style.borderColor = '#060030ff';
               e.currentTarget.style.boxShadow = '0 0 0 4px rgba(82, 102, 129, 0.1)';
             }}
             onBlur={(e) => {
@@ -668,7 +668,7 @@ export const CoachDashboard = () => {
                 transition: 'all 0.2s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#526681';
+                e.currentTarget.style.borderColor = '#060030ff';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = '#E2E8F0';
@@ -716,7 +716,7 @@ export const CoachDashboard = () => {
                       color: '#111827'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.borderColor = '#526681';
+                      e.currentTarget.style.borderColor = '#060030ff';
                       e.currentTarget.style.boxShadow = '0 4px 12px rgba(82, 102, 129, 0.1)';
                       e.currentTarget.style.transform = 'translateY(-2px)';
                     }}
@@ -788,7 +788,7 @@ export const CoachDashboard = () => {
                         <p style={{
                           fontSize: '13px',
                           fontWeight: '600',
-                          color: '#526681',
+                          color: '#060030ff',
                           margin: 0
                         }}>
                           {student.totalPoints}
@@ -828,7 +828,7 @@ export const CoachDashboard = () => {
                         <div style={{
                           width: `${student.progress}%`,
                           height: '100%',
-                          background: 'linear-gradient(90deg, #526681, #252c35)',
+                          background: 'linear-gradient(90deg, #060030ff, #252c35)',
                           transition: 'width 0.5s ease'
                         }} />
                       </div>

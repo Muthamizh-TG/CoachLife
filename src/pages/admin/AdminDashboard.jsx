@@ -33,7 +33,7 @@ export const AdminDashboard = () => {
   // Chart Data: Session Status Distribution
   const sessionStatusData = [
     { name: 'Submitted', value: submittedSessions, fill: '#10B981' },
-    { name: 'Draft', value: draftSessions, fill: '#526681' },
+    { name: 'Draft', value: draftSessions, fill: '#060030ff' },
     { name: 'Completed', value: completedSessions, fill: '#252c35' }
   ];
 
@@ -71,7 +71,7 @@ export const AdminDashboard = () => {
       <div style={{ maxWidth: '100%', padding: '0' }}>
         {/* Enhanced Header */}
         <div style={{
-          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
+          background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
           color: 'white',
           padding: '40px 32px',
           marginBottom: '32px',
@@ -191,7 +191,7 @@ export const AdminDashboard = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}>
-                <BookOpen size={28} color="#526681" />
+                <BookOpen size={28} color="#060030ff" />
               </div>
               <div>
                 <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Total Sessions</p>
@@ -269,9 +269,9 @@ export const AdminDashboard = () => {
                         fontSize: '13px'
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.borderColor = '#526681';
+                        e.currentTarget.style.borderColor = '#060030ff';
                         e.currentTarget.style.backgroundColor = '#E8F2F8';
-                        e.currentTarget.style.color = '#526681';
+                        e.currentTarget.style.color = '#060030ff';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.borderColor = '#e5e7eb';
@@ -356,7 +356,7 @@ export const AdminDashboard = () => {
             }}>
               <div style={{
                 fontSize: '24px',
-                background: 'linear-gradient(135deg, #252c35, #526681)',
+                background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
@@ -426,12 +426,12 @@ export const AdminDashboard = () => {
                 e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}>
-                <h3 style={{ fontSize: '14px', fontWeight: '700', color: '#526681', marginBottom: '12px', margin: '0 0 12px 0' }}>Players by Level</h3>
+                <h3 style={{ fontSize: '14px', fontWeight: '700', color: '#060030ff', marginBottom: '12px', margin: '0 0 12px 0' }}>Players by Level</h3>
                 <ResponsiveContainer width="100%" height={220}>
                   <BarChart data={playerLevelData} margin={{ top: 10, right: 15, bottom: 15, left: -5 }}>
                     <defs>
                       <linearGradient id="colorLevel" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%" stopColor="#526681" stopOpacity={1}/>
+                        <stop offset="5%" stopColor="#060030ff" stopOpacity={1}/>
                         <stop offset="95%" stopColor="#252c35" stopOpacity={0.8}/>
                       </linearGradient>
                     </defs>
@@ -482,9 +482,9 @@ export const AdminDashboard = () => {
                     <Line 
                       type="linear" 
                       dataKey="progress" 
-                      stroke="#526681" 
+                      stroke="#060030ff" 
                       strokeWidth={2.5} 
-                      dot={{ fill: '#526681', r: 3 }} 
+                      dot={{ fill: '#060030ff', r: 3 }} 
                       activeDot={{ r: 5 }}
                       animationDuration={1000}
                     />

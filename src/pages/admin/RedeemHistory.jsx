@@ -116,7 +116,7 @@ export const RedeemHistory = () => {
       <div style={{ maxWidth: '100%', padding: '0' }}>
         {/* Enhanced Header */}
         <div style={{
-          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
+          background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
           color: 'white',
           padding: '40px 32px',
           marginBottom: '32px',
@@ -216,7 +216,7 @@ export const RedeemHistory = () => {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <Clock size={24} color="#526681" />
+                  <Clock size={24} color="#060030ff" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Pending</p>
@@ -242,7 +242,7 @@ export const RedeemHistory = () => {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <Gift size={24} color="#526681" />
+                  <Gift size={24} color="#060030ff" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Total Points Used</p>
@@ -266,7 +266,7 @@ export const RedeemHistory = () => {
                 left: '12px',
                 top: '50%',
                 transform: 'translateY(-50%)',
-                color: '#526681'
+                color: '#060030ff'
               }} />
               <input
                 type="text"
@@ -284,7 +284,7 @@ export const RedeemHistory = () => {
                   transition: 'all 0.3s ease'
                 }}
                 onFocus={(e) => {
-                  e.target.style.borderColor = '#526681';
+                  e.target.style.borderColor = '#060030ff';
                   e.target.style.boxShadow = '0 0 0 3px rgba(82, 102, 129, 0.1)';
                 }}
                 onBlur={(e) => {

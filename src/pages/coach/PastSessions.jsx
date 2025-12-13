@@ -25,7 +25,7 @@ export const PastSessions = () => {
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '24px' }}>
         {/* Gradient Header */}
         <div style={{
-          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
+          background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
           borderRadius: '12px',
           padding: '32px',
           color: 'white',
@@ -57,7 +57,7 @@ export const PastSessions = () => {
             background: 'white',
             borderRadius: '12px',
             padding: '20px',
-            borderLeft: '4px solid #526681',
+            borderLeft: '4px solid #060030ff',
             boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
             transition: 'all 0.3s'
           }}
@@ -73,7 +73,7 @@ export const PastSessions = () => {
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
               <div style={{ backgroundColor: '#E8F2F8', borderRadius: '8px', padding: '8px' }}>
-                <BookOpen size={24} color="#526681" />
+                <BookOpen size={24} color="#060030ff" />
               </div>
               <span style={{ fontSize: '14px', color: '#64748B', fontWeight: '500' }}>Total Sessions</span>
             </div>
@@ -118,7 +118,7 @@ export const PastSessions = () => {
             background: 'white',
             borderRadius: '12px',
             padding: '20px',
-            borderLeft: '4px solid #526681',
+            borderLeft: '4px solid #060030ff',
             boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
             transition: 'all 0.3s'
           }}
@@ -135,7 +135,7 @@ export const PastSessions = () => {
           data-aos-duration="800">
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
               <div style={{ backgroundColor: '#FFFBEB', borderRadius: '8px', padding: '8px' }}>
-                <Star size={24} color="#526681" />
+                <Star size={24} color="#060030ff" />
               </div>
               <span style={{ fontSize: '14px', color: '#64748B', fontWeight: '500' }}>Average Rating</span>
             </div>
@@ -184,13 +184,13 @@ export const PastSessions = () => {
               paddingBottom: '12px',
               borderBottom: '2px solid #E2E8F0'
             }}>
-              <Clock size={20} color="#526681" />
+              <Clock size={20} color="#060030ff" />
               <h2 style={{ fontSize: '18px', fontWeight: '600', color: '#111827', margin: '0' }}>
                 Pending Sessions
               </h2>
               <span style={{
                 backgroundColor: '#FFFBEB',
-                color: '#526681',
+                color: '#060030ff',
                 fontSize: '12px',
                 fontWeight: '600',
                 padding: '4px 10px',
@@ -244,7 +244,7 @@ export const PastSessions = () => {
                         padding: '4px 10px',
                         borderRadius: '6px',
                         backgroundColor: '#FFFBEB',
-                        color: '#526681'
+                        color: '#060030ff'
                       }}>⏳ Pending</span>
                     </div>
                     <div>
@@ -346,7 +346,7 @@ export const PastSessions = () => {
                           color: '#10B981'
                         }}>✓ Completed</span>
                         {session.rating && (
-                          <span style={{ fontSize: '13px', fontWeight: '600', color: '#526681' }}>⭐ {session.rating}/5</span>
+                          <span style={{ fontSize: '13px', fontWeight: '600', color: '#060030ff' }}>⭐ {session.rating}/5</span>
                         )}
                       </div>
                     </div>

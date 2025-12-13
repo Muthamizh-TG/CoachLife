@@ -54,7 +54,7 @@ export const PlayerSessions = () => {
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '24px' }}>
         {/* Gradient Header */}
         <div style={{
-          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
+          background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
           borderRadius: '12px',
           padding: '32px',
           color: 'white',
@@ -111,7 +111,7 @@ export const PlayerSessions = () => {
             background: 'white',
             borderRadius: '12px',
             padding: '20px',
-            borderLeft: '4px solid #526681',
+            borderLeft: '4px solid #060030ff',
             boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
             transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
             cursor: 'default'
@@ -128,7 +128,7 @@ export const PlayerSessions = () => {
           data-aos-duration="800">
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
               <div style={{ backgroundColor: '#E8F2F8', borderRadius: '8px', padding: '8px' }}>
-                <BookOpen size={24} color="#526681" />
+                <BookOpen size={24} color="#060030ff" />
               </div>
               <span style={{ fontSize: '14px', color: '#64748B', fontWeight: '500' }}>Total Sessions</span>
             </div>
@@ -142,7 +142,7 @@ export const PlayerSessions = () => {
             background: 'white',
             borderRadius: '12px',
             padding: '20px',
-            borderLeft: '4px solid #526681',
+            borderLeft: '4px solid #060030ff',
             boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
             transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
             cursor: 'default'
@@ -157,7 +157,7 @@ export const PlayerSessions = () => {
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
               <div style={{ backgroundColor: '#FFFBEB', borderRadius: '8px', padding: '8px' }}>
-                <Award size={24} color="#526681" />
+                <Award size={24} color="#060030ff" />
               </div>
               <span style={{ fontSize: '14px', color: '#64748B', fontWeight: '500' }}>Submitted</span>
             </div>
@@ -238,7 +238,7 @@ export const PlayerSessions = () => {
               paddingBottom: '12px',
               borderBottom: '2px solid #E2E8F0'
             }}>
-              <Clock size={20} color="#526681" />
+              <Clock size={20} color="#060030ff" />
               <h2 style={{ fontSize: '18px', fontWeight: '600', color: '#111827', margin: '0' }}>
                 Upcoming Sessions
               </h2>
@@ -297,7 +297,7 @@ export const PlayerSessions = () => {
                       </span>
                     </div>
                   </div>
-                  <ChevronRight size={20} color="#526681" />
+                  <ChevronRight size={20} color="#060030ff" />
                 </Link>
               ))}
             </div>
@@ -315,13 +315,13 @@ export const PlayerSessions = () => {
               paddingBottom: '12px',
               borderBottom: '2px solid #E2E8F0'
             }}>
-              <Clock size={20} color="#526681" />
+              <Clock size={20} color="#060030ff" />
               <h2 style={{ fontSize: '18px', fontWeight: '600', color: '#111827', margin: '0' }}>
                 Draft Sessions
               </h2>
               <span style={{
                 backgroundColor: '#FFFBEB',
-                color: '#526681',
+                color: '#060030ff',
                 fontSize: '12px',
                 fontWeight: '600',
                 padding: '4px 10px',
@@ -374,7 +374,7 @@ export const PlayerSessions = () => {
                       </span>
                     </div>
                   </div>
-                  <ChevronRight size={20} color="#526681" />
+                  <ChevronRight size={20} color="#060030ff" />
                 </Link>
               ))}
             </div>

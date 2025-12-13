@@ -20,7 +20,7 @@ export function Home() {
       password: 'coach',
       description: 'Manage players and sessions',
       icon: Target,
-      color: '#526681'
+      color: '#060030ff'
     }
   ];
 
@@ -63,7 +63,7 @@ export function Home() {
         }
 
         .home-header {
-          background: linear-gradient(135deg, #252c35 0%, #526681 100%);
+          background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
           color: white;
           padding: 60px 20px;
           text-align: center;
@@ -152,7 +152,7 @@ export function Home() {
         .feature-icon {
           width: 50px;
           height: 50px;
-          background: linear-gradient(135deg, #252c35, #526681);
+          background: linear-gradient(135deg, #060030ff, #000000ff);
           border-radius: 8px;
           display: flex;
           align-items: center;
@@ -218,7 +218,7 @@ export function Home() {
         .credential-icon {
           width: 60px;
           height: 60px;
-          background: linear-gradient(135deg, #252c35, #526681);
+          background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
           border-radius: 8px;
           display: flex;
           align-items: center;
@@ -267,7 +267,7 @@ export function Home() {
           font-size: 13px !important;
           font-weight: 700 !important;
           border-radius: 6px !important;
-          background: linear-gradient(135deg, #252c35, #526681) !important;
+          background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%) !important;
           color: white !important;
           border: none !important;
         }
@@ -277,7 +277,7 @@ export function Home() {
         }
 
         .home-footer {
-          background: #1f2937;
+          background: linear-gradient(135deg, #060030ff 0%, #000000ff 100%);
           color: white;
           text-align: center;
           padding: 20px;

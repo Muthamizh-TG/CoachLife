@@ -60,7 +60,7 @@ export const StartSession = () => {
       margin: '0 auto',
     },
     header: {
-      background: 'linear-gradient(135deg, #252c35, #526681)',
+      background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
       borderRadius: '16px',
       padding: '32px',
       color: 'white',
@@ -438,7 +438,7 @@ export const StartSession = () => {
           <>
             {/* Header */}
             <div style={{
-              background: 'linear-gradient(135deg, #252c35, #526681)',
+              background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
               borderRadius: '16px',
               padding: '32px',
               color: 'white',
@@ -473,7 +473,7 @@ export const StartSession = () => {
                   left: '12px',
                   top: '50%',
                   transform: 'translateY(-50%)',
-                  color: '#526681'
+                  color: '#060030ff'
                 }} />
                 <input
                   type="text"
@@ -490,7 +490,7 @@ export const StartSession = () => {
                     backgroundColor: 'white',
                     boxSizing: 'border-box'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = '#526681'}
+                  onFocus={(e) => e.target.style.borderColor = '#060030ff'}
                   onBlur={(e) => e.target.style.borderColor = '#E2E8F0'}
                 />
               </div>
@@ -574,7 +574,7 @@ export const StartSession = () => {
                     onMouseEnter={(e) => {
                       e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
                       e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.borderColor = '#526681';
+                      e.currentTarget.style.borderColor = '#060030ff';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
@@ -593,7 +593,7 @@ export const StartSession = () => {
                           width: '48px',
                           height: '48px',
                           borderRadius: '50%',
-                          background: 'linear-gradient(135deg, #526681, #252c35)',
+                          background: 'linear-gradient(135deg, #060030ff, #252c35)',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
@@ -637,13 +637,13 @@ export const StartSession = () => {
                       </div>
                       <div style={{ textAlign: 'center' }}>
                         <p style={{ fontSize: '12px', color: '#64748B', margin: '0 0 4px 0' }}>Points</p>
-                        <p style={{ fontSize: '18px', fontWeight: '700', color: '#526681', margin: '0' }}>
+                        <p style={{ fontSize: '18px', fontWeight: '700', color: '#060030ff', margin: '0' }}>
                           {student.totalPoints || 0}
                         </p>
                       </div>
                       <div style={{ textAlign: 'center' }}>
                         <p style={{ fontSize: '12px', color: '#64748B', margin: '0 0 4px 0' }}>Sessions</p>
-                        <p style={{ fontSize: '18px', fontWeight: '700', color: '#526681', margin: '0' }}>
+                        <p style={{ fontSize: '18px', fontWeight: '700', color: '#060030ff', margin: '0' }}>
                           {store.getPlayerSessions(student.playerId)?.length || 0}
                         </p>
                       </div>
@@ -666,7 +666,7 @@ export const StartSession = () => {
                 alignItems: 'center',
                 gap: '8px',
                 backgroundColor: 'rgba(82, 102, 129, 0.1)',
-                color: '#526681',
+                color: '#060030ff',
                 border: 'none',
                 padding: '8px 12px',
                 borderRadius: '6px',
@@ -685,7 +685,7 @@ export const StartSession = () => {
 
             {/* Player Header */}
             <div style={{
-              background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
+              background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
               borderRadius: '12px',
               padding: '32px',
               color: 'white',
@@ -729,7 +729,7 @@ export const StartSession = () => {
                 background: 'white',
                 borderRadius: '12px',
                 padding: '20px',
-                borderLeft: '4px solid #526681',
+                borderLeft: '4px solid #060030ff',
                 boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
                 transition: 'all 0.3s'
               }}
@@ -743,7 +743,7 @@ export const StartSession = () => {
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
                   <div style={{ backgroundColor: '#E8F2F8', borderRadius: '8px', padding: '8px' }}>
-                    <BookOpen size={24} color="#526681" />
+                    <BookOpen size={24} color="#060030ff" />
                   </div>
                   <span style={{ fontSize: '14px', color: '#64748B', fontWeight: '500' }}>Total Sessions</span>
                 </div>
@@ -783,7 +783,7 @@ export const StartSession = () => {
                 background: 'white',
                 borderRadius: '12px',
                 padding: '20px',
-                borderLeft: '4px solid #526681',
+                borderLeft: '4px solid #060030ff',
                 boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
                 transition: 'all 0.3s'
               }}
@@ -797,7 +797,7 @@ export const StartSession = () => {
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
                   <div style={{ backgroundColor: '#FFFBEB', borderRadius: '8px', padding: '8px' }}>
-                    <Clock size={24} color="#526681" />
+                    <Clock size={24} color="#060030ff" />
                   </div>
                   <span style={{ fontSize: '14px', color: '#64748B', fontWeight: '500' }}>Draft Sessions</span>
                 </div>
@@ -845,13 +845,13 @@ export const StartSession = () => {
                   paddingBottom: '12px',
                   borderBottom: '2px solid #E2E8F0'
                 }}>
-                  <Clock size={20} color="#526681" />
+                  <Clock size={20} color="#060030ff" />
                   <h2 style={{ fontSize: '18px', fontWeight: '600', color: '#111827', margin: '0' }}>
                     Draft Sessions
                   </h2>
                   <span style={{
                     backgroundColor: '#FFFBEB',
-                    color: '#526681',
+                    color: '#060030ff',
                     fontSize: '12px',
                     fontWeight: '600',
                     padding: '4px 10px',
@@ -879,7 +879,7 @@ export const StartSession = () => {
                         textDecoration: 'none',
                         color: 'inherit',
                         transition: 'all 0.3s',
-                        borderLeft: '4px solid #526681'
+                        borderLeft: '4px solid #060030ff'
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.12)';
@@ -906,7 +906,7 @@ export const StartSession = () => {
                           {session.defaultPoints + session.bonusPoints} pts
                         </span>
                       </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#526681', fontSize: '13px', fontWeight: '500' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#060030ff', fontSize: '13px', fontWeight: '500' }}>
                         Edit <ChevronRight size={14} />
                       </div>
                     </Link>
@@ -1033,7 +1033,7 @@ export const StartSession = () => {
                     alignItems: 'center',
                     gap: '8px',
                     padding: '10px 16px',
-                    backgroundColor: '#526681',
+                    backgroundColor: '#060030ff',
                     color: 'white',
                     border: 'none',
                     borderRadius: '8px',
@@ -1043,7 +1043,7 @@ export const StartSession = () => {
                     transition: 'background-color 0.3s'
                   }}
                   onMouseEnter={(e) => e.target.style.backgroundColor = '#1565B8'}
-                  onMouseLeave={(e) => e.target.style.backgroundColor = '#526681'}
+                  onMouseLeave={(e) => e.target.style.backgroundColor = '#060030ff'}
                 >
                   <Plus size={18} />
                   Create Session

@@ -70,7 +70,7 @@ export const AssignPlayers = () => {
       <div style={{ maxWidth: '100%', padding: '0' }}>
         {/* Enhanced Header */}
         <div style={{
-          background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
+          background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
           color: 'white',
           padding: '40px 32px',
           marginBottom: '32px',
@@ -114,7 +114,7 @@ export const AssignPlayers = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
-              e.currentTarget.style.borderColor = '#526681';
+              e.currentTarget.style.borderColor = '#060030ff';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
@@ -155,7 +155,7 @@ export const AssignPlayers = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
-              e.currentTarget.style.borderColor = '#526681';
+              e.currentTarget.style.borderColor = '#060030ff';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
@@ -197,7 +197,7 @@ export const AssignPlayers = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
-              e.currentTarget.style.borderColor = '#526681';
+              e.currentTarget.style.borderColor = '#060030ff';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
@@ -239,7 +239,7 @@ export const AssignPlayers = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
-              e.currentTarget.style.borderColor = '#526681';
+              e.currentTarget.style.borderColor = '#060030ff';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
@@ -262,7 +262,7 @@ export const AssignPlayers = () => {
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <Link2 size={24} color="#526681" />
+                  <Link2 size={24} color="#060030ff" />
                 </div>
                 <div>
                   <p style={{ fontSize: '12px', color: '#666', fontWeight: '500', textTransform: 'uppercase', margin: 0 }}>Total Assignments</p>
@@ -287,7 +287,7 @@ export const AssignPlayers = () => {
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
-          e.currentTarget.style.borderColor = '#526681';
+          e.currentTarget.style.borderColor = '#060030ff';
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
@@ -301,7 +301,7 @@ export const AssignPlayers = () => {
               width: '40px',
               height: '40px',
               borderRadius: '8px',
-              background: 'linear-gradient(135deg, #252c35, #526681)',
+              background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center'
@@ -352,7 +352,7 @@ export const AssignPlayers = () => {
                   transition: 'all 0.3s'
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = '#526681';
+                  e.currentTarget.style.borderColor = '#060030ff';
                   e.currentTarget.style.boxShadow = '0 0 0 3px rgba(82, 102, 129, 0.1)';
                 }}
                 onBlur={(e) => {
@@ -384,7 +384,7 @@ export const AssignPlayers = () => {
                   transition: 'all 0.3s'
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = '#526681';
+                  e.currentTarget.style.borderColor = '#060030ff';
                   e.currentTarget.style.boxShadow = '0 0 0 3px rgba(82, 102, 129, 0.1)';
                 }}
                 onBlur={(e) => {
@@ -405,7 +405,7 @@ export const AssignPlayers = () => {
                 padding: '10px 24px',
                 borderRadius: '8px',
                 fontWeight: '600',
-                background: selectedPlayer && selectedCoach ? 'linear-gradient(135deg, #252c35, #526681)' : '#e5e7eb',
+                background: selectedPlayer && selectedCoach ? 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)' : '#e5e7eb',
                 color: selectedPlayer && selectedCoach ? 'white' : '#999',
                 border: 'none',
                 cursor: selectedPlayer && selectedCoach ? 'pointer' : 'not-allowed',
@@ -454,7 +454,7 @@ export const AssignPlayers = () => {
             gap: '10px',
             transition: 'all 0.3s'
           }}>
-            <Search size={18} color="#526681" />
+            <Search size={18} color="#060030ff" />
             <input
               type="text"
               placeholder="Search players..."
@@ -470,7 +470,7 @@ export const AssignPlayers = () => {
                 fontWeight: '500'
               }}
               onFocus={(e) => {
-                e.target.parentElement.style.borderColor = '#526681';
+                e.target.parentElement.style.borderColor = '#060030ff';
                 e.target.parentElement.style.boxShadow = '0 0 0 3px rgba(82, 102, 129, 0.1)';
               }}
               onBlur={(e) => {
@@ -496,7 +496,7 @@ export const AssignPlayers = () => {
               transition: 'all 0.3s'
             }}
             onFocus={(e) => {
-              e.currentTarget.style.borderColor = '#526681';
+              e.currentTarget.style.borderColor = '#060030ff';
               e.currentTarget.style.boxShadow = '0 0 0 3px rgba(82, 102, 129, 0.1)';
             }}
             onBlur={(e) => {
@@ -531,7 +531,7 @@ export const AssignPlayers = () => {
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.boxShadow = '0 8px 20px rgba(82, 102, 129, 0.1)';
-                    e.currentTarget.style.borderColor = '#526681';
+                    e.currentTarget.style.borderColor = '#060030ff';
                     e.currentTarget.style.transform = 'translateY(-2px)';
                   }}
                   onMouseLeave={(e) => {
@@ -549,7 +549,7 @@ export const AssignPlayers = () => {
                         width: '36px',
                         height: '36px',
                         borderRadius: '50%',
-                        background: 'linear-gradient(135deg, #252c35, #526681)',
+                        background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -576,11 +576,11 @@ export const AssignPlayers = () => {
                       borderRadius: '6px',
                       fontSize: '12px',
                       fontWeight: '600',
-                      border: '1px solid #526681',
+                      border: '1px solid #060030ff',
                       transition: 'all 0.3s'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = '#526681';
+                      e.currentTarget.style.backgroundColor = '#060030ff';
                       e.currentTarget.style.color = 'white';
                     }}
                     onMouseLeave={(e) => {
@@ -608,7 +608,7 @@ export const AssignPlayers = () => {
                         }}
                         onMouseEnter={(e) => {
                           e.currentTarget.style.backgroundColor = '#EEF4F8';
-                          e.currentTarget.style.borderColor = '#526681';
+                          e.currentTarget.style.borderColor = '#060030ff';
                         }}
                         onMouseLeave={(e) => {
                           e.currentTarget.style.backgroundColor = '#F8FAFC';

@@ -70,7 +70,7 @@ export const Sidebar = ({ onClose }) => {
     <div style={{
       width: '280px',
       height: '100vh',
-      background: 'linear-gradient(135deg, #252c35 0%, #526681 100%)',
+      background: 'linear-gradient(135deg, #060030ff 0%, #000000ff 100%)',
       display: 'flex',
       flexDirection: 'column',
       boxShadow: '2px 0 8px rgba(0, 0, 0, 0.1)',
@@ -102,7 +102,7 @@ export const Sidebar = ({ onClose }) => {
             border: '2px solid rgba(82, 102, 129, 0.4)',
             boxShadow: '0 4px 12px rgba(82, 102, 129, 0.1)'
           }}>
-            <img src={logo} alt="CoachLife Logo" style={{ width: '26px', height: '26px' }} />
+            <img src={logo} alt="CoachLife Logo" style={{ width: '35px', height: '35px' }} />
           </div>
           <div>
             <h1 style={{
@@ -149,8 +149,8 @@ export const Sidebar = ({ onClose }) => {
                 borderRadius: '10px',
                 textDecoration: 'none',
                 color: isActive ? '#dde3e8' : 'rgba(255, 255, 255, 0.75)',
-                background: isActive ? 'rgba(82, 102, 129, 0.15)' : 'transparent',
-                border: isActive ? '1.5px solid #526681' : '1.5px solid transparent',
+                background: isActive ? 'rgba(255, 255, 255, 0.3)' : 'transparent',
+                border: isActive ? '1.5px solid #ffffffff' : '1.5px solid transparent',
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 cursor: 'pointer',
                 position: 'relative',
@@ -239,15 +239,15 @@ export const Sidebar = ({ onClose }) => {
             width: '44px',
             height: '44px',
             borderRadius: '12px',
-            background: 'linear-gradient(135deg, #252c35, #526681)',
+            background: '#ffffffff',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             fontSize: '16px',
             fontWeight: 'bold',
-            color: '#dde3e8',
+            color: '#000000ff',
             flexShrink: 0,
-            boxShadow: '0 4px 12px #dde3e84d'
+            boxShadow: '0 4px 8px #000000ff'
           }}>
             {currentUser?.username?.charAt(0).toUpperCase()}
           </div>
